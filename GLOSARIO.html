@@ -242,7 +242,8 @@
 			margin: 20px;
 			padding: 20px;
 			vertical-align: top;
-			border-top: 1px solid #4800ff;
+			/*border-top: 1px solid #4800ff;*/
+			border-top: 1px solid red;
 			}
 			
 			nav.mainNav.flexbox {
@@ -299,11 +300,43 @@
 			/*background: #4800ff;*/
 			color: #fff;
 			}
+			
+			/* ESTILO PARA EL VIDEO DE FONDO */
+			
+			#cabecera{
+			width: 100%;
+			height: 500%;
+			}
+			#video {
+			
+			position: fixed; right: 0; bottom: 0;
+			
+			min-width: 100%; min-height: 100%;
+			
+			width: auto; height: auto; z-index: -100;
+			
+			
+			/*
+			position: fixed;
+			left: 0;
+			top: 0px;
+			width: 100%;
+			height: 100vh;
+			z-index: -10;
+			visibility: visible;
+			*/
+			}
+			h2{
+			color:white;
+			text-shadow: 4px 4px 4px #333;
+			text-align: center;
+			margin-top: 200px;
+			}
 		</style>
 	</head>
 	<body class="bg-light">
-		
-		<header class="section-header py-4">
+		<!--<header class="section-header py-4" style="background: #4800ff">-->
+		<header class="section-header py-4" style="background: #eee">
 			<div class="container">
 				<!--<h2></h2>-->
 				<div class="">
@@ -314,369 +347,377 @@
 			</div>
 		</header> <!-- section-header.// -->	
 		<!-- ========================= SECTION CONTENT ========================= -->
-		
-		<div class="container">
+		<div class="" id="cabecera">
+			<!--<div class="" style="background: #4800fe" id="cabecera">-->
 			
-			<nav class="navbar navbar-expand-lg navbar-dark color-navbar">
-				<!--<nav class="nav nav-pills nav-stacked navbar-dark bg-primary">-->
+			<!--El código del vídeo iría aquí-->
+			<video id="video" loop autoplay preload muted>
+				<source src="images/codigo.webm" type='video/webm; codecs="vp8,vorbis"' />
+			</video>
+			<div class="container" >
 				
-				<!--<a class="navbar-brand" href="#">Brand</a>-->
-				<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
-					<span class="navbar-toggler-icon"></span>
-				</button>-->
-				<div class="collapse navbar-collapse" id="main_nav">
+				<nav class="navbar navbar-expand-lg navbar-dark color-navbar">
+					<!--<nav class="nav nav-pills nav-stacked navbar-dark bg-primary">-->
 					
-					<ul class="navbar-nav">
-						<!--<li class="nav-item active"> <a class="nav-link" href="#">Home </a> </li>
-						<li class="nav-item"><a class="nav-link" href="#"> About </a></li>-->
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown" style="color:#eee">  GLOSARIO  </a>
-							<!--<a class="nav-link dropdown-toggle" href="" data-toggle="dropdown">  GLOSARIO  </a>-->
-							<ul class="dropdown-menu">
-								<!--<li><a class="dropdown-item" href="#"> Dropdown item 1 </a></li>-->
-								<!--<li><a class="dropdown-item" href="#"> Acervo Bibliográfico &raquo </a>
-									<ul class="submenu dropdown-menu">
-									<li><a class="dropdown-item text-wrap" href="">colección bibliohemerográfica de una biblioteca determinada, que puede estar compuesta por libros, revistas y diarios, material digital y tridimensional, entre otros.
-									</a></li>
-									<li><a class="dropdown-item" href="">Submenu item 2</a></li>
-									<li><a class="dropdown-item" href="">Submenu item 3 &raquo </a>
-									<ul class="submenu dropdown-menu">
-									<li><a class="dropdown-item" href="">Multi level 1</a></li>
-									<li><a class="dropdown-item" href="">Multi level 2</a></li>
-									</ul>
-									</li>
-									<li><a class="dropdown-item" href="">Submenu item 4</a></li>
-									<li><a class="dropdown-item" href="">Submenu item 5</a></li>
-									</ul>
-									</li>
-									<li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
-								<li><a class="dropdown-item" href="#"> Dropdown item 4 </a>-->
-							</ul>
-						</li>
-						<!--<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  More items  </a>
-							<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#"> Dropdown item 1 </a></li>
-							<li><a class="dropdown-item dropdown-toggle" href="#"> Dropdown item 2 </a>
-							<ul class="submenu dropdown-menu">
+					<!--<a class="navbar-brand" href="#">Brand</a>-->
+					<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+						<span class="navbar-toggler-icon"></span>
+					</button>-->
+					<div class="collapse navbar-collapse" id="main_nav">
+						
+						<ul class="navbar-nav">
+							<!--<li class="nav-item active"> <a class="nav-link" href="#">Home </a> </li>
+							<li class="nav-item"><a class="nav-link" href="#"> About </a></li>-->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown" style="color:#eee">  GLOSARIO  </a>
+								<!--<a class="nav-link dropdown-toggle" href="" data-toggle="dropdown">  GLOSARIO  </a>-->
+								<ul class="dropdown-menu">
+									<!--<li><a class="dropdown-item" href="#"> Dropdown item 1 </a></li>-->
+									<!--<li><a class="dropdown-item" href="#"> Acervo Bibliográfico &raquo </a>
+										<ul class="submenu dropdown-menu">
+										<li><a class="dropdown-item text-wrap" href="">colección bibliohemerográfica de una biblioteca determinada, que puede estar compuesta por libros, revistas y diarios, material digital y tridimensional, entre otros.
+										</a></li>
+										<li><a class="dropdown-item" href="">Submenu item 2</a></li>
+										<li><a class="dropdown-item" href="">Submenu item 3 &raquo </a>
+										<ul class="submenu dropdown-menu">
+										<li><a class="dropdown-item" href="">Multi level 1</a></li>
+										<li><a class="dropdown-item" href="">Multi level 2</a></li>
+										</ul>
+										</li>
+										<li><a class="dropdown-item" href="">Submenu item 4</a></li>
+										<li><a class="dropdown-item" href="">Submenu item 5</a></li>
+										</ul>
+										</li>
+										<li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
+									<li><a class="dropdown-item" href="#"> Dropdown item 4 </a>-->
+								</ul>
+							</li>
+							<!--<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  More items  </a>
+								<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#"> Dropdown item 1 </a></li>
+								<li><a class="dropdown-item dropdown-toggle" href="#"> Dropdown item 2 </a>
+								<ul class="submenu dropdown-menu">
+								<li><a class="dropdown-item" href="">Submenu item 1</a></li>
+								<li><a class="dropdown-item" href="">Submenu item 2</a></li>
+								<li><a class="dropdown-item" href="">Submenu item 3</a></li>
+								</ul>
+								</li>
+								<li><a class="dropdown-item dropdown-toggle" href="#"> Dropdown item 3 </a>
+								<ul class="submenu dropdown-menu">
+								<li><a class="dropdown-item" href="">Another submenu 1</a></li>
+								<li><a class="dropdown-item" href="">Another submenu 2</a></li>
+								<li><a class="dropdown-item" href="">Another submenu 3</a></li>
+								<li><a class="dropdown-item" href="">Another submenu 4</a></li>
+								</ul>
+								</li>
+								<li><a class="dropdown-item dropdown-toggle" href="#"> Dropdown item 4 </a>
+								<ul class="submenu dropdown-menu">
+								<li><a class="dropdown-item" href="">Another submenu 1</a></li>
+								<li><a class="dropdown-item" href="">Another submenu 2</a></li>
+								<li><a class="dropdown-item" href="">Another submenu 3</a></li>
+								<li><a class="dropdown-item" href="">Another submenu 4</a></li>
+								</ul>
+								</li>
+								<li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
+								<li><a class="dropdown-item" href="#"> Dropdown item 5 </a></li>
+								</ul>
+							</li>-->
+						</ul>
+						
+						<!--<ul class="navbar-nav ml-auto">
+							<li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
+							<li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
+							<li class="nav-item dropdown">
+							<a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> Dropdown right </a>
+							<ul class="dropdown-menu dropdown-menu-right">
+							<li><a class="dropdown-item" href="#"> Dropdown item 1</a></li>
+							<li><a class="dropdown-item" href="#"> Dropdown item 2 </a></li>
+							<li><a class="dropdown-item dropdown-toggle" href="#"> Dropdown item 3 </a>
+							<ul class="submenu submenu-left dropdown-menu">
 							<li><a class="dropdown-item" href="">Submenu item 1</a></li>
 							<li><a class="dropdown-item" href="">Submenu item 2</a></li>
 							<li><a class="dropdown-item" href="">Submenu item 3</a></li>
-							</ul>
-							</li>
-							<li><a class="dropdown-item dropdown-toggle" href="#"> Dropdown item 3 </a>
-							<ul class="submenu dropdown-menu">
-							<li><a class="dropdown-item" href="">Another submenu 1</a></li>
-							<li><a class="dropdown-item" href="">Another submenu 2</a></li>
-							<li><a class="dropdown-item" href="">Another submenu 3</a></li>
-							<li><a class="dropdown-item" href="">Another submenu 4</a></li>
-							</ul>
-							</li>
-							<li><a class="dropdown-item dropdown-toggle" href="#"> Dropdown item 4 </a>
-							<ul class="submenu dropdown-menu">
-							<li><a class="dropdown-item" href="">Another submenu 1</a></li>
-							<li><a class="dropdown-item" href="">Another submenu 2</a></li>
-							<li><a class="dropdown-item" href="">Another submenu 3</a></li>
-							<li><a class="dropdown-item" href="">Another submenu 4</a></li>
+							<li><a class="dropdown-item" href="">Submenu item 4</a></li>
 							</ul>
 							</li>
 							<li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
-							<li><a class="dropdown-item" href="#"> Dropdown item 5 </a></li>
 							</ul>
-						</li>-->
-					</ul>
-					
-					<!--<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
-						<li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
-						<li class="nav-item dropdown">
-						<a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> Dropdown right </a>
-						<ul class="dropdown-menu dropdown-menu-right">
-						<li><a class="dropdown-item" href="#"> Dropdown item 1</a></li>
-						<li><a class="dropdown-item" href="#"> Dropdown item 2 </a></li>
-						<li><a class="dropdown-item dropdown-toggle" href="#"> Dropdown item 3 </a>
-						<ul class="submenu submenu-left dropdown-menu">
-						<li><a class="dropdown-item" href="">Submenu item 1</a></li>
-						<li><a class="dropdown-item" href="">Submenu item 2</a></li>
-						<li><a class="dropdown-item" href="">Submenu item 3</a></li>
-						<li><a class="dropdown-item" href="">Submenu item 4</a></li>
-						</ul>
-						</li>
-						<li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
-						</ul>
-						</li>
+							</li>
+							
+						</ul>-->
 						
-					</ul>-->
+					</div> <!-- navbar-collapse.// -->
 					
-				</div> <!-- navbar-collapse.// -->
+				</nav>
 				
-			</nav>
-			
-			<div class="container-fluid">
-				<div class="row" style="margin-left: -30px">
-					<div class="col-sm-2 terms">
-						<!-- MENU LATERAL -->	
-						<nav class="vertical">
-							<ul>
-								<li><a href="#">Acervo Bibliográfico</a>
-									<ul>
-										<li>
-											<a href="#">
-												colección bibliohemerográfica de una biblioteca determinada, que puede
-												estar compuesta por libros, revistas y diarios, material digital y tridimensional, entre otros.
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Adquisición</a>
-									<ul>
-										<li>
-											<a href="#">
-												Es el proceso administrativo por el cual se asegura la disposición de material seleccionado,
-												determinado por las condiciones administrativas de gestión de cada biblioteca, exigiendo la
-												correcta distribución de los recursos disponibles para lograr la mayor cobertura de la lista
-												seleccionada.
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Canje</a>
-									<ul>
-										<li>
-											<a href="#">
-												Procedimiento de adquisición que puede utilizar cualquier biblioteca para obtener libros o
-												publicaciones periódicas de otras bibliotecas, instituciones u organizaciones, mediante el
-												intercambio de sus propias publicaciones u otros materiales bibliográficos. Es el procedimiento
-												de adquisición de publicaciones por el que bibliotecas u otras instituciones intercambian
-												materiales bibliográficos.
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Colecciones Bibliográficas</a>
-									<ul>
-										<li>
-											<a href="#">
-												La colección o fondo bibliográfico es el conjunto de materiales bibliotecarios que la biblioteca
-												pone a disposición de los usuarios. La formación y desarrollo de la colección es imprescindible
-												para los usuarios Estos se agrupan bajo determinados criterios como el género, tema o formato
-												que responden a una clasificación temática propia e idéntica en todas las bibliotecas.
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Compra</a>
-									<ul>
-										<li>
-											<a href="#">
-												Es la forma de adquisición por excelencia de las bibliotecas y requiere un gran
-												conocimiento de las editoriales, distribuidores y libreros del panorama nacional y extranjero.
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Depósito legal</a>
-									<ul>
-										<li>
-											<a href="#">
-												Es una institución que permite recoger ejemplares de todas las publicaciones (de
-												cualquier tipo y soporte) con el fin de preservar el patrimonio bibliográfico, sonoro, visual,
-												audiovisual y digital y permitir el acceso al mismo con fines culturales, de investigación o de
-												información.
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Desarrollo de colecciones</a>
-									<ul>
-										<li>
-											<a href="#">
-												Es un proceso el cual establece políticas por medio de la inclusión
-												de todos los usuarios, docentes, estudiantes, bibliotecarios, administrativos etc… Para la
-												selección, preservación, mantenimiento, adquisición y evaluación de todos los recursos dentro
-												de las unidades de la información.		
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Descarte</a>
-									<ul>
-										<li>
-											<a href="#">
-												Es el retiro definitivo o temporal que se hace de una publicación o documento de una
-												colección determinada. Existiendo dos clases de descarte,que son: parcial (cuando el retiro se
-												efectúa y el documento se traslada o relega a un depósito para supuestas consultas
-												posteriores) y total (cuando él o los documentos se retiran definitivamente de la biblioteca o
-												unidad de información).
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Donación</a>
-									<ul>
-										<li>
-											<a href="#">
-												En relación a la bibliotecología se puede definir el término donación como “la oferta de
-												materiales o dinero para acrecentar la colección de la unidad de información” . La
-												La donación de todo tipo de material de información es fundamental para el desarrollo de la
-												colección, de cualquier tipo de institución. La donación de fondos personales se los puede
-												denominar cómo aquellos legados por particulares a una unidad de información, constituidos
-												por diferentes tipos de materiales y formatos –que pueden ser de archivo, museo y bibliotecacon el objeto de acrecentar la colección de la misma.													
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Evaluación de Colecciones</a>
-									<ul>
-										<li>
-											<a href="#">
-												Determina en qué medida las colecciones responden
-												satisfactoriamente a las necesidades de los usuarios por medio de procesos que permiten
-												obtener información confiable en materia de recursos informativos disponibles y necesarios en
-												conformidad con la satisfacción y necesidad de los usuarios
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Expurgo</a>
-									<ul>
-										<li>
-											<a href="#">
-												El expurgo en la biblioteca es un manual que analiza detenidamente el proceso de expurgo o de
-												revisión de las colecciones proponiendo una metodología de trabajo, que incluye la reflexión
-												previa sobre las colecciones, los motivos del expurgo y el objetivo que se desea conseguir; un
-												modelo de proceso técnico experimentado ya en bibliotecas francesas; y la evaluación de los
-												resultados obtenidos.
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Expurgo</a>
-									<ul>
-										<li>
-											<a href="#">
-												Supresión de determinados fondos de la biblioteca, ya sea momentánea o
-												definitivamente, con el fin de dar mayor operatividad y eficacia a la gestión de la colección,
-												ajustándose a las necesidades reales de los usuarios.		
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Lista de chequeo</a>
-									<ul>
-										<li>
-											<a href="#">
-												Es una herramienta usada para verificar el cumplimiento de la normatividad,
-												políticas generales e institucionales en el proceso bibliotecario. Esto con el fin de determinar si
-												la gestión es realizada adecuadamente, a través de los soportes y afirmaciones hechas por un
-												auditor.
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Métodos Cualitativos</a>
-									<ul>
-										<li>
-											<a href="#">
-												Son metodologías científico de observación para recopilar datos no
-												numéricos usados para evaluar a los usuarios de la información. Estas se fundamentan en la
-												realización de estudios (entrevistas, encuestas, grupos de discusión o técnicas de observación)
-												que registren, interpreten y describan las palabras de los usuarios, donde se requiere la
-												descripción narrativa de sus palabras: necesidades, inquietudes, comportamientos,
-												satisfacciones y transformaciones cognitivas (utilización) con relación a la información.
-												
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Métodos Cuantitativos</a>
-									<ul>
-										<li>
-											<a href="#">
-												Estos son evaluaciones donde se evalúa los procesos y servicios que
-												ofrecen las bibliotecas a partir de estadísticas de uso con el fin de encontrar nuevas amenazas
-												oportunidades debilidades y fortalezas para mejorar todos los mecanismos del trabajo.
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Misión</a>
-									<ul>
-										<li>
-											<a href="#">
-												Describe el motivo o la razón de ser de una institución bibliotecaria. Se enfoca en los
-												objetivos a cumplir en el presente, así como lo que se plantea cumplir en el mediano y largo
-												plazo. Debe estar definida de manera precisa y concreta para guiar al grupo de trabajo en el día
-												a día. Se compone de un conjunto de objetivos generales y algunos principios de trabajo en la
-												organización.
-												
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">REPOSICIÓN</a>
-									<ul>
-										<li>
-											<a href="#">
-												El usuario que pierda material bibliográfico u otro recurso, será suspendido de todos los
-												servicios de la Biblioteca hasta la reposición de la pérdida o, el pago de su valor actual.
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Selección</a>
-									<ul>
-										<li>
-											<a href="#">
-												es el proceso por el cual se decide qué documentos deben añadirse a la colección
-												de una biblioteca, cometido que, en la actualidad, ha cobrado más importancia que nunca,
-												debido a la enorme producción bibliográfica existente y al aumento y diversificación de las
-												demandas por parte de los usuarios.					
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Usuario de la información</a>
-									<ul>
-										<li>
-											<a href="#">
-												Es la persona que mediante el uso de los instrumentos de
-												información complementa y desarrolla su conocimiento de acuerdo a sus intereses, esta
-												persona no solamente se encarga de consumir la información sino que brinda y reproduce la
-												información aprendida
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li><a href="#">Visión</a>
-									<ul>
-										<li>
-											<a href="#">
-												La visión de la Biblioteca de Administración Pública es ser el centro de información e
-												investigación en la disciplina donde estudiantes, facultad e investigadores tengan acceso a los
-												recursos informativos utilizando las herramientas tecnológicas más avanzadas; así como
-												fomentar en el estudiantado el desarrollo de competencias de información.									
-											</a>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</nav>
-						<!-- VIDEO EMBEBIDO -->
-						<div class="medida-video">
-							<span></span>
-							<nav>
-								<video class="video_background" src="images/cedrick-pilato-terpsichore.mp4" width=650  height=470 controls poster="images/guitarra.jpg">
-									Lo sentimos. Este vídeo no puede ser reproducido en tu navegador.<br>
-									La versión descargable está disponible en <a href="URL">Enlace</a>. 
-								</video>
+				<div class="container-fluid">
+					<div class="row" style="margin-left: -30px">
+						<div class="col-sm-2 terms">
+							<!-- MENU LATERAL -->	
+							<nav class="vertical">
+								<ul>
+									<li><a href="#">Acervo Bibliográfico</a>
+										<ul>
+											<li>
+												<a href="#">
+													colección bibliohemerográfica de una biblioteca determinada, que puede
+													estar compuesta por libros, revistas y diarios, material digital y tridimensional, entre otros.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Adquisición</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el proceso administrativo por el cual se asegura la disposición de material seleccionado,
+													determinado por las condiciones administrativas de gestión de cada biblioteca, exigiendo la
+													correcta distribución de los recursos disponibles para lograr la mayor cobertura de la lista
+													seleccionada.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Canje</a>
+										<ul>
+											<li>
+												<a href="#">
+													Procedimiento de adquisición que puede utilizar cualquier biblioteca para obtener libros o
+													publicaciones periódicas de otras bibliotecas, instituciones u organizaciones, mediante el
+													intercambio de sus propias publicaciones u otros materiales bibliográficos. Es el procedimiento
+													de adquisición de publicaciones por el que bibliotecas u otras instituciones intercambian
+													materiales bibliográficos.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Colecciones Bibliográficas</a>
+										<ul>
+											<li>
+												<a href="#">
+													La colección o fondo bibliográfico es el conjunto de materiales bibliotecarios que la biblioteca
+													pone a disposición de los usuarios. La formación y desarrollo de la colección es imprescindible
+													para los usuarios Estos se agrupan bajo determinados criterios como el género, tema o formato
+													que responden a una clasificación temática propia e idéntica en todas las bibliotecas.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Compra</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es la forma de adquisición por excelencia de las bibliotecas y requiere un gran
+													conocimiento de las editoriales, distribuidores y libreros del panorama nacional y extranjero.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Depósito legal</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es una institución que permite recoger ejemplares de todas las publicaciones (de
+													cualquier tipo y soporte) con el fin de preservar el patrimonio bibliográfico, sonoro, visual,
+													audiovisual y digital y permitir el acceso al mismo con fines culturales, de investigación o de
+													información.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Desarrollo de colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es un proceso el cual establece políticas por medio de la inclusión
+													de todos los usuarios, docentes, estudiantes, bibliotecarios, administrativos etc… Para la
+													selección, preservación, mantenimiento, adquisición y evaluación de todos los recursos dentro
+													de las unidades de la información.		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Descarte</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el retiro definitivo o temporal que se hace de una publicación o documento de una
+													colección determinada. Existiendo dos clases de descarte,que son: parcial (cuando el retiro se
+													efectúa y el documento se traslada o relega a un depósito para supuestas consultas
+													posteriores) y total (cuando él o los documentos se retiran definitivamente de la biblioteca o
+													unidad de información).
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Donación</a>
+										<ul>
+											<li>
+												<a href="#">
+													En relación a la bibliotecología se puede definir el término donación como “la oferta de
+													materiales o dinero para acrecentar la colección de la unidad de información” . La
+													La donación de todo tipo de material de información es fundamental para el desarrollo de la
+													colección, de cualquier tipo de institución. La donación de fondos personales se los puede
+													denominar cómo aquellos legados por particulares a una unidad de información, constituidos
+													por diferentes tipos de materiales y formatos –que pueden ser de archivo, museo y bibliotecacon el objeto de acrecentar la colección de la misma.													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Evaluación de Colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Determina en qué medida las colecciones responden
+													satisfactoriamente a las necesidades de los usuarios por medio de procesos que permiten
+													obtener información confiable en materia de recursos informativos disponibles y necesarios en
+													conformidad con la satisfacción y necesidad de los usuarios
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Expurgo</a>
+										<ul>
+											<li>
+												<a href="#">
+													El expurgo en la biblioteca es un manual que analiza detenidamente el proceso de expurgo o de
+													revisión de las colecciones proponiendo una metodología de trabajo, que incluye la reflexión
+													previa sobre las colecciones, los motivos del expurgo y el objetivo que se desea conseguir; un
+													modelo de proceso técnico experimentado ya en bibliotecas francesas; y la evaluación de los
+													resultados obtenidos.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Expurgo</a>
+										<ul>
+											<li>
+												<a href="#">
+													Supresión de determinados fondos de la biblioteca, ya sea momentánea o
+													definitivamente, con el fin de dar mayor operatividad y eficacia a la gestión de la colección,
+													ajustándose a las necesidades reales de los usuarios.		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Lista de chequeo</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es una herramienta usada para verificar el cumplimiento de la normatividad,
+													políticas generales e institucionales en el proceso bibliotecario. Esto con el fin de determinar si
+													la gestión es realizada adecuadamente, a través de los soportes y afirmaciones hechas por un
+													auditor.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Métodos Cualitativos</a>
+										<ul>
+											<li>
+												<a href="#">
+													Son metodologías científico de observación para recopilar datos no
+													numéricos usados para evaluar a los usuarios de la información. Estas se fundamentan en la
+													realización de estudios (entrevistas, encuestas, grupos de discusión o técnicas de observación)
+													que registren, interpreten y describan las palabras de los usuarios, donde se requiere la
+													descripción narrativa de sus palabras: necesidades, inquietudes, comportamientos,
+													satisfacciones y transformaciones cognitivas (utilización) con relación a la información.
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Métodos Cuantitativos</a>
+										<ul>
+											<li>
+												<a href="#">
+													Estos son evaluaciones donde se evalúa los procesos y servicios que
+													ofrecen las bibliotecas a partir de estadísticas de uso con el fin de encontrar nuevas amenazas
+													oportunidades debilidades y fortalezas para mejorar todos los mecanismos del trabajo.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Misión</a>
+										<ul>
+											<li>
+												<a href="#">
+													Describe el motivo o la razón de ser de una institución bibliotecaria. Se enfoca en los
+													objetivos a cumplir en el presente, así como lo que se plantea cumplir en el mediano y largo
+													plazo. Debe estar definida de manera precisa y concreta para guiar al grupo de trabajo en el día
+													a día. Se compone de un conjunto de objetivos generales y algunos principios de trabajo en la
+													organización.
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">REPOSICIÓN</a>
+										<ul>
+											<li>
+												<a href="#">
+													El usuario que pierda material bibliográfico u otro recurso, será suspendido de todos los
+													servicios de la Biblioteca hasta la reposición de la pérdida o, el pago de su valor actual.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Selección</a>
+										<ul>
+											<li>
+												<a href="#">
+													es el proceso por el cual se decide qué documentos deben añadirse a la colección
+													de una biblioteca, cometido que, en la actualidad, ha cobrado más importancia que nunca,
+													debido a la enorme producción bibliográfica existente y al aumento y diversificación de las
+													demandas por parte de los usuarios.					
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Usuario de la información</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es la persona que mediante el uso de los instrumentos de
+													información complementa y desarrolla su conocimiento de acuerdo a sus intereses, esta
+													persona no solamente se encarga de consumir la información sino que brinda y reproduce la
+													información aprendida
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Visión</a>
+										<ul>
+											<li>
+												<a href="#">
+													La visión de la Biblioteca de Administración Pública es ser el centro de información e
+													investigación en la disciplina donde estudiantes, facultad e investigadores tengan acceso a los
+													recursos informativos utilizando las herramientas tecnológicas más avanzadas; así como
+													fomentar en el estudiantado el desarrollo de competencias de información.									
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
 							</nav>
-						</div>	
+							<!-- VIDEO EMBEBIDO -->
+							<div class="medida-video">
+								<span></span>
+								<nav>
+									<video class="video_background" src="images/cedrick-pilato-terpsichore.mp4" width=650  height=470 controls poster="images/guitarra.jpg">
+										Lo sentimos. Este vídeo no puede ser reproducido en tu navegador.<br>
+										La versión descargable está disponible en <a href="URL">Enlace</a>. 
+									</video>
+								</nav>
+							</div>	
+						</div>
 					</div>
 				</div>
-			</div>
+				
+			</div><!-- container //  -->
 			
-		</div><!-- container //  -->
+		</div>
 		
 		
 		
@@ -704,7 +745,7 @@
 		
 	</body>
 	
-	<footer class="footer">
+	<footer class="footer" style="background: #eee">
 		
 		<!-- Sector Empleo -->	
 		<div class="" style="margin-left:20px">
@@ -800,7 +841,7 @@
 			</div>
 			
 			<div>
-				<img src="images/footer.jpg">
+				<img src="images/FOOTER.jpg">
 			</div>
 		</footer>
-	</html>																			
+	</html>																					
