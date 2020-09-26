@@ -91,6 +91,8 @@
 				$("#mostrarmodal").modal("show");
 			});
 			
+			/*SCRIPT PARA DESILENCIAR EL AUDIO PRUEBA */
+			
 		</script>
 		
 		<style type="text/css">
@@ -230,7 +232,7 @@
 			border: 1px;
 			position: relative;
 			top: 50px;
-			left: 300px;
+			left: 700px;
 			bottom: 0px;
 			
 			}
@@ -351,9 +353,10 @@
 			<!--<div class="" style="background: #4800fe" id="cabecera">-->
 			
 			<!--El código del vídeo iría aquí-->
+			<!--<video id="video" loop autoplay preload muted>-->
 			<video id="video" loop autoplay preload muted>
-				<source src="images/codigo.webm" type='video/webm; codecs="vp8,vorbis"' />
-			</video>
+				<source src="images/BEATS_480p.webm" type='video/webm; codecs="vp8,vorbis"' />
+			</video>			
 			<div class="container" >
 				
 				<nav class="navbar navbar-expand-lg navbar-dark color-navbar">
@@ -701,16 +704,21 @@
 									</li>
 								</ul>
 							</nav>
-							<!-- VIDEO EMBEBIDO -->
-							<div class="medida-video">
+							<!-- VIDEO EMBEBIDO
+								<div class="medida-video">
 								<span></span>
 								<nav>
-									<video class="video_background" src="images/BEATS_480p.mp4" width=650  height=470 controls poster="images/IMAGENVIDEOGLOSARIO.jpg">
-										Lo sentimos. Este vídeo no puede ser reproducido en tu navegador.<br>
-										La versión descargable está disponible en <a href="URL">Enlace</a>. 
-									</video>
+								<video class="video_background" src="images/BEATS_480p.mp4" width=650  height=470 controls muted autoplay poster="images/IMAGENVIDEOGLOSARIO.jpg">
+								Lo sentimos. Este vídeo no puede ser reproducido en tu navegador.<br>
+								La versión descargable está disponible en <a href="URL">Enlace</a>. 
+								</video>
 								</nav>
-							</div>	
+							</div> -->
+							<div class="medida-video">
+								<audio autoplay loop controls src="images/BEATS_480p.mp4">	
+									<p>Tu navegador no implementa el elemento audio</p>
+								</audio>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -722,24 +730,24 @@
 		
 		
 		<!-- IMAGEN EMERGENTE -->
-		
-		<div class="modal fade" id="mostrarmodal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" align="center">
+			
+			<div class="modal fade" id="mostrarmodal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" align="center">
 			<br><br><br><br><br><br><br><br>
 			<img src="images/MODALSENA.jpeg">
 			<div class="">
-				
-				<div class="modal-dialog">
-					<div class="">
-						<h3></h3>
-						
-					</div>
-					<div class="modal-body">
-						
-					</div>
-					<div class="">
-						<a href="#" data-dismiss="modal" class="btn btn-danger">Cerrar</a>
-					</div>
-				</div>
+			
+			<div class="modal-dialog">
+			<div class="">
+			<h3></h3>
+			
+			</div>
+			<div class="modal-body">
+			
+			</div>
+			<div class="">
+			<a href="#" data-dismiss="modal" class="btn btn-danger">Cerrar</a>
+			</div>
+			</div>
 			</div>
 		</div>
 		
@@ -844,4 +852,4 @@
 				<img src="images/FOOTER.jpg">
 			</div>
 		</footer>
-	</html>																					
+	</html>																						
