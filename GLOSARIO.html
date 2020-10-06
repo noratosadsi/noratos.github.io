@@ -14,6 +14,7 @@
 			crossorigin="anonymous"></script>
 		-->
 		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+		<script src="js/buscador.js"></script>
 		<script src="vendor/bootstrap/js/popper.js"></script>
 		<script src="fonts/font-awesome-4.7.0/js/fontawesome.js"></script>
 		<!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) 
@@ -22,6 +23,12 @@
 		
 		<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/textobuscado.css">
+		<link rel="stylesheet" type="text/css" href="css/menulateral/menulateral2.css">
+		<link rel="stylesheet" type="text/css" href="css/menulateral/menulateral3.css">
+		<link rel="stylesheet" type="text/css" href="css/menulateral/menulateral4.css">
+		<link rel="stylesheet" type="text/css" href="css/menulateral/menulateral5.css">
+		<link rel="stylesheet" type="text/css" href="css/menulateral/menulateral6.css">
 		<!--	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/svg-with-js.css">
 			<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/svg-v4-shims.css">
 			<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/regular.css">
@@ -124,7 +131,7 @@
 			.dropdown-menu > li:hover > .submenu{
 			display: block;
 			width: 500px !important;
-       		height: 100px !important;			
+       		height: auto !important;			
 			}
 			
 			.dropdown-item > li:hover{
@@ -138,9 +145,7 @@
 			background: #fca036;
 			}
 			
-			
 			}
-			
 			
 			*{padding:0;margin:0;}
 			body{font:16px/1 sans-serif}
@@ -150,7 +155,9 @@
 			nav.vertical{
 			position:relative;
 			width:200px;
+			z-index:6;
 			}
+			
 			
 			/* ALL UL */
 			nav.vertical ul{
@@ -169,10 +176,12 @@
 			background:#fca036;
 			transition:0.2s;
 			/*width:160%;*/
+			border:#000 solid; border-width:1px;
 			}
 			/* ALL A HOVER */
 			nav.vertical li:hover > a{
-			background:#fca036;
+			background:#ffac42;
+			/*position:relative;*/
 			}
 			
 			/* INNER UL HIDE */
@@ -376,28 +385,45 @@
 							<li class="nav-item"><a class="nav-link" href="#"> About </a></li>-->
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown" style="color:#eee">  GLOSARIO  </a>
-								<!--<a class="nav-link dropdown-toggle" href="" data-toggle="dropdown">  GLOSARIO  </a>-->
-								<ul class="dropdown-menu">
-									<!--<li><a class="dropdown-item" href="#"> Dropdown item 1 </a></li>-->
-									<!--<li><a class="dropdown-item" href="#"> Acervo Bibliográfico &raquo </a>
-										<ul class="submenu dropdown-menu">
-										<li><a class="dropdown-item text-wrap" href="">colección bibliohemerográfica de una biblioteca determinada, que puede estar compuesta por libros, revistas y diarios, material digital y tridimensional, entre otros.
-										</a></li>
-										<li><a class="dropdown-item" href="">Submenu item 2</a></li>
-										<li><a class="dropdown-item" href="">Submenu item 3 &raquo </a>
-										<ul class="submenu dropdown-menu">
-										<li><a class="dropdown-item" href="">Multi level 1</a></li>
-										<li><a class="dropdown-item" href="">Multi level 2</a></li>
-										</ul>
-										</li>
-										<li><a class="dropdown-item" href="">Submenu item 4</a></li>
-										<li><a class="dropdown-item" href="">Submenu item 5</a></li>
-										</ul>
-										</li>
-										<li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
-									<li><a class="dropdown-item" href="#"> Dropdown item 4 </a>-->
-								</ul>
+								<!--<a class="nav-link dropdown-toggle" href="" data-toggle="dropdown">  A  </a>-->
+								<!-- EJEMPLO DE SUBMENU <ul class="dropdown-menu">
+									<li>
+									<a class="dropdown-item" href="#"> Acervo Bibliográfico &raquo </a>
+									<ul class="submenu dropdown-menu">
+									<li>
+									<a class="dropdown-item text-wrap" href="">
+									Colección bibliohemerográfica de una biblioteca determinada, que puede estar compuesta por libros, revistas y diarios, material digital y tridimensional, entre otros.
+									</a>
+									</li>
+									</ul>
+									</li>
+									<li>
+									<a class="dropdown-item" href="#"> Adquisición &raquo </a>
+									<ul class="submenu dropdown-menu">
+									<li>
+									<a class="dropdown-item text-wrap" href="">
+									Es el proceso administrativo por el cual se asegura la disposición de material seleccionado,
+									determinado por las condiciones administrativas de gestión de cada biblioteca, exigiendo la
+									correcta distribución de los recursos disponibles para lograr la mayor cobertura de la lista
+									seleccionada.
+									</a>
+									</li>
+									</ul>
+									</li>
+								</ul>-->
+								
+								
+								
+								
+								
+								
 							</li>
+							<!--<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="" data-toggle="dropdown">  C  </a>
+								
+							</li>-->
+							
+							
 							<!--<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  More items  </a>
 								<ul class="dropdown-menu">
@@ -431,10 +457,14 @@
 							</li>-->
 						</ul>
 						
-						<!--<ul class="navbar-nav ml-auto">
-							<li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
-							<li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
-							<li class="nav-item dropdown">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<input id="js-buscador" type="text" class="form-control"/>
+							</li>
+							<li class="nav-item">
+								<input type="submit" id="js-submitBuscar" class="form-control"/>
+							</li>
+							<!--<li class="nav-item dropdown">
 							<a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> Dropdown right </a>
 							<ul class="dropdown-menu dropdown-menu-right">
 							<li><a class="dropdown-item" href="#"> Dropdown item 1</a></li>
@@ -449,26 +479,27 @@
 							</li>
 							<li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
 							</ul>
-							</li>
+							</li>-->
 							
-						</ul>-->
+						</ul>
 						
 					</div> <!-- navbar-collapse.// -->
 					
 				</nav>
 				
 				<div class="container-fluid">
-					<div class="row" style="margin-left: -30px">
+					<div class="row" style="margin-left: -30px;" id="js-main">
 						<div class="col-sm-2 terms">
 							<!-- MENU LATERAL -->	
 							<nav class="vertical">
 								<ul>
+									<li><a href="#">A-C</a>
+									</li>
 									<li><a href="#">Acervo Bibliográfico</a>
 										<ul>
 											<li>
 												<a href="#">
-													Colección bibliohemerográfica de una biblioteca determinada, que puede
-													estar compuesta por libros, revistas y diarios, material digital y tridimensional, entre otros.
+													Colección bibliohemerográfica de una biblioteca determinada, que puede estar compuesta por libros, revistas y diarios, material digital y tridimensional, entre otros.
 												</a>
 											</li>
 										</ul>
@@ -509,7 +540,7 @@
 												</a>
 											</li>
 										</ul>
-									</li>	
+									</li>
 									<li><a href="#">Colección de Referencia</a>
 										<ul>
 											<li>
@@ -540,7 +571,30 @@
 												</a>
 											</li>
 										</ul>
-									</li>	
+									</li>
+								</ul>
+							</nav>
+							<!-- VIDEO EMBEBIDO
+								<div class="medida-video">
+								<span></span>
+								<nav>
+								<video class="video_background" src="images/BEATS_480p.mp4" width=650  height=470 controls muted autoplay poster="images/IMAGENVIDEOGLOSARIO.jpg">
+								Lo sentimos. Este vídeo no puede ser reproducido en tu navegador.<br>
+								La versión descargable está disponible en <a href="URL">Enlace</a>. 
+								</video>
+								</nav>
+							</div> -->
+							<div class="medida-video">
+								<audio autoplay loop controls src="images/BEATS_480p.mp4">	
+									<p>Tu navegador no implementa el elemento audio</p>
+								</audio>
+							</div>
+							
+							<!-- MENU LATERAL 2-->	
+							<nav class="vertical1 terms" style="margin-left: -300px;">
+								<ul>
+									<li><a href="#">D-E</a>
+									</li>
 									<li><a href="#">Depósito legal</a>
 										<ul>
 											<li>
@@ -628,6 +682,14 @@
 											</li>
 										</ul>
 									</li>
+								</ul>
+							</nav><!-- FIN DE LA COLUMNA 2 -->
+							
+							<!-- MENU LATERAL 3-->	
+							<nav class="vertical2 terms" style="margin-left: 0px;">
+								<ul>
+									<li><a href="#">H-L</a>
+									</li>
 									<li><a href="#">Hemeroteca</a>
 										<ul>
 											<li>
@@ -649,6 +711,14 @@
 											</li>
 										</ul>
 									</li>
+								</ul>
+							</nav>
+							
+							<!-- MENU LATERAL 4-->	
+							<nav class="vertical3 terms" style="margin-left: 0px;">
+								<ul>
+									<li><a href="#">M-P</a>
+									</li>			
 									<li><a href="#">Mantenimiento de colecciones</a>
 										<ul>
 											<li>
@@ -728,6 +798,14 @@
 											</li>
 										</ul>
 									</li>
+								</ul>
+							</nav> <!--fin del menulateral4-->
+							
+							<!-- MENU LATERAL 5 -->	
+							<nav class="vertical4">
+								<ul>
+									<li><a href="#">R-S</a>
+									</li>
 									<li><a href="#">Reposición</a>
 										<ul>
 											<li>
@@ -759,6 +837,14 @@
 											</li>
 										</ul>
 									</li>
+								</ul>
+							</nav> <!-- fin del menu lateral 5-->
+							
+							<!-- MENU LATERAL 6 -->	
+							<nav class="vertical5">
+								<ul>
+									<li><a href="#">U-V</a>
+									</li>
 									<li><a href="#">Usuario de la información</a>
 										<ul>
 											<li>
@@ -784,24 +870,17 @@
 										</ul>
 									</li>
 								</ul>
-							</nav>
-							<!-- VIDEO EMBEBIDO
-								<div class="medida-video">
-								<span></span>
-								<nav>
-								<video class="video_background" src="images/BEATS_480p.mp4" width=650  height=470 controls muted autoplay poster="images/IMAGENVIDEOGLOSARIO.jpg">
-								Lo sentimos. Este vídeo no puede ser reproducido en tu navegador.<br>
-								La versión descargable está disponible en <a href="URL">Enlace</a>. 
-								</video>
-								</nav>
-							</div> -->
-							<div class="medida-video">
-								<audio autoplay loop controls src="images/BEATS_480p.mp4">	
-									<p>Tu navegador no implementa el elemento audio</p>
-								</audio>
-							</div>
+							</nav> <!-- fin del menu lateral 5-->
+							
+							
+							
 						</div>
-					</div>
+						
+					</div><!-- DIV DE FILA DE LAS COLUMNAS -->
+					
+					
+					
+					
 				</div>
 				
 			</div><!-- container //  -->
@@ -932,4 +1011,4 @@
 				<img src="images/FOOTER.jpg">
 			</div>
 		</footer>
-	</html>																														
+	</html>																																																																																																				

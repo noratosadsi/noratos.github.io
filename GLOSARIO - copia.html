@@ -1,0 +1,1886 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<link rel="shortcut icon" href="https://www.sena.edu.co/SiteCollectionImages/favicon.ico" type="image/vnd.microsoft.icon" id="favicon">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="keywords" content="htmlcss bootstrap menu, navbar, mega menu examples" />
+		<meta name="description" content="Navigation  menu with submenu examples for any type of project, Bootstrap 4" />  
+		
+		<!--<title>Demo - Bootstrap multilevel navbar responsive. html code example </title>-->
+		
+		<!-- jQuery 
+			<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			crossorigin="anonymous"></script>
+		-->
+		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+		<script src="vendor/bootstrap/js/popper.js"></script>
+		<script src="fonts/font-awesome-4.7.0/js/fontawesome.js"></script>
+		<!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) 
+			<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>-->
+		
+		<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/menulateral/menulateral2.css">
+		<link rel="stylesheet" type="text/css" href="css/menulateral/menulateral3.css">
+		<link rel="stylesheet" type="text/css" href="css/menulateral/menulateral4.css">
+		<!--	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/svg-with-js.css">
+			<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/svg-v4-shims.css">
+			<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/regular.css">
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/brands.css">-->
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		
+		<!--
+			<link href="bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+			<script src="bootstrap.min.js"></script>
+			<script src="jquery-1.11.1.min.js"></script>
+			
+		<!------ Include the above in your HEAD tag ---------->
+		
+		<!--<link href="estilos css.css" rel="stylesheet" >
+		<script src="funcionalidad javascript.js"></script>-->
+		
+		<script type="text/javascript">
+			/// some script
+			
+			// jquery ready start
+			$(document).ready(function() {
+				// jQuery code
+				
+				//////////////////////// Prevent closing from click inside dropdown
+				$(document).on('click', '.dropdown-menu', function (e) {
+					e.stopPropagation();
+				});
+				
+				// make it as accordion for smaller screens
+				if ($(window).width() < 992) {
+					$('.dropdown-menu a').click(function(e){
+						e.preventDefault();
+						if($(this).next('.submenu').length){
+							$(this).next('.submenu').toggle();
+						}
+						$('.dropdown').on('hide.bs.dropdown', function () {
+							$(this).find('.submenu').hide();
+						})
+					});
+				}
+				
+			}); // jquery end
+			
+			
+			
+			/*JAVASCRIPT MENU LATERAL*/
+			//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+			var dropdown = document.getElementsByClassName("dropdown-btn");
+			var i;
+			
+			for (i = 0; i < dropdown.length; i++) {
+				dropdown[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					var dropdownContent = this.nextElementSibling;
+					if (dropdownContent.style.display === "block") {
+						dropdownContent.style.display = "none";
+						} else {
+						dropdownContent.style.display = "block";
+					}
+				});
+			}
+			
+			/*ABRIR IMAGEN EMERGENTE*/
+			
+			$(document).ready(function()
+			{
+				$("#mostrarmodal").modal("show");
+			});
+			
+			/*SCRIPT PARA DESILENCIAR EL AUDIO PRUEBA */
+			
+		</script>
+		
+		<style type="text/css">
+			@media (min-width: 992px){
+			.dropdown-menu .dropdown-toggle:after{
+			border-top: .3em solid transparent;
+		    border-right: 0;
+		    border-bottom: .3em solid transparent;
+		    border-left: .3em solid;
+			}
+			
+			.dropdown-menu .dropdown-menu{
+			margin-left:0; margin-right: 0;
+			}
+			
+			.dropdown-menu li{
+			position: relative;
+			}
+			.nav-item .submenu{ 
+			display: none;
+			position: absolute;
+			left:100%; top:-7px;	
+			}
+			.nav-item .submenu-left{ 
+			right:100%; left:auto;
+			}
+			
+			.dropdown-menu > li:hover{background-color: #f1f1f1}
+			.dropdown-menu > li:hover > .submenu{
+			display: block;
+			width: 500px !important;
+       		height: auto !important;			
+			}
+			
+			.dropdown-item > li:hover{
+			background-color: #47FFFC;
+			}
+			
+			.text-wrap{
+			white-space: normal !important;
+			}
+			.color-navbar{
+			background: #fca036;
+			}
+			
+			
+			}
+			
+			
+			*{padding:0;margin:0;}
+			body{font:16px/1 sans-serif}
+			
+			
+			/*VERTICAL MENU*/
+			nav.vertical{
+			position:relative;
+			width:200px;
+			z-index:3;
+			}
+			
+			
+			/* ALL UL */
+			nav.vertical ul{
+			list-style: none;
+			}
+			/* ALL LI */
+			nav.vertical li{
+			position:relative;
+			}
+			/* ALL A */
+			nav.vertical a{
+			display:block;
+			color:#eee;
+			text-decoration:none;
+			padding:10px 15px;
+			background:#fca036;
+			transition:0.2s;
+			/*width:160%;*/
+			border:#000 solid; border-width:1px;
+			}
+			/* ALL A HOVER */
+			nav.vertical li:hover > a{
+			background:#fca036;
+			/*position:relative;*/
+			}
+			
+			/* INNER UL HIDE */
+			nav.vertical ul ul{
+			position:absolute;
+			left:0%;
+			top:0;
+			width:220%;
+			visibility:hidden;
+			opacity:0;
+			transition: transform 0.2s;
+			transform: translateX(50px);
+			}
+			/* INNER UL SHOW */
+			nav.vertical li:hover > ul{
+			left:100%;
+			visibility:visible;
+			opacity:1;
+			transform: translateX(0px);
+			}
+			
+			/*VIDEO*/
+			
+			.video-background {
+			height: 100%;
+			position: fixed;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			text-align:left;	
+			float:right;
+			}
+			
+			/*IMAGEN EMERGENTE
+			
+			.modal-body {
+			background-image: url("images/MODALSENA.jpeg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 400px;
+			}*/
+			
+			/*COLOCAR DOS ELEMENTOS EN UNA MISMA FILA*/
+			
+			.terms {
+			display: flex;
+			margin: 10;
+			}
+			
+			.terms > p {
+			margin: 0;
+			}
+			
+			.medida-video {
+			/*margin: 100px;
+			padding: 200px;*/
+			border: 1px;
+			position: relative;
+			top: 50px;
+			left: 700px;
+			bottom: 0px;
+			
+			}
+			
+			/* IMAGENES PARTE DE ABAJO DE LA PAGINA */
+			
+			nav.mainNav {
+			display: inline-block;
+			margin: 20px;
+			padding: 20px;
+			vertical-align: top;
+			/*border-top: 1px solid #4800ff;*/
+			border-top: 1px solid red;
+			}
+			
+			nav.mainNav.flexbox {
+			/* BROWSER DEFINITION */
+			display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+			display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+			display: -ms-flexbox; /* TWEENER - IE 10 */
+			display: -webkit-flex; /* NEW - Chrome */
+			
+			/* W3C DEFINITION */
+			display: flex;
+			display: inline-flex;
+			}
+			
+			nav.mainNav > .navItem {
+			display: inline-block;
+			padding: 20px;
+			/*background: #4800ff;*/
+			color: #fff;
+			}
+			
+			/*AJUSTE Y COLOR DE LA PARTE DE ABAJO DE LA PAGINA DONDE ESTA TODA LA INFORMACION DE COLOR ANARANJADO*/
+			.clear{
+			background-color: #ff6b00;
+			z-index: 600;
+			color: #fff;
+			font-family: calibri, sans-serif;
+			display: block;
+			clear: both;
+			/*margin-top: -50px;*/
+			}
+			nav.mainNav1 {
+			display: inline-block;
+			margin: 20px;
+			padding: 20px;
+			vertical-align: top;
+			}	
+			
+			nav.mainNav1.flexbox {
+			/* BROWSER DEFINITION */
+			display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+			display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+			display: -ms-flexbox; /* TWEENER - IE 10 */
+			display: -webkit-flex; /* NEW - Chrome */
+			
+			/* W3C DEFINITION */
+			display: flex;
+			display: inline-flex;
+			}
+			
+			nav.mainNav1 > .navItem {
+			display: inline-block;
+			padding: 20px;
+			/*background: #4800ff;*/
+			color: #fff;
+			}
+			
+			/* ESTILO PARA EL VIDEO DE FONDO */
+			
+			#cabecera{
+			width: 100%;
+			height: 500%;
+			}
+			#video {
+			
+			/*position: absolute; right: 0; bottom: 0;
+			
+			min-width: 100%; min-height: 100%;
+			
+			width: auto; height: auto; z-index: -100;
+			*/
+			
+			
+			position: absolute;
+			left: 0;
+			top: 120px;
+			width: 100%;
+			height: 110%;
+			z-index: -10;
+			visibility: visible;
+			
+			}
+			h2{
+			color:white;
+			text-shadow: 4px 4px 4px #333;
+			text-align: center;
+			margin-top: 200px;
+			}
+		</style>
+	</head>
+	<body class="bg-light" style="background: #eee">
+		<!--<header class="section-header py-4" style="background: #4800ff">-->
+		<header class="section-header py-4" style="background: #eee">
+			<div class="container">
+				<!--<h2></h2>-->
+				<div class="">
+					<a href="" title="SENA" style="text-decoration:none">
+					<img class="" src="images/SENASOFIA.png" alt="Logo SENA" title="Logo SENA" width="350" height="70">&nbsp;</a>
+					<img src="images/Logo-Mintrabajo-s72.png" alt="Gobierno de Colombia" style="margin-left: 35%;max-width: 50%;" title="Gobierno de Colombia">	
+				</div>
+			</div>
+		</header> <!-- section-header.// -->	
+		<!-- ========================= SECTION CONTENT ========================= -->
+		<div class="" id="cabecera">
+			<!--<div class="" style="background: #4800fe" id="cabecera">-->
+			
+			<!--El código del vídeo iría aquí-->
+			<!--<video id="video" loop autoplay preload muted>
+				<video id="video" loop autoplay preload muted>
+				<source src="images/BEATS_480p.webm" type='video/webm; codecs="vp8,vorbis"' />
+			</video>-->
+			
+			<img src="images/INSTRUCTORA.jpg" id="video">
+			
+			<div class="container" >
+				
+				<nav class="navbar navbar-expand-lg navbar-dark color-navbar">
+					<!--<nav class="nav nav-pills nav-stacked navbar-dark bg-primary">-->
+					
+					<!--<a class="navbar-brand" href="#">Brand</a>-->
+					<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+						<span class="navbar-toggler-icon"></span>
+					</button>-->
+					<div class="collapse navbar-collapse" id="main_nav">
+						
+						<ul class="navbar-nav">
+							<!--<li class="nav-item active"> <a class="nav-link" href="#">Home </a> </li>
+							<li class="nav-item"><a class="nav-link" href="#"> About </a></li>-->
+							<li class="nav-item dropdown">
+								<!--<a class="nav-link dropdown" style="color:#eee">  GLOSARIO  </a>-->
+								<a class="nav-link dropdown-toggle" href="" data-toggle="dropdown">  A  </a>
+								<!-- EJEMPLO DE SUBMENU <ul class="dropdown-menu">
+									<li>
+									<a class="dropdown-item" href="#"> Acervo Bibliográfico &raquo </a>
+									<ul class="submenu dropdown-menu">
+									<li>
+									<a class="dropdown-item text-wrap" href="">
+									Colección bibliohemerográfica de una biblioteca determinada, que puede estar compuesta por libros, revistas y diarios, material digital y tridimensional, entre otros.
+									</a>
+									</li>
+									</ul>
+									</li>
+									<li>
+									<a class="dropdown-item" href="#"> Adquisición &raquo </a>
+									<ul class="submenu dropdown-menu">
+									<li>
+									<a class="dropdown-item text-wrap" href="">
+									Es el proceso administrativo por el cual se asegura la disposición de material seleccionado,
+									determinado por las condiciones administrativas de gestión de cada biblioteca, exigiendo la
+									correcta distribución de los recursos disponibles para lograr la mayor cobertura de la lista
+									seleccionada.
+									</a>
+									</li>
+									</ul>
+									</li>
+								</ul>-->
+								
+								
+								
+								
+								
+								
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="" data-toggle="dropdown">  C  </a>
+								
+							</li>
+							
+							
+							<!--<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  More items  </a>
+								<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#"> Dropdown item 1 </a></li>
+								<li><a class="dropdown-item dropdown-toggle" href="#"> Dropdown item 2 </a>
+								<ul class="submenu dropdown-menu">
+								<li><a class="dropdown-item" href="">Submenu item 1</a></li>
+								<li><a class="dropdown-item" href="">Submenu item 2</a></li>
+								<li><a class="dropdown-item" href="">Submenu item 3</a></li>
+								</ul>
+								</li>
+								<li><a class="dropdown-item dropdown-toggle" href="#"> Dropdown item 3 </a>
+								<ul class="submenu dropdown-menu">
+								<li><a class="dropdown-item" href="">Another submenu 1</a></li>
+								<li><a class="dropdown-item" href="">Another submenu 2</a></li>
+								<li><a class="dropdown-item" href="">Another submenu 3</a></li>
+								<li><a class="dropdown-item" href="">Another submenu 4</a></li>
+								</ul>
+								</li>
+								<li><a class="dropdown-item dropdown-toggle" href="#"> Dropdown item 4 </a>
+								<ul class="submenu dropdown-menu">
+								<li><a class="dropdown-item" href="">Another submenu 1</a></li>
+								<li><a class="dropdown-item" href="">Another submenu 2</a></li>
+								<li><a class="dropdown-item" href="">Another submenu 3</a></li>
+								<li><a class="dropdown-item" href="">Another submenu 4</a></li>
+								</ul>
+								</li>
+								<li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
+								<li><a class="dropdown-item" href="#"> Dropdown item 5 </a></li>
+								</ul>
+							</li>-->
+						</ul>
+						
+						<!--<ul class="navbar-nav ml-auto">
+							<li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
+							<li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
+							<li class="nav-item dropdown">
+							<a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> Dropdown right </a>
+							<ul class="dropdown-menu dropdown-menu-right">
+							<li><a class="dropdown-item" href="#"> Dropdown item 1</a></li>
+							<li><a class="dropdown-item" href="#"> Dropdown item 2 </a></li>
+							<li><a class="dropdown-item dropdown-toggle" href="#"> Dropdown item 3 </a>
+							<ul class="submenu submenu-left dropdown-menu">
+							<li><a class="dropdown-item" href="">Submenu item 1</a></li>
+							<li><a class="dropdown-item" href="">Submenu item 2</a></li>
+							<li><a class="dropdown-item" href="">Submenu item 3</a></li>
+							<li><a class="dropdown-item" href="">Submenu item 4</a></li>
+							</ul>
+							</li>
+							<li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
+							</ul>
+							</li>
+							
+						</ul>-->
+						
+					</div> <!-- navbar-collapse.// -->
+					
+				</nav>
+				
+				<div class="container-fluid">
+					<div class="row" style="margin-left: -30px;">
+						<div class="col-sm-2 terms">
+							<!-- MENU LATERAL -->	
+							<nav class="vertical">
+								<ul>
+									<li><a href="#">Acervo Bibliográfico</a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>	
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>	
+									<li><a href="#">Depósito legal</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es una institución que permite recoger ejemplares de todas las publicaciones (de
+													cualquier tipo y soporte) con el fin de preservar el patrimonio bibliográfico, sonoro, visual,
+													audiovisual y digital y permitir el acceso al mismo con fines culturales, de investigación o de
+													información.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Desarrollo de colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es un proceso el cual establece políticas por medio de la inclusión
+													de todos los usuarios, docentes, estudiantes, bibliotecarios, administrativos etc… Para la
+													selección, preservación, mantenimiento, adquisición y evaluación de todos los recursos dentro
+													de las unidades de la información.		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Descarte</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el retiro definitivo o temporal que se hace de una publicación o documento de una
+													colección determinada. Existiendo dos clases de descarte,que son: parcial (cuando el retiro se
+													efectúa y el documento se traslada o relega a un depósito para supuestas consultas
+													posteriores) y total (cuando él o los documentos se retiran definitivamente de la biblioteca o
+													unidad de información).
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Donación</a>
+										<ul>
+											<li>
+												<a href="#">
+													En relación a la bibliotecología se puede definir el término donación como “la oferta de
+													materiales o dinero para acrecentar la colección de la unidad de información” . La
+													La donación de todo tipo de material de información es fundamental para el desarrollo de la
+													colección, de cualquier tipo de institución. La donación de fondos personales se los puede
+													denominar cómo aquellos legados por particulares a una unidad de información, constituidos
+													por diferentes tipos de materiales y formatos –que pueden ser de archivo, museo y bibliotecacon el objeto de acrecentar la colección de la misma.													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Evaluación de Colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Determina en qué medida las colecciones responden
+													satisfactoriamente a las necesidades de los usuarios por medio de procesos que permiten
+													obtener información confiable en materia de recursos informativos disponibles y necesarios en
+													conformidad con la satisfacción y necesidad de los usuarios
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Expurgo</a>
+										<ul>
+											<li>
+												<a href="#">
+													El expurgo en la biblioteca es un manual que analiza detenidamente el proceso de expurgo o de
+													revisión de las colecciones proponiendo una metodología de trabajo, que incluye la reflexión
+													previa sobre las colecciones, los motivos del expurgo y el objetivo que se desea conseguir; un
+													modelo de proceso técnico experimentado ya en bibliotecas francesas; y la evaluación de los
+													resultados obtenidos.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Expurgo</a>
+										<ul>
+											<li>
+												<a href="#">
+													Supresión de determinados fondos de la biblioteca, ya sea momentánea o
+													definitivamente, con el fin de dar mayor operatividad y eficacia a la gestión de la colección,
+													ajustándose a las necesidades reales de los usuarios.		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Hemeroteca</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es un edificio, sala, o página web donde se guardan, ordenan, conservan y clasifican diarios, revistas y otras publicaciones periódicas de prensa escrita, archivados para su consulta. Generalmente, hace referencia a una biblioteca que se especializa en diarios y otras publicaciones periódicas. También se refiere a la colección o conjunto de diarios, revistas y otras publicaciones periodísticas en un documento específico..		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Lista de chequeo</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es una herramienta usada para verificar el cumplimiento de la normatividad,
+													políticas generales e institucionales en el proceso bibliotecario. Esto con el fin de determinar si
+													la gestión es realizada adecuadamente, a través de los soportes y afirmaciones hechas por un
+													auditor.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Mantenimiento de colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el conjunto de operaciones que se gestionan con la finalidad de preservar o prevenir el deterioro del material documental y bibliográfico. Si un material no está en óptimas condiciones no podrá ponerse a disposición del usuario.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Métodos Cualitativos</a>
+										<ul>
+											<li>
+												<a href="#">
+													Son metodologías científico de observación para recopilar datos no
+													numéricos usados para evaluar a los usuarios de la información. Estas se fundamentan en la
+													realización de estudios (entrevistas, encuestas, grupos de discusión o técnicas de observación)
+													que registren, interpreten y describan las palabras de los usuarios, donde se requiere la
+													descripción narrativa de sus palabras: necesidades, inquietudes, comportamientos,
+													satisfacciones y transformaciones cognitivas (utilización) con relación a la información.
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Métodos Cuantitativos</a>
+										<ul>
+											<li>
+												<a href="#">
+													Estos son evaluaciones donde se evalúa los procesos y servicios que
+													ofrecen las bibliotecas a partir de estadísticas de uso con el fin de encontrar nuevas amenazas
+													oportunidades debilidades y fortalezas para mejorar todos los mecanismos del trabajo.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Misión</a>
+										<ul>
+											<li>
+												<a href="#">
+													Describe el motivo o la razón de ser de una institución bibliotecaria. Se enfoca en los
+													objetivos a cumplir en el presente, así como lo que se plantea cumplir en el mediano y largo
+													plazo. Debe estar definida de manera precisa y concreta para guiar al grupo de trabajo en el día
+													a día. Se compone de un conjunto de objetivos generales y algunos principios de trabajo en la
+													organización.			
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Política Desarrollo de Colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el proceso que permite identificar las debilidades y fortalezas, tanto como las necesidades informativas-formativas del usuario, en la biblioteca, con el fin de garantizar un buen servicio a la comunidad.		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Proveedor</a>
+										<ul>
+											<li>
+												<a href="#">
+													<p>
+														Mediante la selección se decide qué documentos se incorporan a la colección de la biblioteca para conseguir que sea pertinente, coherente y suficiente. Este proceso va unido al de la adquisición y es ahí donde los proveedores aportan servicios de valor añadido tales como la catalogación, localización de libros agotados. 	
+													</p>		
+													
+													<p>
+														Como herramienta de apoyo, presentamos a ustedes direcciones de proveedores de diferentes insumos para las bibliotecas:
+													</p>
+													
+													<p>
+														Software para bibliotecas, librerías, editoriales, publicaciones periódicas, consumibles (papeleria), mobiliario y equipos.
+													</p>
+													<p>	
+														La selección de proveedores requiere un equilibrio entre la necesaria concentración para no dispersar las adquisiciones y la garantía de un buen servicio. La evaluación de proveedores es fundamental en la gestión de una colección y ha de realizarse con regularidad para valorar si los objetivos se han cumplido.
+													</p>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Reposición</a>
+										<ul>
+											<li>
+												<a href="#">
+													El usuario que pierda material bibliográfico u otro recurso, será suspendido de todos los
+													servicios de la Biblioteca hasta la reposición de la pérdida o, el pago de su valor actual.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Restauración</a>
+										<ul>
+											<li>
+												<a href="#">
+													La restauración, es el proceso por el cual se le devuelven al libro o al documento sus características originales, y que este perdió por degradación o destrucción. El proceso de restauración devuelve características que serán idénticas a las que poseía pero nunca las mismas. Es importante conocer la distinción que hace la restauración, en general: ella sólo trabaja la materia de la obra, es decir, su soporte físico, no su contenido. Los faltantes de material original son tratados como “lagunas”, y como tal aparecen en la obra restaurada.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Selección</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el proceso por el cual se decide qué documentos deben añadirse a la colección
+													de una biblioteca, cometido que, en la actualidad, ha cobrado más importancia que nunca,
+													debido a la enorme producción bibliográfica existente y al aumento y diversificación de las
+													demandas por parte de los usuarios.					
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Usuario de la información</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es la persona que mediante el uso de los instrumentos de
+													información complementa y desarrolla su conocimiento de acuerdo a sus intereses, esta
+													persona no solamente se encarga de consumir la información sino que brinda y reproduce la
+													información aprendida
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Visión</a>
+										<ul>
+											<li>
+												<a href="#">
+													La visión de la Biblioteca de Administración Pública es ser el centro de información e
+													investigación en la disciplina donde estudiantes, facultad e investigadores tengan acceso a los
+													recursos informativos utilizando las herramientas tecnológicas más avanzadas; así como
+													fomentar en el estudiantado el desarrollo de competencias de información.									
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+							<!-- VIDEO EMBEBIDO
+								<div class="medida-video">
+								<span></span>
+								<nav>
+								<video class="video_background" src="images/BEATS_480p.mp4" width=650  height=470 controls muted autoplay poster="images/IMAGENVIDEOGLOSARIO.jpg">
+								Lo sentimos. Este vídeo no puede ser reproducido en tu navegador.<br>
+								La versión descargable está disponible en <a href="URL">Enlace</a>. 
+								</video>
+								</nav>
+							</div> -->
+							<div class="medida-video">
+								<audio autoplay loop controls src="images/BEATS_480p.mp4">	
+									<p>Tu navegador no implementa el elemento audio</p>
+								</audio>
+							</div>
+											
+							<!-- MENU LATERAL 2-->	
+							<nav class="vertical1 terms" style="margin-left: -300px;">
+								<ul>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>	
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>	
+									<li><a href="#">Depósito legal</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es una institución que permite recoger ejemplares de todas las publicaciones (de
+													cualquier tipo y soporte) con el fin de preservar el patrimonio bibliográfico, sonoro, visual,
+													audiovisual y digital y permitir el acceso al mismo con fines culturales, de investigación o de
+													información.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Desarrollo de colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es un proceso el cual establece políticas por medio de la inclusión
+													de todos los usuarios, docentes, estudiantes, bibliotecarios, administrativos etc… Para la
+													selección, preservación, mantenimiento, adquisición y evaluación de todos los recursos dentro
+													de las unidades de la información.		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Descarte</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el retiro definitivo o temporal que se hace de una publicación o documento de una
+													colección determinada. Existiendo dos clases de descarte,que son: parcial (cuando el retiro se
+													efectúa y el documento se traslada o relega a un depósito para supuestas consultas
+													posteriores) y total (cuando él o los documentos se retiran definitivamente de la biblioteca o
+													unidad de información).
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Donación</a>
+										<ul>
+											<li>
+												<a href="#">
+													En relación a la bibliotecología se puede definir el término donación como “la oferta de
+													materiales o dinero para acrecentar la colección de la unidad de información” . La
+													La donación de todo tipo de material de información es fundamental para el desarrollo de la
+													colección, de cualquier tipo de institución. La donación de fondos personales se los puede
+													denominar cómo aquellos legados por particulares a una unidad de información, constituidos
+													por diferentes tipos de materiales y formatos –que pueden ser de archivo, museo y bibliotecacon el objeto de acrecentar la colección de la misma.													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Evaluación de Colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Determina en qué medida las colecciones responden
+													satisfactoriamente a las necesidades de los usuarios por medio de procesos que permiten
+													obtener información confiable en materia de recursos informativos disponibles y necesarios en
+													conformidad con la satisfacción y necesidad de los usuarios
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Expurgo</a>
+										<ul>
+											<li>
+												<a href="#">
+													El expurgo en la biblioteca es un manual que analiza detenidamente el proceso de expurgo o de
+													revisión de las colecciones proponiendo una metodología de trabajo, que incluye la reflexión
+													previa sobre las colecciones, los motivos del expurgo y el objetivo que se desea conseguir; un
+													modelo de proceso técnico experimentado ya en bibliotecas francesas; y la evaluación de los
+													resultados obtenidos.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Expurgo</a>
+										<ul>
+											<li>
+												<a href="#">
+													Supresión de determinados fondos de la biblioteca, ya sea momentánea o
+													definitivamente, con el fin de dar mayor operatividad y eficacia a la gestión de la colección,
+													ajustándose a las necesidades reales de los usuarios.		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Hemeroteca</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es un edificio, sala, o página web donde se guardan, ordenan, conservan y clasifican diarios, revistas y otras publicaciones periódicas de prensa escrita, archivados para su consulta. Generalmente, hace referencia a una biblioteca que se especializa en diarios y otras publicaciones periódicas. También se refiere a la colección o conjunto de diarios, revistas y otras publicaciones periodísticas en un documento específico..		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Lista de chequeo</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es una herramienta usada para verificar el cumplimiento de la normatividad,
+													políticas generales e institucionales en el proceso bibliotecario. Esto con el fin de determinar si
+													la gestión es realizada adecuadamente, a través de los soportes y afirmaciones hechas por un
+													auditor.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Mantenimiento de colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el conjunto de operaciones que se gestionan con la finalidad de preservar o prevenir el deterioro del material documental y bibliográfico. Si un material no está en óptimas condiciones no podrá ponerse a disposición del usuario.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Métodos Cualitativos</a>
+										<ul>
+											<li>
+												<a href="#">
+													Son metodologías científico de observación para recopilar datos no
+													numéricos usados para evaluar a los usuarios de la información. Estas se fundamentan en la
+													realización de estudios (entrevistas, encuestas, grupos de discusión o técnicas de observación)
+													que registren, interpreten y describan las palabras de los usuarios, donde se requiere la
+													descripción narrativa de sus palabras: necesidades, inquietudes, comportamientos,
+													satisfacciones y transformaciones cognitivas (utilización) con relación a la información.
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Métodos Cuantitativos</a>
+										<ul>
+											<li>
+												<a href="#">
+													Estos son evaluaciones donde se evalúa los procesos y servicios que
+													ofrecen las bibliotecas a partir de estadísticas de uso con el fin de encontrar nuevas amenazas
+													oportunidades debilidades y fortalezas para mejorar todos los mecanismos del trabajo.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Misión</a>
+										<ul>
+											<li>
+												<a href="#">
+													Describe el motivo o la razón de ser de una institución bibliotecaria. Se enfoca en los
+													objetivos a cumplir en el presente, así como lo que se plantea cumplir en el mediano y largo
+													plazo. Debe estar definida de manera precisa y concreta para guiar al grupo de trabajo en el día
+													a día. Se compone de un conjunto de objetivos generales y algunos principios de trabajo en la
+													organización.			
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Política Desarrollo de Colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el proceso que permite identificar las debilidades y fortalezas, tanto como las necesidades informativas-formativas del usuario, en la biblioteca, con el fin de garantizar un buen servicio a la comunidad.		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Proveedor</a>
+										<ul>
+											<li>
+												<a href="#">
+													<p>
+														Mediante la selección se decide qué documentos se incorporan a la colección de la biblioteca para conseguir que sea pertinente, coherente y suficiente. Este proceso va unido al de la adquisición y es ahí donde los proveedores aportan servicios de valor añadido tales como la catalogación, localización de libros agotados. 	
+													</p>		
+													
+													<p>
+														Como herramienta de apoyo, presentamos a ustedes direcciones de proveedores de diferentes insumos para las bibliotecas:
+													</p>
+													
+													<p>
+														Software para bibliotecas, librerías, editoriales, publicaciones periódicas, consumibles (papeleria), mobiliario y equipos.
+													</p>
+													<p>	
+														La selección de proveedores requiere un equilibrio entre la necesaria concentración para no dispersar las adquisiciones y la garantía de un buen servicio. La evaluación de proveedores es fundamental en la gestión de una colección y ha de realizarse con regularidad para valorar si los objetivos se han cumplido.
+													</p>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Reposición</a>
+										<ul>
+											<li>
+												<a href="#">
+													El usuario que pierda material bibliográfico u otro recurso, será suspendido de todos los
+													servicios de la Biblioteca hasta la reposición de la pérdida o, el pago de su valor actual.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Restauración</a>
+										<ul>
+											<li>
+												<a href="#">
+													La restauración, es el proceso por el cual se le devuelven al libro o al documento sus características originales, y que este perdió por degradación o destrucción. El proceso de restauración devuelve características que serán idénticas a las que poseía pero nunca las mismas. Es importante conocer la distinción que hace la restauración, en general: ella sólo trabaja la materia de la obra, es decir, su soporte físico, no su contenido. Los faltantes de material original son tratados como “lagunas”, y como tal aparecen en la obra restaurada.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Selección</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el proceso por el cual se decide qué documentos deben añadirse a la colección
+													de una biblioteca, cometido que, en la actualidad, ha cobrado más importancia que nunca,
+													debido a la enorme producción bibliográfica existente y al aumento y diversificación de las
+													demandas por parte de los usuarios.					
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Usuario de la información</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es la persona que mediante el uso de los instrumentos de
+													información complementa y desarrolla su conocimiento de acuerdo a sus intereses, esta
+													persona no solamente se encarga de consumir la información sino que brinda y reproduce la
+													información aprendida
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Visión</a>
+										<ul>
+											<li>
+												<a href="#">
+													La visión de la Biblioteca de Administración Pública es ser el centro de información e
+													investigación en la disciplina donde estudiantes, facultad e investigadores tengan acceso a los
+													recursos informativos utilizando las herramientas tecnológicas más avanzadas; así como
+													fomentar en el estudiantado el desarrollo de competencias de información.									
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								</nav><!-- FIN DE LA COLUMNA 2 -->
+								
+								<!-- MENU LATERAL 3-->	
+							<nav class="vertical2 terms" style="margin-left: 0px;">
+								<ul>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>	
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>	
+									<li><a href="#">Depósito legal</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es una institución que permite recoger ejemplares de todas las publicaciones (de
+													cualquier tipo y soporte) con el fin de preservar el patrimonio bibliográfico, sonoro, visual,
+													audiovisual y digital y permitir el acceso al mismo con fines culturales, de investigación o de
+													información.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Desarrollo de colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es un proceso el cual establece políticas por medio de la inclusión
+													de todos los usuarios, docentes, estudiantes, bibliotecarios, administrativos etc… Para la
+													selección, preservación, mantenimiento, adquisición y evaluación de todos los recursos dentro
+													de las unidades de la información.		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Descarte</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el retiro definitivo o temporal que se hace de una publicación o documento de una
+													colección determinada. Existiendo dos clases de descarte,que son: parcial (cuando el retiro se
+													efectúa y el documento se traslada o relega a un depósito para supuestas consultas
+													posteriores) y total (cuando él o los documentos se retiran definitivamente de la biblioteca o
+													unidad de información).
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Donación</a>
+										<ul>
+											<li>
+												<a href="#">
+													En relación a la bibliotecología se puede definir el término donación como “la oferta de
+													materiales o dinero para acrecentar la colección de la unidad de información” . La
+													La donación de todo tipo de material de información es fundamental para el desarrollo de la
+													colección, de cualquier tipo de institución. La donación de fondos personales se los puede
+													denominar cómo aquellos legados por particulares a una unidad de información, constituidos
+													por diferentes tipos de materiales y formatos –que pueden ser de archivo, museo y bibliotecacon el objeto de acrecentar la colección de la misma.													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Evaluación de Colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Determina en qué medida las colecciones responden
+													satisfactoriamente a las necesidades de los usuarios por medio de procesos que permiten
+													obtener información confiable en materia de recursos informativos disponibles y necesarios en
+													conformidad con la satisfacción y necesidad de los usuarios
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Expurgo</a>
+										<ul>
+											<li>
+												<a href="#">
+													El expurgo en la biblioteca es un manual que analiza detenidamente el proceso de expurgo o de
+													revisión de las colecciones proponiendo una metodología de trabajo, que incluye la reflexión
+													previa sobre las colecciones, los motivos del expurgo y el objetivo que se desea conseguir; un
+													modelo de proceso técnico experimentado ya en bibliotecas francesas; y la evaluación de los
+													resultados obtenidos.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Expurgo</a>
+										<ul>
+											<li>
+												<a href="#">
+													Supresión de determinados fondos de la biblioteca, ya sea momentánea o
+													definitivamente, con el fin de dar mayor operatividad y eficacia a la gestión de la colección,
+													ajustándose a las necesidades reales de los usuarios.		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Hemeroteca</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es un edificio, sala, o página web donde se guardan, ordenan, conservan y clasifican diarios, revistas y otras publicaciones periódicas de prensa escrita, archivados para su consulta. Generalmente, hace referencia a una biblioteca que se especializa en diarios y otras publicaciones periódicas. También se refiere a la colección o conjunto de diarios, revistas y otras publicaciones periodísticas en un documento específico..		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Lista de chequeo</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es una herramienta usada para verificar el cumplimiento de la normatividad,
+													políticas generales e institucionales en el proceso bibliotecario. Esto con el fin de determinar si
+													la gestión es realizada adecuadamente, a través de los soportes y afirmaciones hechas por un
+													auditor.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Mantenimiento de colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el conjunto de operaciones que se gestionan con la finalidad de preservar o prevenir el deterioro del material documental y bibliográfico. Si un material no está en óptimas condiciones no podrá ponerse a disposición del usuario.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Métodos Cualitativos</a>
+										<ul>
+											<li>
+												<a href="#">
+													Son metodologías científico de observación para recopilar datos no
+													numéricos usados para evaluar a los usuarios de la información. Estas se fundamentan en la
+													realización de estudios (entrevistas, encuestas, grupos de discusión o técnicas de observación)
+													que registren, interpreten y describan las palabras de los usuarios, donde se requiere la
+													descripción narrativa de sus palabras: necesidades, inquietudes, comportamientos,
+													satisfacciones y transformaciones cognitivas (utilización) con relación a la información.
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Métodos Cuantitativos</a>
+										<ul>
+											<li>
+												<a href="#">
+													Estos son evaluaciones donde se evalúa los procesos y servicios que
+													ofrecen las bibliotecas a partir de estadísticas de uso con el fin de encontrar nuevas amenazas
+													oportunidades debilidades y fortalezas para mejorar todos los mecanismos del trabajo.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Misión</a>
+										<ul>
+											<li>
+												<a href="#">
+													Describe el motivo o la razón de ser de una institución bibliotecaria. Se enfoca en los
+													objetivos a cumplir en el presente, así como lo que se plantea cumplir en el mediano y largo
+													plazo. Debe estar definida de manera precisa y concreta para guiar al grupo de trabajo en el día
+													a día. Se compone de un conjunto de objetivos generales y algunos principios de trabajo en la
+													organización.			
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Política Desarrollo de Colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el proceso que permite identificar las debilidades y fortalezas, tanto como las necesidades informativas-formativas del usuario, en la biblioteca, con el fin de garantizar un buen servicio a la comunidad.		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Proveedor</a>
+										<ul>
+											<li>
+												<a href="#">
+													<p>
+														Mediante la selección se decide qué documentos se incorporan a la colección de la biblioteca para conseguir que sea pertinente, coherente y suficiente. Este proceso va unido al de la adquisición y es ahí donde los proveedores aportan servicios de valor añadido tales como la catalogación, localización de libros agotados. 	
+													</p>		
+													
+													<p>
+														Como herramienta de apoyo, presentamos a ustedes direcciones de proveedores de diferentes insumos para las bibliotecas:
+													</p>
+													
+													<p>
+														Software para bibliotecas, librerías, editoriales, publicaciones periódicas, consumibles (papeleria), mobiliario y equipos.
+													</p>
+													<p>	
+														La selección de proveedores requiere un equilibrio entre la necesaria concentración para no dispersar las adquisiciones y la garantía de un buen servicio. La evaluación de proveedores es fundamental en la gestión de una colección y ha de realizarse con regularidad para valorar si los objetivos se han cumplido.
+													</p>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Reposición</a>
+										<ul>
+											<li>
+												<a href="#">
+													El usuario que pierda material bibliográfico u otro recurso, será suspendido de todos los
+													servicios de la Biblioteca hasta la reposición de la pérdida o, el pago de su valor actual.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Restauración</a>
+										<ul>
+											<li>
+												<a href="#">
+													La restauración, es el proceso por el cual se le devuelven al libro o al documento sus características originales, y que este perdió por degradación o destrucción. El proceso de restauración devuelve características que serán idénticas a las que poseía pero nunca las mismas. Es importante conocer la distinción que hace la restauración, en general: ella sólo trabaja la materia de la obra, es decir, su soporte físico, no su contenido. Los faltantes de material original son tratados como “lagunas”, y como tal aparecen en la obra restaurada.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Selección</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el proceso por el cual se decide qué documentos deben añadirse a la colección
+													de una biblioteca, cometido que, en la actualidad, ha cobrado más importancia que nunca,
+													debido a la enorme producción bibliográfica existente y al aumento y diversificación de las
+													demandas por parte de los usuarios.					
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Usuario de la información</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es la persona que mediante el uso de los instrumentos de
+													información complementa y desarrolla su conocimiento de acuerdo a sus intereses, esta
+													persona no solamente se encarga de consumir la información sino que brinda y reproduce la
+													información aprendida
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Visión</a>
+										<ul>
+											<li>
+												<a href="#">
+													La visión de la Biblioteca de Administración Pública es ser el centro de información e
+													investigación en la disciplina donde estudiantes, facultad e investigadores tengan acceso a los
+													recursos informativos utilizando las herramientas tecnológicas más avanzadas; así como
+													fomentar en el estudiantado el desarrollo de competencias de información.									
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+								
+							<!-- MENU LATERAL 4-->	
+							<nav class="vertical3 terms" style="margin-left: 0px;">
+								<ul>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>	
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#"></a>
+										<ul>
+											<li>
+												<a href="#">
+													
+												</a>
+											</li>
+										</ul>
+									</li>	
+									<li><a href="#">Depósito legal</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es una institución que permite recoger ejemplares de todas las publicaciones (de
+													cualquier tipo y soporte) con el fin de preservar el patrimonio bibliográfico, sonoro, visual,
+													audiovisual y digital y permitir el acceso al mismo con fines culturales, de investigación o de
+													información.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Desarrollo de colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es un proceso el cual establece políticas por medio de la inclusión
+													de todos los usuarios, docentes, estudiantes, bibliotecarios, administrativos etc… Para la
+													selección, preservación, mantenimiento, adquisición y evaluación de todos los recursos dentro
+													de las unidades de la información.		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Descarte</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el retiro definitivo o temporal que se hace de una publicación o documento de una
+													colección determinada. Existiendo dos clases de descarte,que son: parcial (cuando el retiro se
+													efectúa y el documento se traslada o relega a un depósito para supuestas consultas
+													posteriores) y total (cuando él o los documentos se retiran definitivamente de la biblioteca o
+													unidad de información).
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Donación</a>
+										<ul>
+											<li>
+												<a href="#">
+													En relación a la bibliotecología se puede definir el término donación como “la oferta de
+													materiales o dinero para acrecentar la colección de la unidad de información” . La
+													La donación de todo tipo de material de información es fundamental para el desarrollo de la
+													colección, de cualquier tipo de institución. La donación de fondos personales se los puede
+													denominar cómo aquellos legados por particulares a una unidad de información, constituidos
+													por diferentes tipos de materiales y formatos –que pueden ser de archivo, museo y bibliotecacon el objeto de acrecentar la colección de la misma.													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Evaluación de Colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Determina en qué medida las colecciones responden
+													satisfactoriamente a las necesidades de los usuarios por medio de procesos que permiten
+													obtener información confiable en materia de recursos informativos disponibles y necesarios en
+													conformidad con la satisfacción y necesidad de los usuarios
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Expurgo</a>
+										<ul>
+											<li>
+												<a href="#">
+													El expurgo en la biblioteca es un manual que analiza detenidamente el proceso de expurgo o de
+													revisión de las colecciones proponiendo una metodología de trabajo, que incluye la reflexión
+													previa sobre las colecciones, los motivos del expurgo y el objetivo que se desea conseguir; un
+													modelo de proceso técnico experimentado ya en bibliotecas francesas; y la evaluación de los
+													resultados obtenidos.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Expurgo</a>
+										<ul>
+											<li>
+												<a href="#">
+													Supresión de determinados fondos de la biblioteca, ya sea momentánea o
+													definitivamente, con el fin de dar mayor operatividad y eficacia a la gestión de la colección,
+													ajustándose a las necesidades reales de los usuarios.		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Hemeroteca</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es un edificio, sala, o página web donde se guardan, ordenan, conservan y clasifican diarios, revistas y otras publicaciones periódicas de prensa escrita, archivados para su consulta. Generalmente, hace referencia a una biblioteca que se especializa en diarios y otras publicaciones periódicas. También se refiere a la colección o conjunto de diarios, revistas y otras publicaciones periodísticas en un documento específico..		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Lista de chequeo</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es una herramienta usada para verificar el cumplimiento de la normatividad,
+													políticas generales e institucionales en el proceso bibliotecario. Esto con el fin de determinar si
+													la gestión es realizada adecuadamente, a través de los soportes y afirmaciones hechas por un
+													auditor.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Mantenimiento de colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el conjunto de operaciones que se gestionan con la finalidad de preservar o prevenir el deterioro del material documental y bibliográfico. Si un material no está en óptimas condiciones no podrá ponerse a disposición del usuario.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Métodos Cualitativos</a>
+										<ul>
+											<li>
+												<a href="#">
+													Son metodologías científico de observación para recopilar datos no
+													numéricos usados para evaluar a los usuarios de la información. Estas se fundamentan en la
+													realización de estudios (entrevistas, encuestas, grupos de discusión o técnicas de observación)
+													que registren, interpreten y describan las palabras de los usuarios, donde se requiere la
+													descripción narrativa de sus palabras: necesidades, inquietudes, comportamientos,
+													satisfacciones y transformaciones cognitivas (utilización) con relación a la información.
+													
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Métodos Cuantitativos</a>
+										<ul>
+											<li>
+												<a href="#">
+													Estos son evaluaciones donde se evalúa los procesos y servicios que
+													ofrecen las bibliotecas a partir de estadísticas de uso con el fin de encontrar nuevas amenazas
+													oportunidades debilidades y fortalezas para mejorar todos los mecanismos del trabajo.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Misión</a>
+										<ul>
+											<li>
+												<a href="#">
+													Describe el motivo o la razón de ser de una institución bibliotecaria. Se enfoca en los
+													objetivos a cumplir en el presente, así como lo que se plantea cumplir en el mediano y largo
+													plazo. Debe estar definida de manera precisa y concreta para guiar al grupo de trabajo en el día
+													a día. Se compone de un conjunto de objetivos generales y algunos principios de trabajo en la
+													organización.			
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Política Desarrollo de Colecciones</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el proceso que permite identificar las debilidades y fortalezas, tanto como las necesidades informativas-formativas del usuario, en la biblioteca, con el fin de garantizar un buen servicio a la comunidad.		
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Proveedor</a>
+										<ul>
+											<li>
+												<a href="#">
+													<p>
+														Mediante la selección se decide qué documentos se incorporan a la colección de la biblioteca para conseguir que sea pertinente, coherente y suficiente. Este proceso va unido al de la adquisición y es ahí donde los proveedores aportan servicios de valor añadido tales como la catalogación, localización de libros agotados. 	
+													</p>		
+													
+													<p>
+														Como herramienta de apoyo, presentamos a ustedes direcciones de proveedores de diferentes insumos para las bibliotecas:
+													</p>
+													
+													<p>
+														Software para bibliotecas, librerías, editoriales, publicaciones periódicas, consumibles (papeleria), mobiliario y equipos.
+													</p>
+													<p>	
+														La selección de proveedores requiere un equilibrio entre la necesaria concentración para no dispersar las adquisiciones y la garantía de un buen servicio. La evaluación de proveedores es fundamental en la gestión de una colección y ha de realizarse con regularidad para valorar si los objetivos se han cumplido.
+													</p>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Reposición</a>
+										<ul>
+											<li>
+												<a href="#">
+													El usuario que pierda material bibliográfico u otro recurso, será suspendido de todos los
+													servicios de la Biblioteca hasta la reposición de la pérdida o, el pago de su valor actual.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Restauración</a>
+										<ul>
+											<li>
+												<a href="#">
+													La restauración, es el proceso por el cual se le devuelven al libro o al documento sus características originales, y que este perdió por degradación o destrucción. El proceso de restauración devuelve características que serán idénticas a las que poseía pero nunca las mismas. Es importante conocer la distinción que hace la restauración, en general: ella sólo trabaja la materia de la obra, es decir, su soporte físico, no su contenido. Los faltantes de material original son tratados como “lagunas”, y como tal aparecen en la obra restaurada.
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Selección</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es el proceso por el cual se decide qué documentos deben añadirse a la colección
+													de una biblioteca, cometido que, en la actualidad, ha cobrado más importancia que nunca,
+													debido a la enorme producción bibliográfica existente y al aumento y diversificación de las
+													demandas por parte de los usuarios.					
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Usuario de la información</a>
+										<ul>
+											<li>
+												<a href="#">
+													Es la persona que mediante el uso de los instrumentos de
+													información complementa y desarrolla su conocimiento de acuerdo a sus intereses, esta
+													persona no solamente se encarga de consumir la información sino que brinda y reproduce la
+													información aprendida
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">Visión</a>
+										<ul>
+											<li>
+												<a href="#">
+													La visión de la Biblioteca de Administración Pública es ser el centro de información e
+													investigación en la disciplina donde estudiantes, facultad e investigadores tengan acceso a los
+													recursos informativos utilizando las herramientas tecnológicas más avanzadas; así como
+													fomentar en el estudiantado el desarrollo de competencias de información.									
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+		
+							
+							
+							
+						</div>
+						
+					</div><!-- DIV DE FILA DE LAS COLUMNAS -->
+					
+					
+					
+					
+				</div>
+				
+			</div><!-- container //  -->
+			
+		</div>
+		
+		
+		
+		<!-- IMAGEN EMERGENTE -->
+		
+		<div class="modal fade" id="mostrarmodal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" align="center">
+			<br><br><br><br><br><br><br><br>
+			<img src="images/MODALSENA.jpeg">
+			<div class="">
+				
+				<div class="modal-dialog">
+					<div class="">
+						<h3></h3>
+						
+					</div>
+					<div class="modal-body">
+						
+					</div>
+					<div class="">
+						<a href="#" data-dismiss="modal" class="btn btn-danger">Cerrar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	
+	<footer class="footer" style="background: #eee">
+		
+		<!-- Sector Empleo -->	
+		<div class="" style="margin-left:20px">
+			<!--<h4><span class=""></span>
+			Sector Trabajo</h4>-->
+			
+			<nav class="mainNav">
+				<!--<nav class="mainNav flexbox">-->
+				<div class="navItem flex-item">
+					<a href="http://www.mintrabajo.gov.co/" target="_blank"><img src="images/iMinTrabajo.png" alt="Ministerio del Trabajo" title="Ministerio del Trabajo" width="188px" height="77px"></a>
+				</div>
+				
+				<div class="navItem flex-item">
+					<a href="http://www.orgsolidarias.gov.co/" target="_blank"><img src="images/iOss.png" alt="Organizaciones Solidarias" title="Organizaciones Solidarias" width="188px" height="77px"></a>
+				</div>
+				
+				<div class="navItem flex-item">
+					<a href="http://unidad.serviciodeempleo.gov.co/" target="_blank"><img src="images/iEmpleo.png" alt="Servicio de Empleo" title="Servicio de Empleo" width="188px" height="77px"></a>		        
+				</div>
+				
+				<div class="navItem flex-item">
+					<a href="http://www.ssf.gov.co/" target="_blank"><img src="images/iSuperSubsidio.png" alt="SuperSubsidio" title="SuperSubsidio" width="188px" height="77px"></a>		        
+				</div>
+				
+				<div class="navItem flex-item">
+					<a href="http://www.colpensiones.gov.co/" target="_blank"><img src="images/iColpensiones.png" alt="Colpensiones" title="Colpensiones" width="188px" height="77px"></a>
+				</div>
+			</nav>	
+		</div>
+		
+		<!-- INFORMACION DE LA PAGINA COLOR ANARANJADO -->
+		<!-- VA A LA IZQUIERDA -->
+		
+		<div id="copy" class="clear">
+			<nav class="mainNav1">
+				<div class="navItem flex-item">
+					
+					Servicio Nacional de Aprendizaje SENA - Dirección General<br>
+					Calle 57 No. 8 - 69 Bogotá D.C. (Cundinamarca), Colombia<br>
+					Debido a la emergencia sanitaria, los Centros de Formación Profesional, Puntos de Atención o Información y demás  <br>
+					espacios físicos destinados por el SENA para la atención presencial a los ciudadanos se encuentran cerrados.<br>
+					Conmutador Nacional (57 1) 5461500 - Extensiones<br>
+					Atención al ciudadano: Bogotá (57 1) 3430111 - Línea gratuita y  resto del país 018000 910270<br>
+					Atención al empresario: Bogotá (57 1) 3430101 - Línea gratuita y resto del país 018000 910682<br>
+					<a href="http://sciudadanos.sena.edu.co/SolicitudIndex.aspx" target="_blank" style="color: #FFFFFF">PQRS</a><br>
+					<a href="http://www.sena.edu.co/es-co/ciudadano/Paginas/chat.aspx" target="_blank" style="color: #FFFFFF">Chat en linea</a><br>
+					<!--Correo servicio al cliente: gpservicioalcliente@sena.edu.co<br/>-->
+					Correo notificaciones judiciales: servicioalciudadano@sena.edu.co<br>
+					<div class="flLeft">Todos los derechos 2017 SENA - <a href="http://www.sena.edu.co/es-co/Paginas/politicasCondicionesUso.aspx" target="_blank" style="color: #FFFFFF">Políticas de privacidad y condiciones uso Portal Web SENA</a><br>
+						<a href="http://www.sena.edu.co/es-co/transparencia/Documents/proteccion_datos_personales_sena_2016.pdf" target="_blank" style="color: #FFFFFF">Política de Tratamiento para Protección de Datos Personales</a> - <a href="http://compromiso.sena.edu.co/index.php?text=inicio&amp;id=27" target="_blank" style="color: #FFFFFF">Política de seguridad y privacidad de la información</a>
+					</div>
+					
+				</div>
+				
+				<!-- VA A LA DERECHA -->
+				
+				<div class="navItem flex-item">
+					<ul class="">
+						<li><img src="images/Icontec03_all.png" alt="Certificación ISO 9001" title="Certificación ISO 9001"></li>
+						<!--<li><img src="/Style Library/alayout/images/Icontec_2019-5.png" alt="Certificación IQNet"  title="Certificación IQNet" /></li>-->
+					</ul>
+					<div class="push10 text-center">
+						<style>
+							.btn {
+							padding: 6px 12px;
+							font-size: 14px;
+							color: #eee;
+							}
+						</style>
+						<p> &nbsp; </p>
+						<a aria-label="Síguenos en Facebook" rel="nofollow noopener noreferrer" target="_blank" href="https://www.facebook.com/SENA/" class="btn ">
+							<span class="fa fa-facebook fa-2x "> </span> 
+						</a>
+						<a aria-label="Síguenos en Twitter" rel="nofollow noopener noreferrer" target="_blank" href="https://twitter.com/SENAComunica" class="btn ">
+							<span class="fa fa-twitter fa-2x "> </span> 
+						</a>
+						<a aria-label="Síguenos en Instagram" rel="nofollow noopener noreferrer" target="_blank" href="https://www.instagram.com/senacomunica/" class="btn">
+							<span class="fa fa-instagram fa-2x"> </span> 
+						</a>
+						<a aria-label="Síguenos en Youtube" rel="nofollow noopener noreferrer" target="_blank" href="https://www.youtube.com/user/SENATV" class="btn">
+							<span class="fa fa-youtube-play fa-2x"> </span> 
+						</a>
+						<a aria-label="Síguenos en Spotify" rel="nofollow noopener noreferrer" target="_blank" href="https://www.sena.edu.co/es-co/Paginas/default.aspx" class="btn">
+							<span class="fa fa-spotify  fa-2x"> </span> 
+						</a>
+						<a aria-label="Síguenos en Soundcloud" rel="nofollow noopener noreferrer" target="_blank" href="https://soundcloud.com/senacolombia/" class="btn">
+							<span class="fa fa-soundcloud  fa-2x"> </span> 
+						</a>
+						<!--</div>-->
+					</div>	
+				</nav>
+			</div>
+			
+			<div>
+				<img src="images/FOOTER.jpg">
+			</div>
+		</footer>
+	</html>																																																																																								
