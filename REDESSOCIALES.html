@@ -1,0 +1,410 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<link rel="shortcut icon" href="https://www.sena.edu.co/SiteCollectionImages/favicon.ico" type="image/vnd.microsoft.icon" id="favicon">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="keywords" content="htmlcss bootstrap menu, navbar, mega menu examples" />
+		<meta name="description" content="Navigation  menu with submenu examples for any type of project, Bootstrap 4" />  
+		
+		<!--<title>Demo - Bootstrap multilevel navbar responsive. html code example </title>-->
+		
+		<!-- jQuery 
+			<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			crossorigin="anonymous"></script>
+		-->
+		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+		<script src="js/buscador.js"></script>
+		<script src="vendor/bootstrap/js/popper.js"></script>
+		<script src="fonts/font-awesome-4.7.0/js/fontawesome.js"></script>
+		<!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) 
+			<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>-->
+		
+		<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/textobuscado.css">
+		<link rel="stylesheet" type="text/css" href="css/menulateral/menulateral2.css">
+		<link rel="stylesheet" type="text/css" href="css/menulateral/menulateral3.css">
+		<link rel="stylesheet" type="text/css" href="css/menulateral/menulateral4.css">
+		<link rel="stylesheet" type="text/css" href="css/menulateral/menulateral5.css">
+		<link rel="stylesheet" type="text/css" href="css/menulateral/menulateral6.css">
+		<!--	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/svg-with-js.css">
+			<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/svg-v4-shims.css">
+			<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/regular.css">
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/brands.css">-->
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		
+		<!--
+			<link href="bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+			<script src="bootstrap.min.js"></script>
+			<script src="jquery-1.11.1.min.js"></script>
+			
+		<!------ Include the above in your HEAD tag ---------->
+		
+		<!--<link href="estilos css.css" rel="stylesheet" >
+		<script src="funcionalidad javascript.js"></script>-->
+		
+		<script type="text/javascript">
+			/// some script
+			
+			// jquery ready start
+			$(document).ready(function() {
+				// jQuery code
+				
+				//////////////////////// Prevent closing from click inside dropdown
+				$(document).on('click', '.dropdown-menu', function (e) {
+					e.stopPropagation();
+				});
+				
+				// make it as accordion for smaller screens
+				if ($(window).width() < 992) {
+					$('.dropdown-menu a').click(function(e){
+						e.preventDefault();
+						if($(this).next('.submenu').length){
+							$(this).next('.submenu').toggle();
+						}
+						$('.dropdown').on('hide.bs.dropdown', function () {
+							$(this).find('.submenu').hide();
+						})
+					});
+				}
+				
+			}); // jquery end
+			
+			
+			
+			/*JAVASCRIPT MENU LATERAL*/
+			//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+			var dropdown = document.getElementsByClassName("dropdown-btn");
+			var i;
+			
+			for (i = 0; i < dropdown.length; i++) {
+				dropdown[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					var dropdownContent = this.nextElementSibling;
+					if (dropdownContent.style.display === "block") {
+						dropdownContent.style.display = "none";
+						} else {
+						dropdownContent.style.display = "block";
+					}
+				});
+			}
+			
+			/*ABRIR IMAGEN EMERGENTE*/
+			
+			$(document).ready(function()
+			{
+				$("#mostrarmodal").modal("show");
+			});
+			
+			/*SCRIPT PARA DESILENCIAR EL AUDIO PRUEBA */
+			
+		</script>
+		
+		<style type="text/css">
+			
+			
+			
+			
+			
+			
+			
+			
+			/*COLOCAR DOS ELEMENTOS EN UNA MISMA FILA*/
+			
+			.terms {
+			display: flex;
+			margin: 10;
+			}
+			
+			.terms > p {
+			margin: 0;
+			}
+			
+			.medida-video {
+			/*margin: 100px;
+			padding: 200px;*/
+			border: 1px;
+			position: relative;
+			top: 50px;
+			left: 700px;
+			bottom: 0px;
+			
+			}
+			
+			/* IMAGENES PARTE DE ABAJO DE LA PAGINA */
+			
+			nav.mainNav {
+			display: inline-block;
+			margin: 20px;
+			padding: 20px;
+			vertical-align: top;
+			/*border-top: 1px solid #4800ff;*/
+			border-top: 1px solid red;
+			}
+			
+			nav.mainNav.flexbox {
+			/* BROWSER DEFINITION */
+			display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+			display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+			display: -ms-flexbox; /* TWEENER - IE 10 */
+			display: -webkit-flex; /* NEW - Chrome */
+			
+			/* W3C DEFINITION */
+			display: flex;
+			display: inline-flex;
+			}
+			
+			nav.mainNav > .navItem {
+			display: inline-block;
+			padding: 20px;
+			/*background: #4800ff;*/
+			color: #fff;
+			}
+			
+			/*AJUSTE Y COLOR DE LA PARTE DE ABAJO DE LA PAGINA DONDE ESTA TODA LA INFORMACION DE COLOR ANARANJADO*/
+			.clear{
+			background-color: #ff6b00;
+			z-index: 600;
+			color: #fff;
+			font-family: calibri, sans-serif;
+			display: block;
+			clear: both;
+			/*margin-top: -50px;*/
+			}
+			nav.mainNav1 {
+			display: inline-block;
+			margin: 20px;
+			padding: 20px;
+			vertical-align: top;
+			}	
+			
+			nav.mainNav1.flexbox {
+			/* BROWSER DEFINITION */
+			display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+			display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+			display: -ms-flexbox; /* TWEENER - IE 10 */
+			display: -webkit-flex; /* NEW - Chrome */
+			
+			/* W3C DEFINITION */
+			display: flex;
+			display: inline-flex;
+			}
+			
+			nav.mainNav1 > .navItem {
+			display: inline-block;
+			padding: 20px;
+			/*background: #4800ff;*/
+			color: #fff;
+			}
+			
+			/* ESTILO PARA EL VIDEO DE FONDO */
+			
+			#cabecera{
+			width: 100%;
+			height: 500%;
+			}
+			#video {
+			
+			/*position: absolute; right: 0; bottom: 0;
+			
+			min-width: 100%; min-height: 100%;
+			
+			width: auto; height: auto; z-index: -100;
+			*/
+			
+			
+			position: absolute;
+			left: 0;
+			top: 120px;
+			width: 100%;
+			height: 110%;
+			z-index: -10;
+			visibility: visible;
+			
+			}
+			h2{
+			color:white;
+			text-shadow: 4px 4px 4px #333;
+			text-align: center;
+			margin-top: 200px;
+			}
+		</style>
+	</head>
+	<body class="bg-light" style="background: #eee">
+		<!--<header class="section-header py-4" style="background: #4800ff">-->
+		<header class="section-header py-4" style="background: #eee">
+			<div class="container">
+				<!--<h2></h2>-->
+				<div class="">
+					<a href="" title="SENA" style="text-decoration:none">
+					<img class="" src="images/SENASOFIA.png" alt="Logo SENA" title="Logo SENA" width="350" height="70">&nbsp;</a>
+					<img src="images/Logo-Mintrabajo-s72.png" alt="Gobierno de Colombia" style="margin-left: 35%;max-width: 50%;" title="Gobierno de Colombia">	
+				</div>
+			</div>
+		</header> <!-- section-header.// -->	
+		<!-- ========================= SECTION CONTENT ========================= -->
+		<div class="" id="cabecera">
+			
+			<table style="width: 100%; font-family: Verdana, Geneva, sans-serif;">
+				<tbody>
+					<tr style="height: 600px;">
+						
+						<!--PRIMERA-->
+						<td style="width: 30%; background-color: #f1f1f1; border-radius: 5px; vertical-align: top; border: 1px solid #cccccc; height: 600px;">
+							<div style="border-bottom: 1px solid #ccc; height: 30px;">&nbsp;</div>
+						<iframe src="botones_ayuda.html" width="99%" height="600px" frameborder="0"></iframe></td>
+						<td style="width: 1%; height: 600px;">&nbsp;</td>
+						
+						<!--SEGUNDA-->
+		
+						<td style="width: 30%;">
+							<div style="border-bottom: 1px solid #ccc; height: 30px;">&nbsp;</div>
+						</td>
+						<td style="width: 1%; height: 600px;">&nbsp;</td>
+						
+						<!--TERCERA-->
+						<td style="width: 30%;">
+							<div style="border-bottom: 1px solid #ccc; height: 30px;">&nbsp;</div>
+						</td>
+						<td style="width: 1%; height: 600px;">&nbsp;</td>
+						
+					</tr>
+				</tbody>
+			</table>
+			
+			<img src="images/INSTRUCTORA.jpg" id="video">
+			
+			<div class="container" >
+				
+				
+			</div><!-- container //  -->
+			
+		</div>
+		
+		
+		
+		<!-- IMAGEN EMERGENTE -->
+		
+		<div class="modal fade" id="mostrarmodal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" align="center">
+			<br><br><br><br><br><br><br><br>
+			<img src="images/MODALSENA.jpeg">
+			<div class="">
+				
+				<div class="modal-dialog">
+					<div class="">
+						<h3></h3>
+						
+					</div>
+					<div class="modal-body">
+						
+					</div>
+					<div class="">
+						<a href="#" data-dismiss="modal" class="btn btn-danger">Cerrar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	
+	<footer class="footer" style="background: #eee">
+		
+		<!-- Sector Empleo -->	
+		<div class="" style="margin-left:20px">
+			<!--<h4><span class=""></span>
+			Sector Trabajo</h4>-->
+			
+			<nav class="mainNav">
+				<!--<nav class="mainNav flexbox">-->
+				<div class="navItem flex-item">
+					<a href="http://www.mintrabajo.gov.co/" target="_blank"><img src="images/iMinTrabajo.png" alt="Ministerio del Trabajo" title="Ministerio del Trabajo" width="188px" height="77px"></a>
+				</div>
+				
+				<div class="navItem flex-item">
+					<a href="http://www.orgsolidarias.gov.co/" target="_blank"><img src="images/iOss.png" alt="Organizaciones Solidarias" title="Organizaciones Solidarias" width="188px" height="77px"></a>
+				</div>
+				
+				<div class="navItem flex-item">
+					<a href="http://unidad.serviciodeempleo.gov.co/" target="_blank"><img src="images/iEmpleo.png" alt="Servicio de Empleo" title="Servicio de Empleo" width="188px" height="77px"></a>		        
+				</div>
+				
+				<div class="navItem flex-item">
+					<a href="http://www.ssf.gov.co/" target="_blank"><img src="images/iSuperSubsidio.png" alt="SuperSubsidio" title="SuperSubsidio" width="188px" height="77px"></a>		        
+				</div>
+				
+				<div class="navItem flex-item">
+					<a href="http://www.colpensiones.gov.co/" target="_blank"><img src="images/iColpensiones.png" alt="Colpensiones" title="Colpensiones" width="188px" height="77px"></a>
+				</div>
+			</nav>	
+		</div>
+		
+		<!-- INFORMACION DE LA PAGINA COLOR ANARANJADO -->
+		<!-- VA A LA IZQUIERDA -->
+		
+		<div id="copy" class="clear">
+			<nav class="mainNav1">
+				<div class="navItem flex-item">
+					
+					Servicio Nacional de Aprendizaje SENA - Dirección General<br>
+					Calle 57 No. 8 - 69 Bogotá D.C. (Cundinamarca), Colombia<br>
+					Debido a la emergencia sanitaria, los Centros de Formación Profesional, Puntos de Atención o Información y demás  <br>
+					espacios físicos destinados por el SENA para la atención presencial a los ciudadanos se encuentran cerrados.<br>
+					Conmutador Nacional (57 1) 5461500 - Extensiones<br>
+					Atención al ciudadano: Bogotá (57 1) 3430111 - Línea gratuita y  resto del país 018000 910270<br>
+					Atención al empresario: Bogotá (57 1) 3430101 - Línea gratuita y resto del país 018000 910682<br>
+					<a href="http://sciudadanos.sena.edu.co/SolicitudIndex.aspx" target="_blank" style="color: #FFFFFF">PQRS</a><br>
+					<a href="http://www.sena.edu.co/es-co/ciudadano/Paginas/chat.aspx" target="_blank" style="color: #FFFFFF">Chat en linea</a><br>
+					<!--Correo servicio al cliente: gpservicioalcliente@sena.edu.co<br/>-->
+					Correo notificaciones judiciales: servicioalciudadano@sena.edu.co<br>
+					<div class="flLeft">Todos los derechos 2017 SENA - <a href="http://www.sena.edu.co/es-co/Paginas/politicasCondicionesUso.aspx" target="_blank" style="color: #FFFFFF">Políticas de privacidad y condiciones uso Portal Web SENA</a><br>
+						<a href="http://www.sena.edu.co/es-co/transparencia/Documents/proteccion_datos_personales_sena_2016.pdf" target="_blank" style="color: #FFFFFF">Política de Tratamiento para Protección de Datos Personales</a> - <a href="http://compromiso.sena.edu.co/index.php?text=inicio&amp;id=27" target="_blank" style="color: #FFFFFF">Política de seguridad y privacidad de la información</a>
+					</div>
+					
+				</div>
+				
+				<!-- VA A LA DERECHA -->
+				
+				<div class="navItem flex-item">
+					<ul class="">
+						<li><img src="images/Icontec03_all.png" alt="Certificación ISO 9001" title="Certificación ISO 9001"></li>
+						<!--<li><img src="/Style Library/alayout/images/Icontec_2019-5.png" alt="Certificación IQNet"  title="Certificación IQNet" /></li>-->
+					</ul>
+					<div class="push10 text-center">
+						<style>
+							.btn {
+							padding: 6px 12px;
+							font-size: 14px;
+							color: #eee;
+							}
+						</style>
+						<p> &nbsp; </p>
+						<a aria-label="Síguenos en Facebook" rel="nofollow noopener noreferrer" target="_blank" href="https://www.facebook.com/SENA/" class="btn ">
+							<span class="fa fa-facebook fa-2x "> </span> 
+						</a>
+						<a aria-label="Síguenos en Twitter" rel="nofollow noopener noreferrer" target="_blank" href="https://twitter.com/SENAComunica" class="btn ">
+							<span class="fa fa-twitter fa-2x "> </span> 
+						</a>
+						<a aria-label="Síguenos en Instagram" rel="nofollow noopener noreferrer" target="_blank" href="https://www.instagram.com/senacomunica/" class="btn">
+							<span class="fa fa-instagram fa-2x"> </span> 
+						</a>
+						<a aria-label="Síguenos en Youtube" rel="nofollow noopener noreferrer" target="_blank" href="https://www.youtube.com/user/SENATV" class="btn">
+							<span class="fa fa-youtube-play fa-2x"> </span> 
+						</a>
+						<a aria-label="Síguenos en Spotify" rel="nofollow noopener noreferrer" target="_blank" href="https://www.sena.edu.co/es-co/Paginas/default.aspx" class="btn">
+							<span class="fa fa-spotify  fa-2x"> </span> 
+						</a>
+						<a aria-label="Síguenos en Soundcloud" rel="nofollow noopener noreferrer" target="_blank" href="https://soundcloud.com/senacolombia/" class="btn">
+							<span class="fa fa-soundcloud  fa-2x"> </span> 
+						</a>
+						<!--</div>-->
+					</div>	
+				</nav>
+			</div>
+			
+			<div>
+				<img src="images/FOOTER.jpg">
+			</div>
+		</footer>
+	</html>																																																																																																						

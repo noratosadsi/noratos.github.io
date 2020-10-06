@@ -1,0 +1,250 @@
+@charset "utf-8";
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+}
+
+
+a {
+	color:#666;
+	text-align:justify;
+	}
+
+a:hover {
+	text-align:justify;
+	color:#000;
+	}
+
+.col2 {
+	height:18px;
+	width:100%;
+	float:left;
+}
+
+#acordeon1{
+	text-align:center;
+	margin-top:0px;
+	color:#999;
+	}
+
+
+.no-margin {
+	margin:0px !important;	
+}
+
+
+
+.acoseccion {
+	background-color:#fff;
+	padding-bottom: 0px;
+	overflow: hidden;
+}
+
+.acoseccion .acotitle {
+	font-size:14px;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 0px;
+	color: #FCFCFC;
+	background-color: #007b79;
+	display: block;
+	
+	margin-bottom: 8px;
+	cursor:pointer;
+}
+
+.acoseccion .acotitle:hover {
+	background-color:#c96c41;
+}
+
+.acoseccion .acotexto {
+	display: block;
+	padding-left: 9px;
+	padding-top: 9px;
+	padding-right: 9px;
+	padding-bottom: 9px;
+}
+.acormedio {
+	min-height: 180px;
+}
+
+.acoseccion2 {
+	padding-bottom: 20px;
+	overflow: hidden;
+}
+
+.acoseccion2 .acotitle {
+	height: 35px;
+	line-height: 35px;
+	padding-left: 10px;
+	color: #FCFCFC;
+	background-color: #FF9500;
+	display: block;
+	margin-bottom: 8px;
+	cursor:pointer;
+}
+
+.acoseccion2 .acotitle:hover {
+	background-color:#D67D00;
+}
+
+.acoseccion2 .acotexto {
+	display: block;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+
+/*Menu Administradores*/
+a:link{
+	text-decoration:none;
+	}
+	
+.acoseccion2 {
+	background-color: #fff;
+	padding-bottom: 0px;
+	overflow: hidden;
+}
+
+.acoseccion2 .acotitle2 {
+	font-size:14px;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 0px;
+	color: #FCFCFC;
+	background-color: #007b79;
+	display: block;
+	
+	margin-bottom: 0px;
+	cursor:pointer;
+}
+
+.acoseccion2 .acotitle2:hover {
+	background-color:#026c6a;
+}
+
+
+/*boton conoce nuestros cursos cortos*/
+
+.acoseccion4{
+	background-color: #fff;
+
+	overflow: hidden;
+}
+
+.acoseccion4 .acotitle2{
+	background-color:#007b79;
+	font-size:14px;
+	height:auto;
+	
+	padding-left: 0px;
+	color: #FCFCFC;
+	display: block;
+	width:100%;
+	margin-bottom:0px;
+	cursor:pointer;
+	padding-top:0px;
+	border-radius: 15px 15px 15px 15px;
+-moz-border-radius: 15px 15px 15px 15px;
+-webkit-border-radius: 15px 15px 15px 15px;
+border: 0px solid #000000;
+}
+
+.acoseccion4 .acotitle2 img{
+	width:100%;
+}
+
+.acoseccion4 .acotitle2:hover{
+	background-color:#026c6a;
+	border-radius: 15px 15px 15px 15px;
+-moz-border-radius: 15px 15px 15px 15px;
+-webkit-border-radius: 15px 15px 15px 15px;
+border: 0px solid #000000;
+}
+/*boton sofia*/
+
+.acoseccion5{
+	background-color: #fff;
+
+	overflow: hidden;
+}
+
+.acoseccion5 .acotitle2{
+	background-color:#007b79;
+	font-size:14px;
+	height:auto;
+
+	padding-left: 0px;
+	color: #FCFCFC;
+	display: block;
+	width:100%;
+	margin-bottom: 0px;
+	cursor:pointer;
+	padding-top:0px;
+	border-radius: 15px 15px 15px 15px;
+-moz-border-radius: 15px 15px 15px 15px;
+-webkit-border-radius: 15px 15px 15px 15px;
+border: 0px solid #000000;
+}
+
+.acoseccion5 .acotitle2 img{
+	width:100%;
+}
+
+.acoseccion5 .acotitle2:hover{
+	background-color:#026c6a;
+	border-radius: 15px 15px 15px 15px;
+-moz-border-radius: 15px 15px 15px 15px;
+-webkit-border-radius: 15px 15px 15px 15px;
+border: 0px solid #000000;
+}
+
+/*agencia publica de empleo*/
+
+
+.acoseccion6{
+	background-color: #fff;
+
+	overflow: hidden;
+}
+
+.acoseccion6 .acotitle2{
+	background-color:#1698a4;
+	font-size:14px;
+	height:auto;
+	padding-left: 0px;
+	color: #FCFCFC;
+	display: block;
+	width:100%;
+	margin-bottom: 0px;
+	cursor:pointer;
+	padding-top:0px;
+	
+}
+
+.acoseccion6 .acotitle2 img{
+	width:100%;
+}
+
+.acoseccion6 .acotitle2:hover{
+	background-color:#0b818c;
+
+}
+
+@media screen and (max-width:800px){ 
+
+}
+
+@media screen and (max-width:640px){ 
+	.col2 {
+		width: 100%;
+	}
+	
+	.container {
+		margin-top:0px;
+	}
+}

@@ -28,6 +28,9 @@ else if (usuario=="daniels" && password=="3147733150") {
 else if (usuario=="tintinho" && password=="3132170617") { 
 	window.location="GLOSARIO.html"; 
 }
+else if (usuario=="jorgeburgos" && password=="colecciones") { 
+	window.location="GLOSARIO.html"; 
+}
 else
 {
 	//ambos campos
