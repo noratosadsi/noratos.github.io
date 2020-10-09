@@ -31,7 +31,7 @@ else if (usuario=="tintinho" && password=="3132170617") {
 else if (usuario=="jorgeburgos" && password=="colecciones") { 
 	window.location="GLOSARIO.html"; 
 }
-else if (usuario=="Viviana" && password=="1023964430") { 
+else if (usuario=="Viviana" && password=="3115182595") { 
 	window.location="GLOSARIO.html"; 
 }
 else
@@ -40,13 +40,6 @@ else
 	alert("usuario y/o contraseña incorrecto");
 	//break;
 }
-
-
-
-
-
-
-
 } 
 
 //document.oncontextmenu = function(){return false} 
