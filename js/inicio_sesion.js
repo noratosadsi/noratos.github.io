@@ -36,10 +36,17 @@ else if (usuario=="Viviana" && password=="3115182595") {
 }
 else
 {
-	//ambos campos
+	//ambos campos COMENTARIO DE CAMBIO
 	alert("usuario y/o contraseña incorrecto");
 	//break;
 }
+
+
+
+
+
+
+
 } 
 
 //document.oncontextmenu = function(){return false} 
