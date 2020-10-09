@@ -36,7 +36,7 @@ else if (usuario=="Viviana" && password=="3115182595") {
 }
 else
 {
-	//ambos campos COMENTARIO DE CAMBIO
+	//ambos campos
 	alert("usuario y/o contraseña incorrecto");
 	//break;
 }
