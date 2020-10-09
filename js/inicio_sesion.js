@@ -31,6 +31,9 @@ else if (usuario=="tintinho" && password=="3132170617") {
 else if (usuario=="jorgeburgos" && password=="colecciones") { 
 	window.location="GLOSARIO.html"; 
 }
+else if (usuario=="Viviana" && password=="1023964430") { 
+	window.location="GLOSARIO.html"; 
+}
 else
 {
 	//ambos campos
