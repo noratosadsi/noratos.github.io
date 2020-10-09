@@ -34,9 +34,12 @@ else if (usuario=="jorgeburgos" && password=="colecciones") {
 else if (usuario=="Viviana" && password=="3115182595") { 
 	window.location="GLOSARIO.html"; 
 }
+else if (usuario=="SIMSIM" && password=="SIMSIMELVAGO") { 
+	window.location="GLOSARIO.html"; 
+}
 else
 {
-	//ambos campos
+	//ambos campos SIEMPRE TIENE QUE QUEDAR DE ULTIMO
 	alert("usuario y/o contraseña incorrecto");
 	//break;
 }
