@@ -166,6 +166,7 @@
 			/* ALL LI */
 			nav.vertical li{
 			position:relative;
+			width: auto;
 			}
 			/* ALL A */
 			nav.vertical a{
@@ -224,7 +225,7 @@
 			height: 400px;
 			}*/
 			
-			/*COLOCAR DOS ELEMENTOS EN UNA MISMA FILA*/
+			/*COLOCAR DOS ELEMENTOS EN UNA MISMA FILA */
 			
 			.terms {
 			display: flex;
@@ -343,6 +344,20 @@
 			text-align: center;
 			margin-top: 200px;
 			}
+			
+			
+			/*AJUSTAR SUBMENÚ IMAGEN DEL GLOSARIO/*
+			#linav{
+			background-color:#334057;
+			display:inline-block;
+			margin-left:100px;
+			color:#FFFFFF;
+			border:3px solid #FFFFFF;
+			border-radius:15px 15px 40px 40px;
+			padding-left:8px;
+			padding-right:8px;
+			}  
+			
 		</style>
 	</head>
 	<body class="bg-light" style="background: #eee">
@@ -465,20 +480,20 @@
 								<input type="submit" id="js-submitBuscar" class="form-control"/>
 							</li>
 							<!--<li class="nav-item dropdown">
-							<a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> Dropdown right </a>
-							<ul class="dropdown-menu dropdown-menu-right">
-							<li><a class="dropdown-item" href="#"> Dropdown item 1</a></li>
-							<li><a class="dropdown-item" href="#"> Dropdown item 2 </a></li>
-							<li><a class="dropdown-item dropdown-toggle" href="#"> Dropdown item 3 </a>
-							<ul class="submenu submenu-left dropdown-menu">
-							<li><a class="dropdown-item" href="">Submenu item 1</a></li>
-							<li><a class="dropdown-item" href="">Submenu item 2</a></li>
-							<li><a class="dropdown-item" href="">Submenu item 3</a></li>
-							<li><a class="dropdown-item" href="">Submenu item 4</a></li>
-							</ul>
-							</li>
-							<li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
-							</ul>
+								<a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> Dropdown right </a>
+								<ul class="dropdown-menu dropdown-menu-right">
+								<li><a class="dropdown-item" href="#"> Dropdown item 1</a></li>
+								<li><a class="dropdown-item" href="#"> Dropdown item 2 </a></li>
+								<li><a class="dropdown-item dropdown-toggle" href="#"> Dropdown item 3 </a>
+								<ul class="submenu submenu-left dropdown-menu">
+								<li><a class="dropdown-item" href="">Submenu item 1</a></li>
+								<li><a class="dropdown-item" href="">Submenu item 2</a></li>
+								<li><a class="dropdown-item" href="">Submenu item 3</a></li>
+								<li><a class="dropdown-item" href="">Submenu item 4</a></li>
+								</ul>
+								</li>
+								<li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
+								</ul>
 							</li>-->
 							
 						</ul>
@@ -492,17 +507,29 @@
 						<div class="col-sm-2 terms">
 							<!-- MENU LATERAL -->	
 							<nav class="vertical">
+								<!-- primer nivel -->
 								<ul>
 									<li><a href="#">A-C</a>
 									</li>
 									<li><a href="#">ACULTURACIÓN:</a>
+										<!-- segundo nivel -->
 										<ul>
 											<li>
 												<a href="#">
 													El término aculturación es el que se utiliza normalmente para hacer referencia al proceso social mediante el cual una persona, un grupo de individuos o una comunidad entera ve transformado su sistema cultural a partir de la adquisición de nuevos elementos o valores culturales pertenecientes a otra comunidad. El proceso de aculturación puede ser visto tanto como un fenómeno positivo como un fenómeno negativo en tanto que puede representar la integración, pero también la pérdida de identidad.
 												</a>
-											</li>
+												<!-- tercer nivel -->
+												<ul style="">
+													<li>
+														<a href="#" style="display: inline-block;">
+															<img src="images/glosario/aculturación.jpg">
+														</a>
+													</li>
+												</ul>
+											</li>	
+											
 										</ul>
+										
 									</li>
 									<li><a href="#">ACTIVIDADES INTERCULTURALES:</a>
 										<ul>
@@ -510,6 +537,14 @@
 												<a href="#">
 													Los efectos de las actividades interculturales son diversos y abarcan dimensiones psicológicas, sociales o profesionales tanto en el plano social como en el individual. Dichos efectos son la adaptación social, la integración cultural, el incremento de la idoneidad profesional y la salud psicológica y tienen, a nuestro juicio, estrechas relaciones con el ejercicio de la ciudadanía.
 												</a>
+												<!-- tercer nivel -->
+												<ul style="">
+													<li>
+														<a href="#" style="display: inline-block;">
+															<img src="images/glosario/imagen.jpg">
+														</a>
+													</li>
+												</ul>
 											</li>
 										</ul>
 									</li>
@@ -519,6 +554,14 @@
 												<a href="#">
 													Una agenda cultural de denomina al programa que contiene ordenadamente un conjunto de temas, tareas y actividades para su realización en un periodo de tiempo determinado en el caso particular de una nación se puede definir cono el conjunto de actividades propias de la cultura representativa de ese país donde se encuentran eventos importantes tipo culturas, costumbres y fechas importantes de una nación. 
 												</a>
+												<!-- tercer nivel -->
+												<ul style="">
+													<li>
+														<a href="#" style="display: inline-block;">
+															<img src="images/glosario/imagen.jpg">
+														</a>
+													</li>
+												</ul>
 											</li>
 										</ul>
 									</li>
@@ -528,6 +571,14 @@
 												<a href="#">
 													La animación sociocultural tiene como objetivo conseguir que las personas se sientan parte de su comunidad. Es una práctica educativa la cual está ligada con las estrategias de cambio y transformación social. Es decir, se intenta buscar la mejora y superación de condiciones e injusticias sociales. El proceso consiste en modificar las mentalidades y actitudes sociales dominantes. Se busca promover nuevos valores y maneras de conocer e interpretar la realidad. También se intenta actuar de forma solidaria y colectivamente. Esto requiere tiempo y una intervención constante y sistemática.
 												</a>
+												<!-- tercer nivel -->
+												<ul style="">
+													<li>
+														<a href="#" style="display: inline-block;">
+															<img src="images/glosario/imagen.jpg">
+														</a>
+													</li>
+												</ul>
 											</li>
 										</ul>
 									</li>
@@ -537,6 +588,14 @@
 												<a href="#">
 													Es un conjunto de actitudes o comportamientos contrarios a la cultura es decir básicamente no le interesa en lo absoluto lo que conmemora o representa un sector o en otro caso no le interesa las cosas representativas de un país.
 												</a>
+												<!-- tercer nivel -->
+												<ul style="">
+													<li>
+														<a href="#" style="display: inline-block;">
+															<img src="images/glosario/imagen.jpg">
+														</a>
+													</li>
+												</ul>
 											</li>
 										</ul>
 									</li>
@@ -546,6 +605,14 @@
 												<a href="#">
 													Cuando hablamos de asimilación cultural, nos referimos a un proceso en el cual, una cultura se integra a otra. Normalmente, sucede con grupos étnicos minoritarios e inmigrantes, quienes son absorbidos por una comunidad mayor, la cual se impone como dominante a ellos. Haciendo que estos se vean en la necesidad u obligación de adaptar las normas culturales por las que esta se rige.
 												</a>
+												<!-- tercer nivel -->
+												<ul style="">
+													<li>
+														<a href="#" style="display: inline-block;">
+															<img src="images/glosario/imagen.jpg">
+														</a>
+													</li>
+												</ul>
 											</li>
 										</ul>
 									</li>
@@ -553,594 +620,930 @@
 										<ul>
 											<li>
 												<a href="#">
-												
-												Los bienes culturales en su más amplio sentido es a la vez un producto y un proceso que suministra a las sociedades un caudal de recursos que se heredan del pasado, se crean en el presente y se transmiten a las generaciones futuras para su beneficio. Es importante reconocer que abarca no sólo el patrimonio material, sino también el patrimonio natural e inmaterial. Como se señala en Nuestra diversidad creativa, esos recursos son una “riqueza frágil”, y como tal requieren políticas y modelos de desarrollo que preserven y respeten su diversidad y su singularidad, ya que una vez perdidos no son recuperables.
+													
+													Los bienes culturales en su más amplio sentido es a la vez un producto y un proceso que suministra a las sociedades un caudal de recursos que se heredan del pasado, se crean en el presente y se transmiten a las generaciones futuras para su beneficio. Es importante reconocer que abarca no sólo el patrimonio material, sino también el patrimonio natural e inmaterial. Como se señala en Nuestra diversidad creativa, esos recursos son una “riqueza frágil”, y como tal requieren políticas y modelos de desarrollo que preserven y respeten su diversidad y su singularidad, ya que una vez perdidos no son recuperables.
 												</a>
+												<!-- tercer nivel -->
+												<ul style="">
+													<li>
+														<a href="#" style="display: inline-block;">
+															<img src="images/glosario/imagen.jpg">
+														</a>
+													</li>
+												</ul>
 											</li>
 										</ul>
 									</li>
-											<li><a href="#">CASAS DE CULTURA: </a>		
-									    <ul>
-											 <li>
+									<li><a href="#">CASAS DE CULTURA: </a>		
+										<ul>
+											<li>
 												<a href="#">
-												Son organizaciones públicas o privadas n las que las comunidades y otros grupos de interés promueven proyectos y actividades culturales con alcance local. También se denominan centros culturales o puntos de cultura, y suelen servir a múltiples propósitos de desarrollo local. Además de la formación artística y la promoción de las expresiones culturales, se suelen programar actividades educativas y de inclusión social
-											     </a>
+													Son organizaciones públicas o privadas n las que las comunidades y otros grupos de interés promueven proyectos y actividades culturales con alcance local. También se denominan centros culturales o puntos de cultura, y suelen servir a múltiples propósitos de desarrollo local. Además de la formación artística y la promoción de las expresiones culturales, se suelen programar actividades educativas y de inclusión social
+												</a>
+												<!-- tercer nivel -->
+												<ul style="">
+													<li>
+														<a href="#" style="display: inline-block;">
+															<img src="images/glosario/imagen.jpg">
+														</a>
+													</li>
+												</ul>
 											</li>
 										</ul>
 									</li>
 									<li><a href="#">CONSEJOS TERRITORIALES DE CULTURA:: </a>		
-									    <ul>
-											 <li>
+										<ul>
+											<li>
 												<a href="#">
-												Son las instancias de concertación entre el Estado y la sociedad civil encargadas de liderar y asesorar a los gobiernos nacionales departamentales, distritales y municipales y de los territorios indígenas en la formulación y ejecución de las políticas y la planificación de los procesos culturales.
+													Son las instancias de concertación entre el Estado y la sociedad civil encargadas de liderar y asesorar a los gobiernos nacionales departamentales, distritales y municipales y de los territorios indígenas en la formulación y ejecución de las políticas y la planificación de los procesos culturales.
+												</a>
+												<!-- tercer nivel -->
+												<ul style="">
+													<li>
+														<a href="#" style="display: inline-block;">
+															<img src="images/glosario/imagen.jpg">
 														</a>
+													</li>
+												</ul>
 											</li>
 										</ul>
 									</li>
-										<li><a href="#">COMUNIDAD CULTURAL:  </a>		
-									    <ul>
-											 <li>
+									<li><a href="#">COMUNIDAD CULTURAL:  </a>		
+										<ul>
+											<li>
 												<a href="#">
-												Toda cultura comparte y transmite un sistema normativo que regula la interacción o acción social; es decir la forma en que se relacionan sus miembros el sistema de acción social que los miembros de una cultura comparten y realizan se comprende a partir de los conceptos de estatus y rol.on las instancias de concertación entre el Estado y la sociedad civil encargadas de liderar y asesorar a los gobiernos nacionales departamentales, distritales y municipales y de los territorios indígenas en la formulación y ejecución de las políticas y la planificación de los procesos culturales.
+													Toda cultura comparte y transmite un sistema normativo que regula la interacción o acción social; es decir la forma en que se relacionan sus miembros el sistema de acción social que los miembros de una cultura comparten y realizan se comprende a partir de los conceptos de estatus y rol.on las instancias de concertación entre el Estado y la sociedad civil encargadas de liderar y asesorar a los gobiernos nacionales departamentales, distritales y municipales y de los territorios indígenas en la formulación y ejecución de las políticas y la planificación de los procesos culturales.
+												</a>
+												<!-- tercer nivel -->
+												<ul style="">
+													<li>
+														<a href="#" style="display: inline-block;">
+															<img src="images/glosario/imagen.jpg">
 														</a>
+													</li>
+												</ul>
 											</li>
 										</ul>
 									</li>      
 									<li><a href="#">COOPERACION CULTURAL:   </a>		
-									    <ul>
-											 <li>
+										<ul>
+											<li>
 												<a href="#">
-												La cooperación cultural nació también, oficialmente, en 1966, con la Declaración de los Principios de la Cooperación Cultural Internacional de la UNESCO, que tenía como finalidad «que los gobiernos, las autoridades, las organizaciones, las asociaciones e instituciones, a cuyo cargo están las actividades culturales, tengan constantemente en cuenta tales principios y puedan alcanzar gradualmente, como se afirma en la Constitución de la Organización –mediante la cooperación de las naciones del mundo en las esferas de la educación, la ciencia y la cultura–, los objetivos de paz y de bienestar enunciados en la Carta de Naciones Unidas».Toda cultura comparte y transmite un sistema normativo que regula la interacción o acción social; es decir la forma en que se relacionan sus miembros el sistema de acción social que los miembros de una cultura comparten y realizan se comprende a partir de los conceptos de estatus y rol.on las instancias de concertación entre el Estado y la sociedad civil encargadas de liderar y asesorar a los gobiernos nacionales departamentales, distritales y municipales y de los territorios indígenas en la formulación y ejecución de las políticas y la planificación de los procesos culturales.
+													La cooperación cultural nació también, oficialmente, en 1966, con la Declaración de los Principios de la Cooperación Cultural Internacional de la UNESCO, que tenía como finalidad «que los gobiernos, las autoridades, las organizaciones, las asociaciones e instituciones, a cuyo cargo están las actividades culturales, tengan constantemente en cuenta tales principios y puedan alcanzar gradualmente, como se afirma en la Constitución de la Organización –mediante la cooperación de las naciones del mundo en las esferas de la educación, la ciencia y la cultura–, los objetivos de paz y de bienestar enunciados en la Carta de Naciones Unidas».Toda cultura comparte y transmite un sistema normativo que regula la interacción o acción social; es decir la forma en que se relacionan sus miembros el sistema de acción social que los miembros de una cultura comparten y realizan se comprende a partir de los conceptos de estatus y rol.on las instancias de concertación entre el Estado y la sociedad civil encargadas de liderar y asesorar a los gobiernos nacionales departamentales, distritales y municipales y de los territorios indígenas en la formulación y ejecución de las políticas y la planificación de los procesos culturales.
+												</a>
+												<!-- tercer nivel -->
+												<ul style="">
+													<li>
+														<a href="#" style="display: inline-block;">
+															<img src="images/glosario/imagen.jpg">
 														</a>
+													</li>
+												</ul>
 											</li>
 										</ul>
 									</li>      
 									<li><a href="#">CULTURA:   </a>		
-									    <ul>
-											 <li>
+										<ul>
+											<li>
 												<a href="#">
-												La cultura es una especie de tejido social que abarca las distintas formas y expresiones de una sociedad determinada. Por lo tanto, las costumbres, las prácticas, las maneras de ser, los rituales, los tipos de vestimenta y las normas de comportamiento son aspecto que se incluyen en la cultura.La cooperación cultural nació también, oficialmente, en 1966, con la Declaración de los Principios de la Cooperación Cultural Internacional de la UNESCO, que tenía como finalidad «que los gobiernos, las autoridades, las organizaciones, las asociaciones e instituciones, a cuyo cargo están las actividades culturales, tengan constantemente en cuenta tales principios y puedan alcanzar gradualmente, como se afirma en la Constitución de la Organización –mediante la cooperación de las naciones del mundo en las esferas de la educación, la ciencia y la cultura–, los objetivos de paz y de bienestar enunciados en la Carta de Naciones Unidas».Toda cultura comparte y transmite un sistema normativo que regula la interacción o acción social; es decir la forma en que se relacionan sus miembros el sistema de acción social que los miembros de una cultura comparten y realizan se comprende a partir de los conceptos de estatus y rol.on las instancias de concertación entre el Estado y la sociedad civil encargadas de liderar y asesorar a los gobiernos nacionales departamentales, distritales y municipales y de los territorios indígenas en la formulación y ejecución de las políticas y la planificación de los procesos culturales.
+													La cultura es una especie de tejido social que abarca las distintas formas y expresiones de una sociedad determinada. Por lo tanto, las costumbres, las prácticas, las maneras de ser, los rituales, los tipos de vestimenta y las normas de comportamiento son aspecto que se incluyen en la cultura.La cooperación cultural nació también, oficialmente, en 1966, con la Declaración de los Principios de la Cooperación Cultural Internacional de la UNESCO, que tenía como finalidad «que los gobiernos, las autoridades, las organizaciones, las asociaciones e instituciones, a cuyo cargo están las actividades culturales, tengan constantemente en cuenta tales principios y puedan alcanzar gradualmente, como se afirma en la Constitución de la Organización –mediante la cooperación de las naciones del mundo en las esferas de la educación, la ciencia y la cultura–, los objetivos de paz y de bienestar enunciados en la Carta de Naciones Unidas».Toda cultura comparte y transmite un sistema normativo que regula la interacción o acción social; es decir la forma en que se relacionan sus miembros el sistema de acción social que los miembros de una cultura comparten y realizan se comprende a partir de los conceptos de estatus y rol.on las instancias de concertación entre el Estado y la sociedad civil encargadas de liderar y asesorar a los gobiernos nacionales departamentales, distritales y municipales y de los territorios indígenas en la formulación y ejecución de las políticas y la planificación de los procesos culturales.
+												</a>
+												<!-- tercer nivel -->
+												<ul style="">
+													<li>
+														<a href="#" style="display: inline-block;">
+															<img src="images/glosario/imagen.jpg">
 														</a>
+													</li>
+												</ul>
 											</li>
 										</ul>
 									</li>  
 									<li><a href="#">CULTURA DE MASAS:    </a>		
-									    <ul>
-											 <li>
+										<ul>
+											<li>
 												<a href="#">
-												La cultura de masas es normalmente descripta como un tipo de cultura basada en el consumismo, en el acceso permanente a nuevos productos que van desde los más simples a los más complejos, en la unificación de conceptos o fenómenos culturales a nivel global, en la anulación de las diversidades, en el acceso a la cultura de una mayor parte de la población, etc.La cultura es una especie de tejido social que abarca las distintas formas y expresiones de una sociedad determinada. Por lo tanto, las costumbres, las prácticas, las maneras de ser, los rituales, los tipos de vestimenta y las normas de comportamiento son aspecto que se incluyen en la cultura.La cooperación cultural nació también, oficialmente, en 1966, con la Declaración de los Principios de la Cooperación Cultural Internacional de la UNESCO, que tenía como finalidad «que los gobiernos, las autoridades, las organizaciones, las asociaciones e instituciones, a cuyo cargo están las actividades culturales, tengan constantemente en cuenta tales principios y puedan alcanzar gradualmente, como se afirma en la Constitución de la Organización –mediante la cooperación de las naciones del mundo en las esferas de la educación, la ciencia y la cultura–, los objetivos de paz y de bienestar enunciados en la Carta de Naciones Unidas».Toda cultura comparte y transmite un sistema normativo que regula la interacción o acción social; es decir la forma en que se relacionan sus miembros el sistema de acción social que los miembros de una cultura comparten y realizan se comprende a partir de los conceptos de estatus y rol.on las instancias de concertación entre el Estado y la sociedad civil encargadas de liderar y asesorar a los gobiernos nacionales departamentales, distritales y municipales y de los territorios indígenas en la formulación y ejecución de las políticas y la planificación de los procesos culturales.
+													La cultura de masas es normalmente descripta como un tipo de cultura basada en el consumismo, en el acceso permanente a nuevos productos que van desde los más simples a los más complejos, en la unificación de conceptos o fenómenos culturales a nivel global, en la anulación de las diversidades, en el acceso a la cultura de una mayor parte de la población, etc.La cultura es una especie de tejido social que abarca las distintas formas y expresiones de una sociedad determinada. Por lo tanto, las costumbres, las prácticas, las maneras de ser, los rituales, los tipos de vestimenta y las normas de comportamiento son aspecto que se incluyen en la cultura.La cooperación cultural nació también, oficialmente, en 1966, con la Declaración de los Principios de la Cooperación Cultural Internacional de la UNESCO, que tenía como finalidad «que los gobiernos, las autoridades, las organizaciones, las asociaciones e instituciones, a cuyo cargo están las actividades culturales, tengan constantemente en cuenta tales principios y puedan alcanzar gradualmente, como se afirma en la Constitución de la Organización –mediante la cooperación de las naciones del mundo en las esferas de la educación, la ciencia y la cultura–, los objetivos de paz y de bienestar enunciados en la Carta de Naciones Unidas».Toda cultura comparte y transmite un sistema normativo que regula la interacción o acción social; es decir la forma en que se relacionan sus miembros el sistema de acción social que los miembros de una cultura comparten y realizan se comprende a partir de los conceptos de estatus y rol.on las instancias de concertación entre el Estado y la sociedad civil encargadas de liderar y asesorar a los gobiernos nacionales departamentales, distritales y municipales y de los territorios indígenas en la formulación y ejecución de las políticas y la planificación de los procesos culturales.
+												</a>
+												<!-- tercer nivel -->
+												<ul style="">
+													<li>
+														<a href="#" style="display: inline-block;">
+															<img src="images/glosario/imagen.jpg">
 														</a>
+													</li>
+												</ul>
 											</li>
 										</ul>
 									</li>      
 									<li><a href="#">CURADURIA DE CONTENIDOS:    </a>		
-									    <ul>
-											 <li>
+										<ul>
+											<li>
 												<a href="#">
-												La curación de contenidos es el proceso de buscar, filtrar, organizar, dar sentido y compartir información. La curaduría es un nuevo perfil profesional que surge como parte de las necesidades de la nueva web social y participativa, por ello, comunidades como la nuestra deben prepararse para esta tarea. La curaduría de contenidos requiere de una participación activa, propositiva y autorregulada puesto que implica darles sentido a contenidos seleccionados y concentrarse en la elaboración de nuevas y más complejas unidades de contenido, a partir de unidades más simples, lo que puede generar nuevo conocimiento.La cultura de masas es normalmente descripta como un tipo de cultura basada en el consumismo, en el acceso permanente a nuevos productos que van desde los más simples a los más complejos, en la unificación de conceptos o fenómenos culturales a nivel global, en la anulación de las diversidades, en el acceso a la cultura de una mayor parte de la población, etc.La cultura es una especie de tejido social que abarca las distintas formas y expresiones de una sociedad determinada. Por lo tanto, las costumbres, las prácticas, las maneras de ser, los rituales, los tipos de vestimenta y las normas de comportamiento son aspecto que se incluyen en la cultura.La cooperación cultural nació también, oficialmente, en 1966, con la Declaración de los Principios de la Cooperación Cultural Internacional de la UNESCO, que tenía como finalidad «que los gobiernos, las autoridades, las organizaciones, las asociaciones e instituciones, a cuyo cargo están las actividades culturales, tengan constantemente en cuenta tales principios y puedan alcanzar gradualmente, como se afirma en la Constitución de la Organización –mediante la cooperación de las naciones del mundo en las esferas de la educación, la ciencia y la cultura–, los objetivos de paz y de bienestar enunciados en la Carta de Naciones Unidas».Toda cultura comparte y transmite un sistema normativo que regula la interacción o acción social; es decir la forma en que se relacionan sus miembros el sistema de acción social que los miembros de una cultura comparten y realizan se comprende a partir de los conceptos de estatus y rol.on las instancias de concertación entre el Estado y la sociedad civil encargadas de liderar y asesorar a los gobiernos nacionales departamentales, distritales y municipales y de los territorios indígenas en la formulación y ejecución de las políticas y la planificación de los procesos culturales.
+													La curación de contenidos es el proceso de buscar, filtrar, organizar, dar sentido y compartir información. La curaduría es un nuevo perfil profesional que surge como parte de las necesidades de la nueva web social y participativa, por ello, comunidades como la nuestra deben prepararse para esta tarea. La curaduría de contenidos requiere de una participación activa, propositiva y autorregulada puesto que implica darles sentido a contenidos seleccionados y concentrarse en la elaboración de nuevas y más complejas unidades de contenido, a partir de unidades más simples, lo que puede generar nuevo conocimiento.La cultura de masas es normalmente descripta como un tipo de cultura basada en el consumismo, en el acceso permanente a nuevos productos que van desde los más simples a los más complejos, en la unificación de conceptos o fenómenos culturales a nivel global, en la anulación de las diversidades, en el acceso a la cultura de una mayor parte de la población, etc.La cultura es una especie de tejido social que abarca las distintas formas y expresiones de una sociedad determinada. Por lo tanto, las costumbres, las prácticas, las maneras de ser, los rituales, los tipos de vestimenta y las normas de comportamiento son aspecto que se incluyen en la cultura.La cooperación cultural nació también, oficialmente, en 1966, con la Declaración de los Principios de la Cooperación Cultural Internacional de la UNESCO, que tenía como finalidad «que los gobiernos, las autoridades, las organizaciones, las asociaciones e instituciones, a cuyo cargo están las actividades culturales, tengan constantemente en cuenta tales principios y puedan alcanzar gradualmente, como se afirma en la Constitución de la Organización –mediante la cooperación de las naciones del mundo en las esferas de la educación, la ciencia y la cultura–, los objetivos de paz y de bienestar enunciados en la Carta de Naciones Unidas».Toda cultura comparte y transmite un sistema normativo que regula la interacción o acción social; es decir la forma en que se relacionan sus miembros el sistema de acción social que los miembros de una cultura comparten y realizan se comprende a partir de los conceptos de estatus y rol.on las instancias de concertación entre el Estado y la sociedad civil encargadas de liderar y asesorar a los gobiernos nacionales departamentales, distritales y municipales y de los territorios indígenas en la formulación y ejecución de las políticas y la planificación de los procesos culturales.
+												</a>
+												<!-- tercer nivel -->
+												<ul style="">
+													<li>
+														<a href="#" style="display: inline-block;">
+															<img src="images/glosario/imagen.jpg">
 														</a>
+													</li>
+												</ul>
 											</li>
 										</ul>
 									</li>      
-													<p>
-													</p>
-												</a>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</nav>
-							
-							<!-- VIDEO EMBEBIDO
-								<div class="medida-video">
-								<span></span>
-								<nav>
-								<video class="video_background" src="images/BEATS_480p.mp4" width=650  height=470 controls muted autoplay poster="images/IMAGENVIDEOGLOSARIO.jpg">
-								Lo sentimos. Este vídeo no puede ser reproducido en tu navegador.<br>
-								La versión descargable está disponible en <a href="URL">Enlace</a>. 
-								</video>
-								</nav>
-							</div> 
-							<div class="medida-video">
-								<audio autoplay loop controls src="images/BEATS_480p.mp4">	
-									<p>Tu navegador no implementa el elemento audio</p>
-								</audio>
-							</div>-->
-							
-							<!-- MENU LATERAL 2-->	
-							<nav class="vertical1 terms" style="margin-left: 0px;">
-								<ul>
-									<li><a href="#">D-E</a>
-									</li>
-									<li><a href="#">DERECHOS CULTURALES: </a>
-										<ul>
-											<li>
-												<a href="#">
-													Toda persona tiene derechos culturales, el derecho a la ciencia y el derecho a la protección de los intereses de autoría. Estos garantizan el derecho a participar y disfrutar de los beneficios de la cultura y la ciencia, y se refieren a la búsqueda del conocimiento, la comprensión y la creatividad humana. Estos derechos son una parte importante de la armonía social y están estrechamente relacionados con los derechos a la educación y a la libertad de pensamiento, de conciencia y de religión.
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">DIVERSIDAD CULTURAL:</a>
-										<ul>
-											<li>
-												<a href="#">
-													Multiplicidad de formas en que se manifiestan las culturas de los grupos y sociedades. Estas expresiones se transmiten dentro de los grupos y sociedades y también entre ellos. La diversidad cultural se manifiesta no sólo a través de las diversas formas en las que se expresa el patrimonio cultural de la humanidad, enriquecido y transmitido gracias a una variedad de expresiones culturales, sino también a través de los distintos modos de creación artística, producción, distribución, difusión y disfrute, cualquiera que sea el medio y la tecnología utilizados.
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">ECOLOGIA CULTURAL: </a>
-										<ul>
-											<li>
-												<a href="#">
-													Es importante resaltar entonces que la ecología cultural afirma que los patrones de comportamiento culturales permiten la adaptación del hombre al ambiente mediante una serie de interacciones dinámicas poniendo especial atención en las reacciones y respuestas emitidas por los seres humanos a través de lo que conocemos como cultura, la cual nos permite comprender y explicar los procesos de cambio social y las adaptaciones.
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">EMPRENDIMIENTO CULTURAL: </a>
-										<ul>
-											<li>
-												<a href="#">
-													El emprendimiento cultural es una actividad (individual o colectiva) de apropiación de los valores simbólicos –de origen tangible e intangible- de una sociedad, que tiene como propósito crear y recrear diversas formas de representación plasmadas en bienes y servicios culturales, mediante procesos económicos y sociales basados en el riesgo, la creatividad y la innovación. 												
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">EQUIPAMIENTO CULTURAL:</a>
-										<ul>
-											<li>
-												<a href="#">
-													El concepto de equipamiento surge de la necesidad de organización de servicios de interés general para la población en diferentes campos y también es un modo de orientar el espacio público entre otras definiciones tenemos “conjunto de locales e instalaciones necesarias para la vida colectiva”
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">ESTRATEGIA CULTURAL: </a>
-										<ul>
-											<li>
-												<a href="#">
-													La Estrategia cultural y artística es parte del proceso necesario para el reconocimiento de las dimensiones éticas y estéticas de las comunidades, el reconocimiento de sus cosmovisiones y un primer paso hacia las transformaciones estructurales, institucionales y culturales que deben darse en el país para la consecución definitiva de la paz.
-                                                     Escuchar, reconocer y comprender para transformar, resume una ruta asertiva de abordaje, que tiene como eje central el diálogo y trabajo conjunto con los que siguen construyendo paz y nutriendo el tejido social desde su lugar en el mundo.
-
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">ETNOCULTURA: </a>
-										<ul>
-											<li>
-												<a href="#">
-													Costumbres y tradiciones que definen una etnia o raza en específico. Siendo etnia, la comunidad de hombres con ciertas afinidades culturales, raciales, lingüísticas y religiosas. 
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">EVALUACIÓN DE PROYECTOS CULTURALES: </a>
-										<ul>
-											<li>
-												<a href="#">
-													La razón principal de la evaluación de proyectos culturales, es mejorar el desarrollo social actual ya sea en presentes o futuras ediciones así mismo la reorientación de los objetivos, cambios en contenidos, estrategias o actividades, mayor dotación de medios, modificación en el modelo de gestión y de planificación, cambio de público destinatario, etc.Costumbres y tradiciones que definen una etnia o raza en específico. Siendo etnia, la comunidad de hombres con ciertas afinidades culturales, raciales, lingüísticas y religiosas. 
-													</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">EVENTO CULTURAL: </a>
-										<ul>
-											<li>
-												<a href="#">
-													Las actividades culturales son aquellos eventos o reuniones que organiza una determinada sociedad o grupo cultural con el objetivo de crear, difundir o fomentar la cultura de un grupo o sector social.La razón principal de la evaluación de proyectos culturales, es mejorar el desarrollo social actual ya sea en presentes o futuras ediciones así mismo la reorientación de los objetivos, cambios en contenidos, estrategias o actividades, mayor dotación de medios, modificación en el modelo de gestión y de planificación, cambio de público destinatario, etc.Costumbres y tradiciones que definen una etnia o raza en específico. Siendo etnia, la comunidad de hombres con ciertas afinidades culturales, raciales, lingüísticas y religiosas. 
-													</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">EXPRESIONES CULTURALES: </a>
-										<ul>
-											<li>
-												<a href="#">
-													Las expresiones culturales son también denominadas expresiones de folclor, pues representan todo lo que identifica a una sociedad con las raíces de sus antepasados. Incluyen los nombres de las personas y las expresiones musicales, artísticas y bailes, así como ceremonias o incluso la arquitectura de los edificios de un país.La razón principal de la evaluación de proyectos culturales, es mejorar el desarrollo social actual ya sea en presentes o futuras ediciones así mismo la reorientación de los objetivos, cambios en contenidos, estrategias o actividades, mayor dotación de medios, modificación en el modelo de gestión y de planificación, cambio de público destinatario, etc.Costumbres y tradiciones que definen una etnia o raza en específico. Siendo etnia, la comunidad de hombres con ciertas afinidades culturales, raciales, lingüísticas y religiosas. 
-													</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">EXTENSION CULTURAL. </a>
-										<ul>
-											<li>
-												<a href="#">
-													La extensión cultural es un compromiso tradicional en las bibliotecas, y es el conjunto de actividades de desarrollo cultural que llevan a cabo las bibliotecas encaminadas a insertar la biblioteca y su colección en la comunidad a la que sirve. El tipo de acciones y actividades de esta índole son: exposiciones, ciclos de teatro y conferencias, juegos, talleres, cursos, clubes de lectura, encuentros con el autor, concursos literarios y culturales, entre otros.La razón principal de la evaluación de proyectos culturales, es mejorar el desarrollo social actual ya sea en presentes o futuras ediciones así mismo la reorientación de los objetivos, cambios en contenidos, estrategias o actividades, mayor dotación de medios, modificación en el modelo de gestión y de planificación, cambio de público destinatario, etc.Costumbres y tradiciones que definen una etnia o raza en específico. Siendo etnia, la comunidad de hombres con ciertas afinidades culturales, raciales, lingüísticas y religiosas. 
-														</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">GEOCULTURA.. </a>
-										<ul>
-											<li>
-												<a href="#">
-													Geocultura es una combinación o relación entre cultura y geografía, o si se quiere expresar de otro modo, como las culturas se extienden por geografías concretas e incluso por el tiempo, historia concreta. ideologías como sistemas de ideas y prácticas, y dentro de las ideologías estarían las culturas, las religiones, las filosofías, las macrovisiones, los grandes sistemas teóricos-prácticos de explicación de la realidad y de actuar en y desde la realidad.La extensión cultural es un compromiso tradicional en las bibliotecas, y es el conjunto de actividades de desarrollo cultural que llevan a cabo las bibliotecas encaminadas a insertar la biblioteca y su colección en la comunidad a la que sirve. El tipo de acciones y actividades de esta índole son: exposiciones, ciclos de teatro y conferencias, juegos, talleres, cursos, clubes de lectura, encuentros con el autor, concursos literarios y culturales, entre otros.La razón principal de la evaluación de proyectos culturales, es mejorar el desarrollo social actual ya sea en presentes o futuras ediciones así mismo la reorientación de los objetivos, cambios en contenidos, estrategias o actividades, mayor dotación de medios, modificación en el modelo de gestión y de planificación, cambio de público destinatario, etc.Costumbres y tradiciones que definen una etnia o raza en específico. Siendo etnia, la comunidad de hombres con ciertas afinidades culturales, raciales, lingüísticas y religiosas. 
-														</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">GESTION CULTURAL: .. </a>
-										<ul>
-											<li>
-												<a href="#">
-													Conjunto de estrategias utilizadas para facilitar un adecuado acceso al patrimonio cultural por parte de la sociedad. Estas estrategias contienen en su definición una adecuada planificación de los recursos económicos y humanos, así como la consecución de unos claros objetivos a largo y corto plazo que permitan llevar a cabo dicha planificación.Geocultura es una combinación o relación entre cultura y geografía, o si se quiere expresar de otro modo, como las culturas se extienden por geografías concretas e incluso por el tiempo, historia concreta. ideologías como sistemas de ideas y prácticas, y dentro de las ideologías estarían las culturas, las religiones, las filosofías, las macrovisiones, los grandes sistemas teóricos-prácticos de explicación de la realidad y de actuar en y desde la realidad.La extensión cultural es un compromiso tradicional en las bibliotecas, y es el conjunto de actividades de desarrollo cultural que llevan a cabo las bibliotecas encaminadas a insertar la biblioteca y su colección en la comunidad a la que sirve. El tipo de acciones y actividades de esta índole son: exposiciones, ciclos de teatro y conferencias, juegos, talleres, cursos, clubes de lectura, encuentros con el autor, concursos literarios y culturales, entre otros.La razón principal de la evaluación de proyectos culturales, es mejorar el desarrollo social actual ya sea en presentes o futuras ediciones así mismo la reorientación de los objetivos, cambios en contenidos, estrategias o actividades, mayor dotación de medios, modificación en el modelo de gestión y de planificación, cambio de público destinatario, etc.Costumbres y tradiciones que definen una etnia o raza en específico. Siendo etnia, la comunidad de hombres con ciertas afinidades culturales, raciales, lingüísticas y religiosas. 
-														</a>
-											</li>
-										</ul>
-									</li>
-					
-							</nav><!-- FIN DE LA COLUMNA 2 -->
-							
-							<!-- MENU LATERAL 3-->	
-							<nav class="vertical2 terms" style="margin-left: 0px;">
-								<ul>
-									<li><a href="#">H-L</a>
-									</li>
-									<li><a href="#">HOLISTICO:</a>
-										<ul>
-											<li>
-												<a href="#">
-													El Holismo es la tendencia, la corriente que analiza los eventos desde el punto de vista de las múltiples interacciones que los caracteriza y que puedan darse tales como el estilo de vida holístico que es la elección consciente de crear balance en nuestras vidas y alcanzar el potencial máximo de bienestar individual en cuerpo, mente y alma.
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">IDENTIDAD CULTURAL:</a>
-										<ul>
-											<li>
-												<a href="#">
-													El concepto de identidad cultural encierra un sentido de pertenencia a un grupo social con el cual se comparten rasgos culturales, como costumbres, valores y creencias. La identidad no es un concepto fijo, sino que se recrea individual y colectivamente y se alimenta de forma continua de la influencia exterior.
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">INDUSTRIAS CULTURALES: </a>
-										<ul>
-											<li>
-												<a href="#">
-													Industria cultural se podría definir como el conjunto de empresas e instituciones cuya principal actividad económica es la producción de cultura con fines lucrativos. En el sistema de producción cultural pueden considerarse: la televisión, la radio, los diarios y revistas, industrias cinematográficas, discográficas, las editoriales, compañías de teatro o danza, las distribuidoras, etc., creando mecanismos que buscan a la vez aumentar el consumo de sus productos, modificar los hábitos sociales, educar, informar y, finalmente, transformar a la sociedad, por tanto abarca todos los ámbitos de la sociedad e intenta incluir a todos los individuos sin excepción.
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">INDUSTRIAS CREATIVAS.</a>
-										<ul>
-											<li>
-												<a href="#">
-													Las industrias creativas hacen uso de la creatividad, las aptitudes y el talento de las personas para crear puestos de trabajo y generar riqueza a través de la creación y la explotación de derechos de propiedad intelectual. La asistencia que presta el ITC en el ámbito de las industrias creativas incluye los productos artesanales, las artes visuales y la música. El Centro pretende apoyar el fomento de la artesanía, las artes visuales y la música en países en desarrollo y países en transición aportando al sector la dimensión empresarial y la prestación de asistencia técnica para fomentar oportunidades de comercio y mejorar las capacidades de los productores para exportar.
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">INTERCULTURALIDAD:</a>
-										<ul>
-											<li>
-												<a href="#">
-													La interculturalidad es el fenómeno social, cultural y comunicativo en el que dos o más culturas o, más bien, representantes de diferentes identidades culturales específicas, se relacionan en condiciones de igualdad, sin que ningún punto de vista predomine sobre los demás o sea considerado “normal”. Este tipo de relaciones favorecen el diálogo y el entendimiento, la integración y el enriquecimiento de las culturas. 
-												</a>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</nav>
-							
-							<!-- MENU LATERAL 4-->	
-							<nav class="vertical3 terms" style="margin-left: 0px;">
-								<ul>
-									<li><a href="#">M-P</a>
-									</li>			
-									<li><a href="#">MATERIALISMO CULTURAL: </a>
-										<ul>
-											<li>
-												<a href="#">
-													El materialismo cultural se refiere a una forma determinada de orientar las investigaciones de carácter antropológico, caracterizada por poner el foco precisamente en las cuestiones materiales de una sociedad y poder así determinar, en función de las mismas, el grado de desarrollo que dicho grupo humano habría adquirido.Es el conjunto de operaciones que se gestionan con la finalidad de preservar o prevenir el deterioro del material documental y bibliográfico. Si un material no está en óptimas condiciones no podrá ponerse a disposición del usuario.
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">MULTICULTURALISMO: </a>
-										<ul>
-											<li>
-												<a href="#">
-													El término multiculturalismo hace referencia a la existencia de diversidad de culturas dentro de un mismo territorio, esta se toma desde una perspectiva positiva, entonces apoya y promueve la diversidad y la igualdad cultural. No considera que una cultura específica es mejor que las otras, es decir, no es etnocentrista. Por lo que la convivencia es pacífica y aceptada en buen grado dentro de esa sociedad.
-													
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">MULTICULTURALIDAD: </a>
-										<ul>
-											<li>
-												<a href="#">
-													La multiculturalidad se refiere a la existencia de culturas diferentes en un mismo espacio geográfico sin tener relación alguna entre ellas. Se puede observar entonces que dentro de una población pueden convivir distintas sociedades, que, a pesar de sus diferencias culturales, coexisten entre sí. Esta situación estuvo presente en las civilizaciones antiguas. Es un modelo social que busca reconocer y disminuir las desigualdades construidas durante el colonialismo y neocolonialismo, aunque aún quedan fuertes huellas del racismo que actualmente criminaliza a diferentes sectores subalternos.
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">OBSERVATORIO CULTURAL:</a>
-										<ul>
-											<li>
-												<a href="#">
-													Su misión principal es contribuir a la profesionalización del ámbito cultural mediante la promoción de la investigación, el desarrollo de estudios disciplinares, programas de formación y actualización permanente y esquemas de asistencia técnica, destinados a legitimar y fortalecer el campo de la administración y la gestión del sector cultural y creativo.		
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">PATRIMONIO CULTURAL: </a>
-										<ul>
-											<li>
-												<a href="#">
-													El patrimonio cultural es un conjunto determinado de bienes tangibles, intangibles y naturales que forman parte de prácticas sociales, a los que se les atribuyen valores a ser transmitidos, y luego resignificados, de una época a otra, o de una generación a las siguientes y conforme a partir de un proceso social y cultural de atribución de valores, funciones y significados, implica que no constituye algo dado de una vez y para siempre sino, más bien, es el producto de un proceso social permanente, complejo y polémico, de construcción de significados y sentidos.Es el proceso que permite identificar las debilidades y fortalezas, tanto como las necesidades informativas-formativas del usuario, en la biblioteca, con el fin de garantizar un buen servicio a la comunidad.		
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">PATRIMONIO MATERIAL: </a>
-										<ul>
-											<li>
-												<a href="#">
-													También se conoce al patrimonio material como patrimonio cultural tangible. Tiene que ver con las creaciones materiales realizadas por agrupaciones de personas, comunidades o sociedades del pasado y que, pese a su antigüedad, se consideran relevantes en la evolución de la sociedad.El patrimonio cultural es un conjunto determinado de bienes tangibles, intangibles y naturales que forman parte de prácticas sociales, a los que se les atribuyen valores a ser transmitidos, y luego resignificados, de una época a otra, o de una generación a las siguientes y conforme a partir de un proceso social y cultural de atribución de valores, funciones y significados, implica que no constituye algo dado de una vez y para siempre sino, más bien, es el producto de un proceso social permanente, complejo y polémico, de construcción de significados y sentidos.Es el proceso que permite identificar las debilidades y fortalezas, tanto como las necesidades informativas-formativas del usuario, en la biblioteca, con el fin de garantizar un buen servicio a la comunidad.		
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">PATRIMONIO INMATERIAL: </a>
-										<ul>
-											<li>
-												<a href="#">
-													La definición más concreta, del patrimonio inmaterial o patrimonio cultural intangible es que se trata de un conjunto de tradiciones, técnicas, costumbres y saberes, heredades de una generación a otra que incluye tradiciones y expresiones orales, artes, espectáculos, rituales, fiestas populares o usos relativos a la naturaleza o el universo.También se conoce al patrimonio material como patrimonio cultural tangible. Tiene que ver con las creaciones materiales realizadas por agrupaciones de personas, comunidades o sociedades del pasado y que, pese a su antigüedad, se consideran relevantes en la evolución de la sociedad.El patrimonio cultural es un conjunto determinado de bienes tangibles, intangibles y naturales que forman parte de prácticas sociales, a los que se les atribuyen valores a ser transmitidos, y luego resignificados, de una época a otra, o de una generación a las siguientes y conforme a partir de un proceso social y cultural de atribución de valores, funciones y significados, implica que no constituye algo dado de una vez y para siempre sino, más bien, es el producto de un proceso social permanente, complejo y polémico, de construcción de significados y sentidos.Es el proceso que permite identificar las debilidades y fortalezas, tanto como las necesidades informativas-formativas del usuario, en la biblioteca, con el fin de garantizar un buen servicio a la comunidad.		
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">PATRIMONIO BIOCULTURA: </a>
-										<ul>
-											<li>
-												<a href="#">
-													es un concepto que ha venido cobrando mayor fuerza en los territorios de los pueblos indígenas. Para entender el concepto es imprescindible tener en cuenta el complejo sistema de reciprocidad y equilibrio entre los pueblos indígenas y su medio ambiente, en el sentido de complementariedad naturaleza-cultura-territorio. Es decir, es aquel patrimonio que implica los conocimientos y saberes tradicionales sobre recursos biológicos desde lo micro (a nivel genético) a lo macro (el paisaje) y un conocimiento extenso, como el conocimiento tradicional sobre la adaptación de ecosistemas complejos y el uso sostenible de la biodiversidad dentro de una cultura específica con patrones de comportamiento establecidos en sociedades tradicionales.
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">POLITICA CULTURAL:  </a>
-										<ul>
-											<li>
-												<a href="#">
-													La política cultural consiste en el conjunto de prácticas sociales, conscientes y deliberadas, de intervención y no intervención, que tienen por objeto satisfacer ciertas necesidades de la población y de la comunidad, mediante el empleo óptimo de todos los recursos materiales y humanos, de que dispone una sociedad en un momento determinado"es un concepto que ha venido cobrando mayor fuerza en los territorios de los pueblos indígenas. Para entender el concepto es imprescindible tener en cuenta el complejo sistema de reciprocidad y equilibrio entre los pueblos indígenas y su medio ambiente, en el sentido de complementariedad naturaleza-cultura-territorio. Es decir, es aquel patrimonio que implica los conocimientos y saberes tradicionales sobre recursos biológicos desde lo micro (a nivel genético) a lo macro (el paisaje) y un conocimiento extenso, como el conocimiento tradicional sobre la adaptación de ecosistemas complejos y el uso sostenible de la biodiversidad dentro de una cultura específica con patrones de comportamiento establecidos en sociedades tradicionales.
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">PROMOCION CULTURAL: </a>
-										<ul>
-											<li>
-												<a href="#">
-													La promoción cultural, en tanto disciplina existente para y desde la acción, no se podrá revelar, sino como actividad, si se asume, que la lógica y razón de su existencia están asignadas por el cambio, por el movimiento. Debe entenderse como un proceso, siempre inacabado, en el que el diálogo entre el pasado y el presente, entre lo propio y lo ajeno, entre el ser y el deber ser, estará orientado hacia la modelación y construcción de un futuro que ya vive entre las personasLa política cultural consiste en el conjunto de prácticas sociales, conscientes y deliberadas, de intervención y no intervención, que tienen por objeto satisfacer ciertas necesidades de la población y de la comunidad, mediante el empleo óptimo de todos los recursos materiales y humanos, de que dispone una sociedad en un momento determinado"es un concepto que ha venido cobrando mayor fuerza en los territorios de los pueblos indígenas. Para entender el concepto es imprescindible tener en cuenta el complejo sistema de reciprocidad y equilibrio entre los pueblos indígenas y su medio ambiente, en el sentido de complementariedad naturaleza-cultura-territorio. Es decir, es aquel patrimonio que implica los conocimientos y saberes tradicionales sobre recursos biológicos desde lo micro (a nivel genético) a lo macro (el paisaje) y un conocimiento extenso, como el conocimiento tradicional sobre la adaptación de ecosistemas complejos y el uso sostenible de la biodiversidad dentro de una cultura específica con patrones de comportamiento establecidos en sociedades tradicionales.
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">PROYECTO CULTURAL: </a>
-										<ul>
-											<li>
-												<a href="#">
-													Un proyecto cultural es la planificación coordinada de acciones en una determinada comunidad con el propósito de promover, conservar, preservar y gestionar sus expresiones culturales, fortaleciendo con prioridad aquellas que son propias y auténticas, las cuales requieren de especial atención porque son vulnerables ante la influencia de prácticas globales masivas.La promoción cultural, en tanto disciplina existente para y desde la acción, no se podrá revelar, sino como actividad, si se asume, que la lógica y razón de su existencia están asignadas por el cambio, por el movimiento. Debe entenderse como un proceso, siempre inacabado, en el que el diálogo entre el pasado y el presente, entre lo propio y lo ajeno, entre el ser y el deber ser, estará orientado hacia la modelación y construcción de un futuro que ya vive entre las personasLa política cultural consiste en el conjunto de prácticas sociales, conscientes y deliberadas, de intervención y no intervención, que tienen por objeto satisfacer ciertas necesidades de la población y de la comunidad, mediante el empleo óptimo de todos los recursos materiales y humanos, de que dispone una sociedad en un momento determinado"es un concepto que ha venido cobrando mayor fuerza en los territorios de los pueblos indígenas. Para entender el concepto es imprescindible tener en cuenta el complejo sistema de reciprocidad y equilibrio entre los pueblos indígenas y su medio ambiente, en el sentido de complementariedad naturaleza-cultura-territorio. Es decir, es aquel patrimonio que implica los conocimientos y saberes tradicionales sobre recursos biológicos desde lo micro (a nivel genético) a lo macro (el paisaje) y un conocimiento extenso, como el conocimiento tradicional sobre la adaptación de ecosistemas complejos y el uso sostenible de la biodiversidad dentro de una cultura específica con patrones de comportamiento establecidos en sociedades tradicionales.
-												</a>
-											</li>
-										</ul>
-									</li>
-				
-							</nav> <!--fin del menulateral4-->
-							
-							<!-- MENU LATERAL 5 -->	
-							<nav class="vertical4">
-								<ul>
-									<li><a href="#">R-S</a>
-									</li>
-									<li><a href="#">RELATIVISMO CULTURAL: </a>
-										<ul>
-											<li>
-												<a href="#">
-													El relativismo cultural es una posición que afirma que todas las culturas, en todas partes y en todos los momentos, son iguales y tienen un mismo valor legítimo y sólido, lo que impide que ellas puedan ser comparadas entre sí. Tampoco, por esa razón, miembros de una cultura pueden evaluar al resto de ellas.
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">SECTOR CULTURAL: </a>
-										<ul>
-											<li>
-												<a href="#">
-													El sector Cultural nos traslada de inmediato a un capítulo del llamado sector servicios, objeto de estudio de la economía general y sobre el cual los estados despliegan títulos de intervención y políticas públicas, tales como bienes culturales, mercados de la cultura, industrias y empresas culturales, sectores administrativos culturales.La restauración, es el proceso por el cual se le devuelven al libro o al documento sus características originales, y que este perdió por degradación o destrucción. El proceso de restauración devuelve características que serán idénticas a las que poseía pero nunca las mismas. Es importante conocer la distinción que hace la restauración, en general: ella sólo trabaja la materia de la obra, es decir, su soporte físico, no su contenido. Los faltantes de material original son tratados como “lagunas”, y como tal aparecen en la obra restaurada.
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">SUBCULTURA: </a>
-										<ul>
-											<li>
-												<a href="#">
-													Si bien muchas veces el concepto es utilizado para referirse a aquello que está en una posición inferior a la cultura dominante, también es empleado para referir a aquellos usos y costumbres que manifiestan ciertos grupos, y de alguna manera una subcultura es un grupo diferenciado dentro de una cultura. Generalmente, sus miembros se reúnen por diversos motivos que comparten, como su edad, etnia, identidad sexual, gustos musicales, estética común, entre los más recurrentes.			
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">TURISMO CULTURAL:  </a>
-										<ul>
-											<li>
-												<a href="#">
-													El Turismo Cultural se define como aquel viaje turístico motivado por conocer, comprender y disfrutar el conjunto de rasgos y elementos distintivos, espirituales y materiales, intelectuales y afectivos que caracterizan a una sociedad o grupo social de un destino específico. El turismo cultural es casi tan amplio como la propia cultura y en él cabe prácticamente cualquier actividad que tenga que ver o sea seña de identidad de un país, zona, ciudad o pueblo: arte, cine, lengua, deporte, religión, arquitectura, gastronomía, naturaleza y cualquier tipo de folclore. Pero hay otros tipos de turismo cultural mucho menos convencionales y, en algunos casos, muy alternativos.Si bien muchas veces el concepto es utilizado para referirse a aquello que está en una posición inferior a la cultura dominante, también es empleado para referir a aquellos usos y costumbres que manifiestan ciertos grupos, y de alguna manera una subcultura es un grupo diferenciado dentro de una cultura. Generalmente, sus miembros se reúnen por diversos motivos que comparten, como su edad, etnia, identidad sexual, gustos musicales, estética común, entre los más recurrentes.			
-												</a>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</nav> <!-- fin del menu lateral 5-->
-							
-							<!-- MENU LATERAL 6 -->	
-							<nav class="vertical5">
-								<ul>
-									<li><a href="#">X</a>
-									</li>
-									<li><a href="#">XEFONOBIA </a>
-										<ul>
-											<li>
-												<a href="#">
-													Se llama xenofobia al miedo, desprecio u odio a las personas que provienen de una nación o una cultura diferente a la propia, o sea, a los extranjeros, incluidas sus manifestaciones culturales, su lenguaje o todo aquello que pueda asociarse a lo foráneo. La xenofobia oscila en sus manifestaciones entre variantes intensas y violentas, capaces de conducir a delitos (asesinatos, palizas, etc.) hasta formas más mansas de rechazo. Una de las variantes más usuales de la xenofobia es la que se sustenta en las distinciones raciales, es decir, el racismo.
-												</a>
-											</li>
-										</ul>
-									</li>
-									
-							</nav> <!-- fin del menu lateral 5-->
-							
-							
-							
-						</div>
-						
-					</div><!-- DIV DE FILA DE LAS COLUMNAS -->
-					
-					
-					
-					
-				</div>
-				
-			</div><!-- container //  -->
-			
-		</div>
-		
-		
-		
-		<!-- IMAGEN EMERGENTE -->
-		
-		<div class="modal fade" id="mostrarmodal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" align="center">
-			<br><br><br><br><br><br><br><br>
-			<img src="images/MODALSENA 1.png">
-			<div class="">
-				
-				<div class="modal-dialog">
-					<div class="">
-						<h3></h3>
-						
-					</div>
-					<div class="modal-body">
-						
-					</div>
-					<div class="">
-						<a href="#" data-dismiss="modal" class="btn btn-danger">Cerrar</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	</body>
-	
-	<footer class="footer" style="background: #eee">
-		
-		<!-- Sector Empleo -->	
-		<div class="" style="margin-left:20px">
-			<!--<h4><span class=""></span>
-			Sector Trabajo</h4>-->
-			
-			<nav class="mainNav">
-				<!--<nav class="mainNav flexbox">-->
-				<div class="navItem flex-item">
-					<a href="http://www.mintrabajo.gov.co/" target="_blank"><img src="images/iMinTrabajo.png" alt="Ministerio del Trabajo" title="Ministerio del Trabajo" width="188px" height="77px"></a>
-				</div>
-				
-				<div class="navItem flex-item">
-					<a href="http://www.orgsolidarias.gov.co/" target="_blank"><img src="images/iOss.png" alt="Organizaciones Solidarias" title="Organizaciones Solidarias" width="188px" height="77px"></a>
-				</div>
-				
-				<div class="navItem flex-item">
-					<a href="http://unidad.serviciodeempleo.gov.co/" target="_blank"><img src="images/iEmpleo.png" alt="Servicio de Empleo" title="Servicio de Empleo" width="188px" height="77px"></a>		        
-				</div>
-				
-				<div class="navItem flex-item">
-					<a href="http://www.ssf.gov.co/" target="_blank"><img src="images/iSuperSubsidio.png" alt="SuperSubsidio" title="SuperSubsidio" width="188px" height="77px"></a>		        
-				</div>
-				
-				<div class="navItem flex-item">
-					<a href="http://www.colpensiones.gov.co/" target="_blank"><img src="images/iColpensiones.png" alt="Colpensiones" title="Colpensiones" width="188px" height="77px"></a>
-				</div>
-			</nav>	
-			
-			<nav align="center">	
-					<a href="REDESSOCIALES.html" class="btn btn-info">
-						SIGUIENTE
-					</a>
-				<br></br>
+									<p>
+									</p>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</nav>
 			
-		</div>
-		
-		<!-- INFORMACION DE LA PAGINA COLOR ANARANJADO -->
-		<!-- VA A LA IZQUIERDA -->
-		
-		<div id="copy" class="clear">
-			<nav class="mainNav1">
-				<div class="navItem flex-item">
+			<!-- VIDEO EMBEBIDO
+				<div class="medida-video">
+				<span></span>
+				<nav>
+				<video class="video_background" src="images/BEATS_480p.mp4" width=650  height=470 controls muted autoplay poster="images/IMAGENVIDEOGLOSARIO.jpg">
+				Lo sentimos. Este vídeo no puede ser reproducido en tu navegador.<br>
+				La versión descargable está disponible en <a href="URL">Enlace</a>. 
+				</video>
+				</nav>
+				</div> 
+				<div class="medida-video">
+				<audio autoplay loop controls src="images/BEATS_480p.mp4">	
+				<p>Tu navegador no implementa el elemento audio</p>
+				</audio>
+			</div>-->
+			
+			<!-- MENU LATERAL 2-->	
+			<nav class="vertical1 terms" style="margin-left: 0px;">
+				<ul>
+					<li><a href="#">D-E</a>
+					</li>
+					<li><a href="#">DERECHOS CULTURALES: </a>
+						<ul>
+							<li>
+								<a href="#">
+									Toda persona tiene derechos culturales, el derecho a la ciencia y el derecho a la protección de los intereses de autoría. Estos garantizan el derecho a participar y disfrutar de los beneficios de la cultura y la ciencia, y se refieren a la búsqueda del conocimiento, la comprensión y la creatividad humana. Estos derechos son una parte importante de la armonía social y están estrechamente relacionados con los derechos a la educación y a la libertad de pensamiento, de conciencia y de religión.
+								</a>
+								<!-- tercer nivel -->
+								<ul style="">
+									<li>
+										<a href="#" style="display: inline-block;">
+											<img src="images/glosario/derechos naturales.jpg">
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">DIVERSIDAD CULTURAL:</a>
+						<ul>
+							<li>
+								<a href="#">
+									Multiplicidad de formas en que se manifiestan las culturas de los grupos y sociedades. Estas expresiones se transmiten dentro de los grupos y sociedades y también entre ellos. La diversidad cultural se manifiesta no sólo a través de las diversas formas en las que se expresa el patrimonio cultural de la humanidad, enriquecido y transmitido gracias a una variedad de expresiones culturales, sino también a través de los distintos modos de creación artística, producción, distribución, difusión y disfrute, cualquiera que sea el medio y la tecnología utilizados.
+								</a>
+								<!-- tercer nivel -->
+								<ul style="">
+									<li>
+										<a href="#" style="display: inline-block;">
+											<img src="images/glosario/imagen.jpg">
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">ECOLOGIA CULTURAL: </a>
+						<ul>
+							<li>
+								<a href="#">
+									Es importante resaltar entonces que la ecología cultural afirma que los patrones de comportamiento culturales permiten la adaptación del hombre al ambiente mediante una serie de interacciones dinámicas poniendo especial atención en las reacciones y respuestas emitidas por los seres humanos a través de lo que conocemos como cultura, la cual nos permite comprender y explicar los procesos de cambio social y las adaptaciones.
+								</a>
+								<!-- tercer nivel -->
+								<ul style="">
+									<li>
+										<a href="#" style="display: inline-block;">
+											<img src="images/glosario/imagen.jpg">
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">EMPRENDIMIENTO CULTURAL: </a>
+						<ul>
+							<li>
+								<a href="#">
+									El emprendimiento cultural es una actividad (individual o colectiva) de apropiación de los valores simbólicos –de origen tangible e intangible- de una sociedad, que tiene como propósito crear y recrear diversas formas de representación plasmadas en bienes y servicios culturales, mediante procesos económicos y sociales basados en el riesgo, la creatividad y la innovación. 												
+								</a>
+								<!-- tercer nivel -->
+								<ul style="">
+									<li>
+										<a href="#" style="display: inline-block;">
+											<img src="images/glosario/imagen.jpg">
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">EQUIPAMIENTO CULTURAL:</a>
+						<ul>
+							<li>
+								<a href="#">
+									El concepto de equipamiento surge de la necesidad de organización de servicios de interés general para la población en diferentes campos y también es un modo de orientar el espacio público entre otras definiciones tenemos “conjunto de locales e instalaciones necesarias para la vida colectiva”
+								</a>
+								<!-- tercer nivel -->
+								<ul style="">
+									<li>
+										<a href="#" style="display: inline-block;">
+											<img src="images/glosario/imagen.jpg">
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">ESTRATEGIA CULTURAL: </a>
+						<ul>
+							<li>
+								<a href="#">
+									La Estrategia cultural y artística es parte del proceso necesario para el reconocimiento de las dimensiones éticas y estéticas de las comunidades, el reconocimiento de sus cosmovisiones y un primer paso hacia las transformaciones estructurales, institucionales y culturales que deben darse en el país para la consecución definitiva de la paz.
+									Escuchar, reconocer y comprender para transformar, resume una ruta asertiva de abordaje, que tiene como eje central el diálogo y trabajo conjunto con los que siguen construyendo paz y nutriendo el tejido social desde su lugar en el mundo.
+									
+								</a>
+								<!-- tercer nivel -->
+								<ul style="">
+									<li>
+										<a href="#" style="display: inline-block;">
+											<img src="images/glosario/imagen.jpg">
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">ETNOCULTURA: </a>
+						<ul>
+							<li>
+								<a href="#">
+									Costumbres y tradiciones que definen una etnia o raza en específico. Siendo etnia, la comunidad de hombres con ciertas afinidades culturales, raciales, lingüísticas y religiosas. 
+								</a>
+								<!-- tercer nivel -->
+								<ul style="">
+									<li>
+										<a href="#" style="display: inline-block;">
+											<img src="images/glosario/imagen.jpg">
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">EVALUACIÓN DE PROYECTOS CULTURALES: </a>
+						<ul>
+							<li>
+								<a href="#">
+									La razón principal de la evaluación de proyectos culturales, es mejorar el desarrollo social actual ya sea en presentes o futuras ediciones así mismo la reorientación de los objetivos, cambios en contenidos, estrategias o actividades, mayor dotación de medios, modificación en el modelo de gestión y de planificación, cambio de público destinatario, etc.Costumbres y tradiciones que definen una etnia o raza en específico. Siendo etnia, la comunidad de hombres con ciertas afinidades culturales, raciales, lingüísticas y religiosas. 
+								</a>
+								<!-- tercer nivel -->
+								<ul style="">
+									<li>
+										<a href="#" style="display: inline-block;">
+											<img src="images/glosario/imagen.jpg">
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">EVENTO CULTURAL: </a>
+						<ul>
+							<li>
+								<a href="#">
+									Las actividades culturales son aquellos eventos o reuniones que organiza una determinada sociedad o grupo cultural con el objetivo de crear, difundir o fomentar la cultura de un grupo o sector social.La razón principal de la evaluación de proyectos culturales, es mejorar el desarrollo social actual ya sea en presentes o futuras ediciones así mismo la reorientación de los objetivos, cambios en contenidos, estrategias o actividades, mayor dotación de medios, modificación en el modelo de gestión y de planificación, cambio de público destinatario, etc.Costumbres y tradiciones que definen una etnia o raza en específico. Siendo etnia, la comunidad de hombres con ciertas afinidades culturales, raciales, lingüísticas y religiosas. 
+								</a>
+								<!-- tercer nivel -->
+								<ul style="">
+									<li>
+										<a href="#" style="display: inline-block;">
+											<img src="images/glosario/imagen.jpg">
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">EXPRESIONES CULTURALES: </a>
+						<ul>
+							<li>
+								<a href="#">
+									Las expresiones culturales son también denominadas expresiones de folclor, pues representan todo lo que identifica a una sociedad con las raíces de sus antepasados. Incluyen los nombres de las personas y las expresiones musicales, artísticas y bailes, así como ceremonias o incluso la arquitectura de los edificios de un país.La razón principal de la evaluación de proyectos culturales, es mejorar el desarrollo social actual ya sea en presentes o futuras ediciones así mismo la reorientación de los objetivos, cambios en contenidos, estrategias o actividades, mayor dotación de medios, modificación en el modelo de gestión y de planificación, cambio de público destinatario, etc.Costumbres y tradiciones que definen una etnia o raza en específico. Siendo etnia, la comunidad de hombres con ciertas afinidades culturales, raciales, lingüísticas y religiosas. 
+								</a>
+								<!-- tercer nivel -->
+								<ul style="">
+									<li>
+										<a href="#" style="display: inline-block;">
+											<img src="images/glosario/imagen.jpg">
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">EXTENSION CULTURAL. </a>
+						<ul>
+							<li>
+								<a href="#">
+									La extensión cultural es un compromiso tradicional en las bibliotecas, y es el conjunto de actividades de desarrollo cultural que llevan a cabo las bibliotecas encaminadas a insertar la biblioteca y su colección en la comunidad a la que sirve. El tipo de acciones y actividades de esta índole son: exposiciones, ciclos de teatro y conferencias, juegos, talleres, cursos, clubes de lectura, encuentros con el autor, concursos literarios y culturales, entre otros.La razón principal de la evaluación de proyectos culturales, es mejorar el desarrollo social actual ya sea en presentes o futuras ediciones así mismo la reorientación de los objetivos, cambios en contenidos, estrategias o actividades, mayor dotación de medios, modificación en el modelo de gestión y de planificación, cambio de público destinatario, etc.Costumbres y tradiciones que definen una etnia o raza en específico. Siendo etnia, la comunidad de hombres con ciertas afinidades culturales, raciales, lingüísticas y religiosas. 
+								</a>
+								<!-- tercer nivel -->
+								<ul style="">
+									<li>
+										<a href="#" style="display: inline-block;">
+											<img src="images/glosario/imagen.jpg">
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">GEOCULTURA.. </a>
+						<ul>
+							<li>
+								<a href="#">
+									Geocultura es una combinación o relación entre cultura y geografía, o si se quiere expresar de otro modo, como las culturas se extienden por geografías concretas e incluso por el tiempo, historia concreta. ideologías como sistemas de ideas y prácticas, y dentro de las ideologías estarían las culturas, las religiones, las filosofías, las macrovisiones, los grandes sistemas teóricos-prácticos de explicación de la realidad y de actuar en y desde la realidad.La extensión cultural es un compromiso tradicional en las bibliotecas, y es el conjunto de actividades de desarrollo cultural que llevan a cabo las bibliotecas encaminadas a insertar la biblioteca y su colección en la comunidad a la que sirve. El tipo de acciones y actividades de esta índole son: exposiciones, ciclos de teatro y conferencias, juegos, talleres, cursos, clubes de lectura, encuentros con el autor, concursos literarios y culturales, entre otros.La razón principal de la evaluación de proyectos culturales, es mejorar el desarrollo social actual ya sea en presentes o futuras ediciones así mismo la reorientación de los objetivos, cambios en contenidos, estrategias o actividades, mayor dotación de medios, modificación en el modelo de gestión y de planificación, cambio de público destinatario, etc.Costumbres y tradiciones que definen una etnia o raza en específico. Siendo etnia, la comunidad de hombres con ciertas afinidades culturales, raciales, lingüísticas y religiosas. 
+								</a>
+								<!-- tercer nivel -->
+								<ul style="">
+									<li>
+										<a href="#" style="display: inline-block;">
+											<img src="images/glosario/imagen.jpg">
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">GESTION CULTURAL: .. </a>
+						<ul>
+							<li>
+								<a href="#">
+									Conjunto de estrategias utilizadas para facilitar un adecuado acceso al patrimonio cultural por parte de la sociedad. Estas estrategias contienen en su definición una adecuada planificación de los recursos económicos y humanos, así como la consecución de unos claros objetivos a largo y corto plazo que permitan llevar a cabo dicha planificación.Geocultura es una combinación o relación entre cultura y geografía, o si se quiere expresar de otro modo, como las culturas se extienden por geografías concretas e incluso por el tiempo, historia concreta. ideologías como sistemas de ideas y prácticas, y dentro de las ideologías estarían las culturas, las religiones, las filosofías, las macrovisiones, los grandes sistemas teóricos-prácticos de explicación de la realidad y de actuar en y desde la realidad.La extensión cultural es un compromiso tradicional en las bibliotecas, y es el conjunto de actividades de desarrollo cultural que llevan a cabo las bibliotecas encaminadas a insertar la biblioteca y su colección en la comunidad a la que sirve. El tipo de acciones y actividades de esta índole son: exposiciones, ciclos de teatro y conferencias, juegos, talleres, cursos, clubes de lectura, encuentros con el autor, concursos literarios y culturales, entre otros.La razón principal de la evaluación de proyectos culturales, es mejorar el desarrollo social actual ya sea en presentes o futuras ediciones así mismo la reorientación de los objetivos, cambios en contenidos, estrategias o actividades, mayor dotación de medios, modificación en el modelo de gestión y de planificación, cambio de público destinatario, etc.Costumbres y tradiciones que definen una etnia o raza en específico. Siendo etnia, la comunidad de hombres con ciertas afinidades culturales, raciales, lingüísticas y religiosas. 
+								</a>
+								<!-- tercer nivel -->
+								<ul style="">
+									<li>
+										<a href="#" style="display: inline-block;">
+											<img src="images/glosario/imagen.jpg">
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
 					
-					Servicio Nacional de Aprendizaje SENA - Dirección General<br>
-					Calle 57 No. 8 - 69 Bogotá D.C. (Cundinamarca), Colombia<br>
-					Debido a la emergencia sanitaria, los Centros de Formación Profesional, Puntos de Atención o Información y demás  <br>
-					espacios físicos destinados por el SENA para la atención presencial a los ciudadanos se encuentran cerrados.<br>
-					Conmutador Nacional (57 1) 5461500 - Extensiones<br>
-					Atención al ciudadano: Bogotá (57 1) 3430111 - Línea gratuita y  resto del país 018000 910270<br>
-					Atención al empresario: Bogotá (57 1) 3430101 - Línea gratuita y resto del país 018000 910682<br>
-					<a href="http://sciudadanos.sena.edu.co/SolicitudIndex.aspx" target="_blank" style="color: #FFFFFF">PQRS</a><br>
-					<a href="http://www.sena.edu.co/es-co/ciudadano/Paginas/chat.aspx" target="_blank" style="color: #FFFFFF">Chat en linea</a><br>
-					<!--Correo servicio al cliente: gpservicioalcliente@sena.edu.co<br/>-->
-					Correo notificaciones judiciales: servicioalciudadano@sena.edu.co<br>
-					<div class="flLeft">Todos los derechos 2017 SENA - <a href="http://www.sena.edu.co/es-co/Paginas/politicasCondicionesUso.aspx" target="_blank" style="color: #FFFFFF">Políticas de privacidad y condiciones uso Portal Web SENA</a><br>
-						<a href="http://www.sena.edu.co/es-co/transparencia/Documents/proteccion_datos_personales_sena_2016.pdf" target="_blank" style="color: #FFFFFF">Política de Tratamiento para Protección de Datos Personales</a> - <a href="http://compromiso.sena.edu.co/index.php?text=inicio&amp;id=27" target="_blank" style="color: #FFFFFF">Política de seguridad y privacidad de la información</a>
+				</nav><!-- FIN DE LA COLUMNA 2 -->
+				
+				<!-- MENU LATERAL 3-->	
+				<nav class="vertical2 terms" style="margin-left: 0px;">
+					<ul>
+						<li><a href="#">H-L</a>
+						</li>
+						<li><a href="#">HOLISTICO:</a>
+							<ul>
+								<li>
+									<a href="#">
+										El Holismo es la tendencia, la corriente que analiza los eventos desde el punto de vista de las múltiples interacciones que los caracteriza y que puedan darse tales como el estilo de vida holístico que es la elección consciente de crear balance en nuestras vidas y alcanzar el potencial máximo de bienestar individual en cuerpo, mente y alma.
+									</a>
+									<!-- tercer nivel -->
+									<ul style="">
+										<li>
+											<a href="#" style="display: inline-block;">
+												<img src="images/glosario/imagen.jpg">
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">IDENTIDAD CULTURAL:</a>
+							<ul>
+								<li>
+									<a href="#">
+										El concepto de identidad cultural encierra un sentido de pertenencia a un grupo social con el cual se comparten rasgos culturales, como costumbres, valores y creencias. La identidad no es un concepto fijo, sino que se recrea individual y colectivamente y se alimenta de forma continua de la influencia exterior.
+									</a>
+									<!-- tercer nivel -->
+									<ul style="">
+										<li>
+											<a href="#" style="display: inline-block;">
+												<img src="images/glosario/imagen.jpg">
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">INDUSTRIAS CULTURALES: </a>
+							<ul>
+								<li>
+									<a href="#">
+										Industria cultural se podría definir como el conjunto de empresas e instituciones cuya principal actividad económica es la producción de cultura con fines lucrativos. En el sistema de producción cultural pueden considerarse: la televisión, la radio, los diarios y revistas, industrias cinematográficas, discográficas, las editoriales, compañías de teatro o danza, las distribuidoras, etc., creando mecanismos que buscan a la vez aumentar el consumo de sus productos, modificar los hábitos sociales, educar, informar y, finalmente, transformar a la sociedad, por tanto abarca todos los ámbitos de la sociedad e intenta incluir a todos los individuos sin excepción.
+									</a>
+									<!-- tercer nivel -->
+									<ul style="">
+										<li>
+											<a href="#" style="display: inline-block;">
+												<img src="images/glosario/imagen.jpg">
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">INDUSTRIAS CREATIVAS.</a>
+							<ul>
+								<li>
+									<a href="#">
+										Las industrias creativas hacen uso de la creatividad, las aptitudes y el talento de las personas para crear puestos de trabajo y generar riqueza a través de la creación y la explotación de derechos de propiedad intelectual. La asistencia que presta el ITC en el ámbito de las industrias creativas incluye los productos artesanales, las artes visuales y la música. El Centro pretende apoyar el fomento de la artesanía, las artes visuales y la música en países en desarrollo y países en transición aportando al sector la dimensión empresarial y la prestación de asistencia técnica para fomentar oportunidades de comercio y mejorar las capacidades de los productores para exportar.
+									</a>
+									<!-- tercer nivel -->
+									<ul style="">
+										<li>
+											<a href="#" style="display: inline-block;">
+												<img src="images/glosario/imagen.jpg">
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">INTERCULTURALIDAD:</a>
+							<ul>
+								<li>
+									<a href="#">
+										La interculturalidad es el fenómeno social, cultural y comunicativo en el que dos o más culturas o, más bien, representantes de diferentes identidades culturales específicas, se relacionan en condiciones de igualdad, sin que ningún punto de vista predomine sobre los demás o sea considerado “normal”. Este tipo de relaciones favorecen el diálogo y el entendimiento, la integración y el enriquecimiento de las culturas. 
+									</a>
+									<!-- tercer nivel -->
+									<ul style="">
+										<li>
+											<a href="#" style="display: inline-block;">
+												<img src="images/glosario/imagen.jpg">
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				
+				<!-- MENU LATERAL 4-->	
+				<nav class="vertical3 terms" style="margin-left: 0px;">
+					<ul>
+						<li><a href="#">M-P</a>
+						</li>			
+						<li><a href="#">MATERIALISMO CULTURAL: </a>
+							<ul>
+								<li>
+									<a href="#">
+										El materialismo cultural se refiere a una forma determinada de orientar las investigaciones de carácter antropológico, caracterizada por poner el foco precisamente en las cuestiones materiales de una sociedad y poder así determinar, en función de las mismas, el grado de desarrollo que dicho grupo humano habría adquirido.Es el conjunto de operaciones que se gestionan con la finalidad de preservar o prevenir el deterioro del material documental y bibliográfico. Si un material no está en óptimas condiciones no podrá ponerse a disposición del usuario.
+									</a>
+									<!-- tercer nivel -->
+									<ul style="">
+										<li>
+											<a href="#" style="display: inline-block;">
+												<img src="images/glosario/imagen.jpg">
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">MULTICULTURALISMO: </a>
+							<ul>
+								<li>
+									<a href="#">
+										El término multiculturalismo hace referencia a la existencia de diversidad de culturas dentro de un mismo territorio, esta se toma desde una perspectiva positiva, entonces apoya y promueve la diversidad y la igualdad cultural. No considera que una cultura específica es mejor que las otras, es decir, no es etnocentrista. Por lo que la convivencia es pacífica y aceptada en buen grado dentro de esa sociedad.
+										
+									</a>
+									<!-- tercer nivel -->
+									<ul style="">
+										<li>
+											<a href="#" style="display: inline-block;">
+												<img src="images/glosario/imagen.jpg">
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">MULTICULTURALIDAD: </a>
+							<ul>
+								<li>
+									<a href="#">
+										La multiculturalidad se refiere a la existencia de culturas diferentes en un mismo espacio geográfico sin tener relación alguna entre ellas. Se puede observar entonces que dentro de una población pueden convivir distintas sociedades, que, a pesar de sus diferencias culturales, coexisten entre sí. Esta situación estuvo presente en las civilizaciones antiguas. Es un modelo social que busca reconocer y disminuir las desigualdades construidas durante el colonialismo y neocolonialismo, aunque aún quedan fuertes huellas del racismo que actualmente criminaliza a diferentes sectores subalternos.
+									</a>
+									<!-- tercer nivel -->
+									<ul style="">
+										<li>
+											<a href="#" style="display: inline-block;">
+												<img src="images/glosario/imagen.jpg">
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">OBSERVATORIO CULTURAL:</a>
+							<ul>
+								<li>
+									<a href="#">
+										Su misión principal es contribuir a la profesionalización del ámbito cultural mediante la promoción de la investigación, el desarrollo de estudios disciplinares, programas de formación y actualización permanente y esquemas de asistencia técnica, destinados a legitimar y fortalecer el campo de la administración y la gestión del sector cultural y creativo.		
+									</a>
+									<!-- tercer nivel -->
+									<ul style="">
+										<li>
+											<a href="#" style="display: inline-block;">
+												<img src="images/glosario/imagen.jpg">
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">PATRIMONIO CULTURAL: </a>
+							<ul>
+								<li>
+									<a href="#">
+										El patrimonio cultural es un conjunto determinado de bienes tangibles, intangibles y naturales que forman parte de prácticas sociales, a los que se les atribuyen valores a ser transmitidos, y luego resignificados, de una época a otra, o de una generación a las siguientes y conforme a partir de un proceso social y cultural de atribución de valores, funciones y significados, implica que no constituye algo dado de una vez y para siempre sino, más bien, es el producto de un proceso social permanente, complejo y polémico, de construcción de significados y sentidos.Es el proceso que permite identificar las debilidades y fortalezas, tanto como las necesidades informativas-formativas del usuario, en la biblioteca, con el fin de garantizar un buen servicio a la comunidad.		
+									</a>
+									<!-- tercer nivel -->
+									<ul style="">
+										<li>
+											<a href="#" style="display: inline-block;">
+												<img src="images/glosario/imagen.jpg">
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">PATRIMONIO MATERIAL: </a>
+							<ul>
+								<li>
+									<a href="#">
+										También se conoce al patrimonio material como patrimonio cultural tangible. Tiene que ver con las creaciones materiales realizadas por agrupaciones de personas, comunidades o sociedades del pasado y que, pese a su antigüedad, se consideran relevantes en la evolución de la sociedad.El patrimonio cultural es un conjunto determinado de bienes tangibles, intangibles y naturales que forman parte de prácticas sociales, a los que se les atribuyen valores a ser transmitidos, y luego resignificados, de una época a otra, o de una generación a las siguientes y conforme a partir de un proceso social y cultural de atribución de valores, funciones y significados, implica que no constituye algo dado de una vez y para siempre sino, más bien, es el producto de un proceso social permanente, complejo y polémico, de construcción de significados y sentidos.Es el proceso que permite identificar las debilidades y fortalezas, tanto como las necesidades informativas-formativas del usuario, en la biblioteca, con el fin de garantizar un buen servicio a la comunidad.		
+									</a>
+									<!-- tercer nivel -->
+									<ul style="">
+										<li>
+											<a href="#" style="display: inline-block;">
+												<img src="images/glosario/imagen.jpg">
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">PATRIMONIO INMATERIAL: </a>
+							<ul>
+								<li>
+									<a href="#">
+										La definición más concreta, del patrimonio inmaterial o patrimonio cultural intangible es que se trata de un conjunto de tradiciones, técnicas, costumbres y saberes, heredades de una generación a otra que incluye tradiciones y expresiones orales, artes, espectáculos, rituales, fiestas populares o usos relativos a la naturaleza o el universo.También se conoce al patrimonio material como patrimonio cultural tangible. Tiene que ver con las creaciones materiales realizadas por agrupaciones de personas, comunidades o sociedades del pasado y que, pese a su antigüedad, se consideran relevantes en la evolución de la sociedad.El patrimonio cultural es un conjunto determinado de bienes tangibles, intangibles y naturales que forman parte de prácticas sociales, a los que se les atribuyen valores a ser transmitidos, y luego resignificados, de una época a otra, o de una generación a las siguientes y conforme a partir de un proceso social y cultural de atribución de valores, funciones y significados, implica que no constituye algo dado de una vez y para siempre sino, más bien, es el producto de un proceso social permanente, complejo y polémico, de construcción de significados y sentidos.Es el proceso que permite identificar las debilidades y fortalezas, tanto como las necesidades informativas-formativas del usuario, en la biblioteca, con el fin de garantizar un buen servicio a la comunidad.		
+									</a>
+									<!-- tercer nivel -->
+									<ul style="">
+										<li>
+											<a href="#" style="display: inline-block;">
+												<img src="images/glosario/imagen.jpg">
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">PATRIMONIO BIOCULTURA: </a>
+							<ul>
+								<li>
+									<a href="#">
+										es un concepto que ha venido cobrando mayor fuerza en los territorios de los pueblos indígenas. Para entender el concepto es imprescindible tener en cuenta el complejo sistema de reciprocidad y equilibrio entre los pueblos indígenas y su medio ambiente, en el sentido de complementariedad naturaleza-cultura-territorio. Es decir, es aquel patrimonio que implica los conocimientos y saberes tradicionales sobre recursos biológicos desde lo micro (a nivel genético) a lo macro (el paisaje) y un conocimiento extenso, como el conocimiento tradicional sobre la adaptación de ecosistemas complejos y el uso sostenible de la biodiversidad dentro de una cultura específica con patrones de comportamiento establecidos en sociedades tradicionales.
+									</a>
+									<!-- tercer nivel -->
+									<ul style="">
+										<li>
+											<a href="#" style="display: inline-block;">
+												<img src="images/glosario/imagen.jpg">
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">POLITICA CULTURAL:  </a>
+							<ul>
+								<li>
+									<a href="#">
+										La política cultural consiste en el conjunto de prácticas sociales, conscientes y deliberadas, de intervención y no intervención, que tienen por objeto satisfacer ciertas necesidades de la población y de la comunidad, mediante el empleo óptimo de todos los recursos materiales y humanos, de que dispone una sociedad en un momento determinado"es un concepto que ha venido cobrando mayor fuerza en los territorios de los pueblos indígenas. Para entender el concepto es imprescindible tener en cuenta el complejo sistema de reciprocidad y equilibrio entre los pueblos indígenas y su medio ambiente, en el sentido de complementariedad naturaleza-cultura-territorio. Es decir, es aquel patrimonio que implica los conocimientos y saberes tradicionales sobre recursos biológicos desde lo micro (a nivel genético) a lo macro (el paisaje) y un conocimiento extenso, como el conocimiento tradicional sobre la adaptación de ecosistemas complejos y el uso sostenible de la biodiversidad dentro de una cultura específica con patrones de comportamiento establecidos en sociedades tradicionales.
+									</a>
+									<!-- tercer nivel -->
+									<ul style="">
+										<li>
+											<a href="#" style="display: inline-block;">
+												<img src="images/glosario/imagen.jpg">
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">PROMOCION CULTURAL: </a>
+							<ul>
+								<li>
+									<a href="#">
+										La promoción cultural, en tanto disciplina existente para y desde la acción, no se podrá revelar, sino como actividad, si se asume, que la lógica y razón de su existencia están asignadas por el cambio, por el movimiento. Debe entenderse como un proceso, siempre inacabado, en el que el diálogo entre el pasado y el presente, entre lo propio y lo ajeno, entre el ser y el deber ser, estará orientado hacia la modelación y construcción de un futuro que ya vive entre las personasLa política cultural consiste en el conjunto de prácticas sociales, conscientes y deliberadas, de intervención y no intervención, que tienen por objeto satisfacer ciertas necesidades de la población y de la comunidad, mediante el empleo óptimo de todos los recursos materiales y humanos, de que dispone una sociedad en un momento determinado"es un concepto que ha venido cobrando mayor fuerza en los territorios de los pueblos indígenas. Para entender el concepto es imprescindible tener en cuenta el complejo sistema de reciprocidad y equilibrio entre los pueblos indígenas y su medio ambiente, en el sentido de complementariedad naturaleza-cultura-territorio. Es decir, es aquel patrimonio que implica los conocimientos y saberes tradicionales sobre recursos biológicos desde lo micro (a nivel genético) a lo macro (el paisaje) y un conocimiento extenso, como el conocimiento tradicional sobre la adaptación de ecosistemas complejos y el uso sostenible de la biodiversidad dentro de una cultura específica con patrones de comportamiento establecidos en sociedades tradicionales.
+									</a>
+									<!-- tercer nivel -->
+									<ul style="">
+										<li>
+											<a href="#" style="display: inline-block;">
+												<img src="images/glosario/imagen.jpg">
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">PROYECTO CULTURAL: </a>
+							<ul>
+								<li>
+									<a href="#">
+										Un proyecto cultural es la planificación coordinada de acciones en una determinada comunidad con el propósito de promover, conservar, preservar y gestionar sus expresiones culturales, fortaleciendo con prioridad aquellas que son propias y auténticas, las cuales requieren de especial atención porque son vulnerables ante la influencia de prácticas globales masivas.La promoción cultural, en tanto disciplina existente para y desde la acción, no se podrá revelar, sino como actividad, si se asume, que la lógica y razón de su existencia están asignadas por el cambio, por el movimiento. Debe entenderse como un proceso, siempre inacabado, en el que el diálogo entre el pasado y el presente, entre lo propio y lo ajeno, entre el ser y el deber ser, estará orientado hacia la modelación y construcción de un futuro que ya vive entre las personasLa política cultural consiste en el conjunto de prácticas sociales, conscientes y deliberadas, de intervención y no intervención, que tienen por objeto satisfacer ciertas necesidades de la población y de la comunidad, mediante el empleo óptimo de todos los recursos materiales y humanos, de que dispone una sociedad en un momento determinado"es un concepto que ha venido cobrando mayor fuerza en los territorios de los pueblos indígenas. Para entender el concepto es imprescindible tener en cuenta el complejo sistema de reciprocidad y equilibrio entre los pueblos indígenas y su medio ambiente, en el sentido de complementariedad naturaleza-cultura-territorio. Es decir, es aquel patrimonio que implica los conocimientos y saberes tradicionales sobre recursos biológicos desde lo micro (a nivel genético) a lo macro (el paisaje) y un conocimiento extenso, como el conocimiento tradicional sobre la adaptación de ecosistemas complejos y el uso sostenible de la biodiversidad dentro de una cultura específica con patrones de comportamiento establecidos en sociedades tradicionales.
+									</a>
+									<!-- tercer nivel -->
+									<ul style="">
+										<li>
+											<a href="#" style="display: inline-block;">
+												<img src="images/glosario/imagen.jpg">
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						
+					</nav> <!--fin del menulateral4-->
+					
+					<!-- MENU LATERAL 5 -->	
+					<nav class="vertical4">
+						<ul>
+							<li><a href="#">R-S</a>
+							</li>
+							<li><a href="#">RELATIVISMO CULTURAL: </a>
+								<ul>
+									<li>
+										<a href="#">
+											El relativismo cultural es una posición que afirma que todas las culturas, en todas partes y en todos los momentos, son iguales y tienen un mismo valor legítimo y sólido, lo que impide que ellas puedan ser comparadas entre sí. Tampoco, por esa razón, miembros de una cultura pueden evaluar al resto de ellas.
+										</a>
+										<!-- tercer nivel -->
+										<ul style="">
+											<li>
+												<a href="#" style="display: inline-block;">
+													<img src="images/glosario/imagen.jpg">
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">SECTOR CULTURAL: </a>
+								<ul>
+									<li>
+										<a href="#">
+											El sector Cultural nos traslada de inmediato a un capítulo del llamado sector servicios, objeto de estudio de la economía general y sobre el cual los estados despliegan títulos de intervención y políticas públicas, tales como bienes culturales, mercados de la cultura, industrias y empresas culturales, sectores administrativos culturales.La restauración, es el proceso por el cual se le devuelven al libro o al documento sus características originales, y que este perdió por degradación o destrucción. El proceso de restauración devuelve características que serán idénticas a las que poseía pero nunca las mismas. Es importante conocer la distinción que hace la restauración, en general: ella sólo trabaja la materia de la obra, es decir, su soporte físico, no su contenido. Los faltantes de material original son tratados como “lagunas”, y como tal aparecen en la obra restaurada.
+										</a>
+										<!-- tercer nivel -->
+										<ul style="">
+											<li>
+												<a href="#" style="display: inline-block;">
+													<img src="images/glosario/imagen.jpg">
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">SUBCULTURA: </a>
+								<ul>
+									<li>
+										<a href="#">
+											Si bien muchas veces el concepto es utilizado para referirse a aquello que está en una posición inferior a la cultura dominante, también es empleado para referir a aquellos usos y costumbres que manifiestan ciertos grupos, y de alguna manera una subcultura es un grupo diferenciado dentro de una cultura. Generalmente, sus miembros se reúnen por diversos motivos que comparten, como su edad, etnia, identidad sexual, gustos musicales, estética común, entre los más recurrentes.			
+										</a>
+										<!-- tercer nivel -->
+										<ul style="">
+											<li>
+												<a href="#" style="display: inline-block;">
+													<img src="images/glosario/imagen.jpg">
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">TURISMO CULTURAL:  </a>
+								<ul>
+									<li>
+										<a href="#">
+											El Turismo Cultural se define como aquel viaje turístico motivado por conocer, comprender y disfrutar el conjunto de rasgos y elementos distintivos, espirituales y materiales, intelectuales y afectivos que caracterizan a una sociedad o grupo social de un destino específico. El turismo cultural es casi tan amplio como la propia cultura y en él cabe prácticamente cualquier actividad que tenga que ver o sea seña de identidad de un país, zona, ciudad o pueblo: arte, cine, lengua, deporte, religión, arquitectura, gastronomía, naturaleza y cualquier tipo de folclore. Pero hay otros tipos de turismo cultural mucho menos convencionales y, en algunos casos, muy alternativos.Si bien muchas veces el concepto es utilizado para referirse a aquello que está en una posición inferior a la cultura dominante, también es empleado para referir a aquellos usos y costumbres que manifiestan ciertos grupos, y de alguna manera una subcultura es un grupo diferenciado dentro de una cultura. Generalmente, sus miembros se reúnen por diversos motivos que comparten, como su edad, etnia, identidad sexual, gustos musicales, estética común, entre los más recurrentes.			
+										</a>
+										<!-- tercer nivel -->
+										<ul style="">
+											<li>
+												<a href="#" style="display: inline-block;">
+													<img src="images/glosario/imagen.jpg">
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav> <!-- fin del menu lateral 5-->
+					
+					<!-- MENU LATERAL 6 -->	
+					<nav class="vertical5">
+						<ul>
+							<li><a href="#">X</a>
+							</li>
+							<li><a href="#">XEFONOBIA </a>
+								<ul>
+									<li>
+										<a href="#">
+											Se llama xenofobia al miedo, desprecio u odio a las personas que provienen de una nación o una cultura diferente a la propia, o sea, a los extranjeros, incluidas sus manifestaciones culturales, su lenguaje o todo aquello que pueda asociarse a lo foráneo. La xenofobia oscila en sus manifestaciones entre variantes intensas y violentas, capaces de conducir a delitos (asesinatos, palizas, etc.) hasta formas más mansas de rechazo. Una de las variantes más usuales de la xenofobia es la que se sustenta en las distinciones raciales, es decir, el racismo.
+										</a>
+										<!-- tercer nivel -->
+										<ul style="">
+											<li>
+												<a href="#" style="display: inline-block;">
+													<img src="images/glosario/imagen.jpg">
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							
+						</nav> <!-- fin del menu lateral 5-->
+						
+						
+						
 					</div>
 					
-				</div>
+				</div><!-- DIV DE FILA DE LAS COLUMNAS -->
 				
-				<!-- VA A LA DERECHA -->
 				
-				<div class="navItem flex-item">
-					<ul class="">
-						<li><img src="images/Icontec03_all.png" alt="Certificación ISO 9001" title="Certificación ISO 9001"></li>
-						<!--<li><img src="/Style Library/alayout/images/Icontec_2019-5.png" alt="Certificación IQNet"  title="Certificación IQNet" /></li>-->
-					</ul>
-					<div class="push10 text-center">
-						<style>
-							.btn {
-							padding: 6px 12px;
-							font-size: 14px;
-							color: #eee;
-							}
-						</style>
-						<p> &nbsp; </p>
-						<a aria-label="Síguenos en Facebook" rel="nofollow noopener noreferrer" target="_blank" href="https://www.facebook.com/SENA/" class="btn ">
-							<span class="fa fa-facebook fa-2x "> </span> 
-						</a>
-						<a aria-label="Síguenos en Twitter" rel="nofollow noopener noreferrer" target="_blank" href="https://twitter.com/SENAComunica" class="btn ">
-							<span class="fa fa-twitter fa-2x "> </span> 
-						</a>
-						<a aria-label="Síguenos en Instagram" rel="nofollow noopener noreferrer" target="_blank" href="https://www.instagram.com/senacomunica/" class="btn">
-							<span class="fa fa-instagram fa-2x"> </span> 
-						</a>
-						<a aria-label="Síguenos en Youtube" rel="nofollow noopener noreferrer" target="_blank" href="https://www.youtube.com/user/SENATV" class="btn">
-							<span class="fa fa-youtube-play fa-2x"> </span> 
-						</a>
-						<a aria-label="Síguenos en Spotify" rel="nofollow noopener noreferrer" target="_blank" href="https://www.sena.edu.co/es-co/Paginas/default.aspx" class="btn">
-							<span class="fa fa-spotify  fa-2x"> </span> 
-						</a>
-						<a aria-label="Síguenos en Soundcloud" rel="nofollow noopener noreferrer" target="_blank" href="https://soundcloud.com/senacolombia/" class="btn">
-							<span class="fa fa-soundcloud  fa-2x"> </span> 
-						</a>
-						<!--</div>-->
-					</div>	
-				</nav>
+				
+				
 			</div>
 			
-			<div>
-				<img src="images/FOOTER.jpg">
+		</div><!-- container //  -->
+		
+	</div>
+	
+	
+	
+	<!-- IMAGEN EMERGENTE -->
+	
+	<div class="modal fade" id="mostrarmodal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" align="center">
+		<br><br><br><br><br><br><br><br>
+		<img src="images/MODALSENA 1.png">
+		<div class="">
+			
+			<div class="modal-dialog">
+				<div class="">
+					<h3></h3>
+					
+				</div>
+				<div class="modal-body">
+					
+				</div>
+				<div class="">
+					<a href="#" data-dismiss="modal" class="btn btn-danger">Cerrar</a>
+				</div>
 			</div>
-		</footer>
-	</html>																																																																																																				
+		</div>
+	</div>
+	
+</body>
+
+<footer class="footer" style="background: #eee">
+	
+	<!-- Sector Empleo -->	
+	<div class="" style="margin-left:20px">
+		<!--<h4><span class=""></span>
+		Sector Trabajo</h4>-->
+		
+		<nav class="mainNav">
+			<!--<nav class="mainNav flexbox">-->
+			<div class="navItem flex-item">
+				<a href="http://www.mintrabajo.gov.co/" target="_blank"><img src="images/iMinTrabajo.png" alt="Ministerio del Trabajo" title="Ministerio del Trabajo" width="188px" height="77px"></a>
+			</div>
+			
+			<div class="navItem flex-item">
+				<a href="http://www.orgsolidarias.gov.co/" target="_blank"><img src="images/iOss.png" alt="Organizaciones Solidarias" title="Organizaciones Solidarias" width="188px" height="77px"></a>
+			</div>
+			
+			<div class="navItem flex-item">
+				<a href="http://unidad.serviciodeempleo.gov.co/" target="_blank"><img src="images/iEmpleo.png" alt="Servicio de Empleo" title="Servicio de Empleo" width="188px" height="77px"></a>		        
+			</div>
+			
+			<div class="navItem flex-item">
+				<a href="http://www.ssf.gov.co/" target="_blank"><img src="images/iSuperSubsidio.png" alt="SuperSubsidio" title="SuperSubsidio" width="188px" height="77px"></a>		        
+			</div>
+			
+			<div class="navItem flex-item">
+				<a href="http://www.colpensiones.gov.co/" target="_blank"><img src="images/iColpensiones.png" alt="Colpensiones" title="Colpensiones" width="188px" height="77px"></a>
+			</div>
+		</nav>	
+		
+		<nav align="center">	
+			<a href="REDESSOCIALES.html" class="btn btn-info">
+				SIGUIENTE
+			</a>
+			<br></br>
+		</nav>
+		
+	</div>
+	
+	<!-- INFORMACION DE LA PAGINA COLOR ANARANJADO -->
+	<!-- VA A LA IZQUIERDA -->
+	
+	<div id="copy" class="clear">
+		<nav class="mainNav1">
+			<div class="navItem flex-item">
+				
+				Servicio Nacional de Aprendizaje SENA - Dirección General<br>
+				Calle 57 No. 8 - 69 Bogotá D.C. (Cundinamarca), Colombia<br>
+				Debido a la emergencia sanitaria, los Centros de Formación Profesional, Puntos de Atención o Información y demás  <br>
+				espacios físicos destinados por el SENA para la atención presencial a los ciudadanos se encuentran cerrados.<br>
+				Conmutador Nacional (57 1) 5461500 - Extensiones<br>
+				Atención al ciudadano: Bogotá (57 1) 3430111 - Línea gratuita y  resto del país 018000 910270<br>
+				Atención al empresario: Bogotá (57 1) 3430101 - Línea gratuita y resto del país 018000 910682<br>
+				<a href="http://sciudadanos.sena.edu.co/SolicitudIndex.aspx" target="_blank" style="color: #FFFFFF">PQRS</a><br>
+				<a href="http://www.sena.edu.co/es-co/ciudadano/Paginas/chat.aspx" target="_blank" style="color: #FFFFFF">Chat en linea</a><br>
+				<!--Correo servicio al cliente: gpservicioalcliente@sena.edu.co<br/>-->
+				Correo notificaciones judiciales: servicioalciudadano@sena.edu.co<br>
+				<div class="flLeft">Todos los derechos 2017 SENA - <a href="http://www.sena.edu.co/es-co/Paginas/politicasCondicionesUso.aspx" target="_blank" style="color: #FFFFFF">Políticas de privacidad y condiciones uso Portal Web SENA</a><br>
+					<a href="http://www.sena.edu.co/es-co/transparencia/Documents/proteccion_datos_personales_sena_2016.pdf" target="_blank" style="color: #FFFFFF">Política de Tratamiento para Protección de Datos Personales</a> - <a href="http://compromiso.sena.edu.co/index.php?text=inicio&amp;id=27" target="_blank" style="color: #FFFFFF">Política de seguridad y privacidad de la información</a>
+				</div>
+				
+			</div>
+			
+			<!-- VA A LA DERECHA -->
+			
+			<div class="navItem flex-item">
+				<ul class="">
+					<li><img src="images/Icontec03_all.png" alt="Certificación ISO 9001" title="Certificación ISO 9001"></li>
+					<!--<li><img src="/Style Library/alayout/images/Icontec_2019-5.png" alt="Certificación IQNet"  title="Certificación IQNet" /></li>-->
+				</ul>
+				<div class="push10 text-center">
+					<style>
+						.btn {
+						padding: 6px 12px;
+						font-size: 14px;
+						color: #eee;
+						}
+					</style>
+					<p> &nbsp; </p>
+					<a aria-label="Síguenos en Facebook" rel="nofollow noopener noreferrer" target="_blank" href="https://www.facebook.com/SENA/" class="btn ">
+						<span class="fa fa-facebook fa-2x "> </span> 
+					</a>
+					<a aria-label="Síguenos en Twitter" rel="nofollow noopener noreferrer" target="_blank" href="https://twitter.com/SENAComunica" class="btn ">
+						<span class="fa fa-twitter fa-2x "> </span> 
+					</a>
+					<a aria-label="Síguenos en Instagram" rel="nofollow noopener noreferrer" target="_blank" href="https://www.instagram.com/senacomunica/" class="btn">
+						<span class="fa fa-instagram fa-2x"> </span> 
+					</a>
+					<a aria-label="Síguenos en Youtube" rel="nofollow noopener noreferrer" target="_blank" href="https://www.youtube.com/user/SENATV" class="btn">
+						<span class="fa fa-youtube-play fa-2x"> </span> 
+					</a>
+					<a aria-label="Síguenos en Spotify" rel="nofollow noopener noreferrer" target="_blank" href="https://www.sena.edu.co/es-co/Paginas/default.aspx" class="btn">
+						<span class="fa fa-spotify  fa-2x"> </span> 
+					</a>
+					<a aria-label="Síguenos en Soundcloud" rel="nofollow noopener noreferrer" target="_blank" href="https://soundcloud.com/senacolombia/" class="btn">
+						<span class="fa fa-soundcloud  fa-2x"> </span> 
+					</a>
+					<!--</div>-->
+				</div>	
+			</nav>
+		</div>
+		
+		<div>
+			<img src="images/FOOTER.jpg">
+		</div>
+	</footer>
+</html>																																																																																																																										
